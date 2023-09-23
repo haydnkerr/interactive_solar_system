@@ -1,75 +1,108 @@
-{
-   "planets" : [ 
-    {
-    "name" : "Earth",
-    "radius" : 24901,
-    "orbit" : 365, 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info",
-    "link" : "",
-    "sun distance" : "",
-    "fun fact" : ""
-   },
-   {
-    "name" : "Mercury",
-    "radius" : "9,525",
-    "orbit" : "88", 
-    "sun distance" : "",
-    "atmosphere" : "Mercury's thin, non-breathable atmosphere, or exosphere, is composed mostly of oxygen (O2), sodium (Na), hydrogen (H2), helium (He), and potassium (K)", 
-    "core" : "info",
-    "surface" : "Mercury is a rocky planet also known as a terrestrial planet. It has a solid, cratered surface, much like the Moon",
-    "bio" : "The smallest planet in our solar system and bearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system that title belongs to nearby Venus, thanks to its dense atmosphere. Because of Mercury's elliptical egg-shaped orbit, and sluggish rotation, the Sun appears to rise briefly, set, and rise again from some parts of the planet's surface. The same thing happens in reverse at sunset.",
-    "link" : "https://solarsystem.nasa.gov/planets/mercury/overview/#:~:text=Mercury%20is%20the%20smallest%20planet%20in%20our%20solar%20system.,one%20of%20the%20rocky%20planets."
-   },
-   {
-    "name" : "Venus",
-    "radius" : "23,628",
-    "orbit" : "225", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   },
-   {
-    "name" : "Mars",
-    "radius" : "13,263",
-    "orbit" : "687", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   },
-   {
-    "name" : "Jupiter",
-    "radius" : "272,946",
-    "orbit" : "4,380", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   },
-   {
-    "name" : "Saturn",
-    "radius" : "235,298",
-    "orbit" : "10,585", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   },
-   {
-    "name" : "Uranus",
-    "radius" : "99,786",
-    "orbit" : "30,660", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   },
-   {
-    "name" : "Neptune",
-    "radius" : "96,685",
-    "orbit" : "60,225", 
-    "atmosphere" : "info", 
-    "core" : "info",
-    "bio" : "info"
-   }
-   ]
-}
 
+ "planets" = [
+   {
+      "name": "Earth",
+      "info1": "Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things and is the only planet in the solar system with liquid water on its surface.",
+      "info2": "Just slightly bigger than Venus it is the largest out of the four planets closest to the Sun, all of which are made of rock and metal.",
+      "info3": "Earth’s atmosphere is 78 percent nitrogen, 21 percent oxygen and 1 percent other ingredients, the perfect balance to breath and live. This atmosphere acts as a protective shield from incoming meteoroids, most of which break up before they can strike the surface.",
+      "info4": "It is believed by scientists that there has been five mass extinction events in Earth’s history. Many are concerned that we will be heading into our sixth mass extinction event due to human induced climate change that has seen the average temperature of the planet rise at worrying rates.",
+      "diameter": 12742,
+      "orbit": 365,
+      "rotation": 24,
+      "moons": "info",
+      "temp": 1,
+      "link": "",
+   },
+   {
+      "name": "Mercury",
+      "info1": "The smallest planet in our solar system and closest planet to the sun, Mercury is 35 million miles from the sun. It is only slightly larger than Earth’s Moon and from its surface the Sun would appear three times as large as it does from Earth and the sunlight would be seven times brighter.",
+      "info2": "Despite being the closest planet Mercury is not the hottest planet in our solar system and due to its elliptical shaped orbit and sluggish rotation, the Sun appears to rise briefly, set, and rise again from some parts of the planet’s surface.
+      ",
+      "info3": "Mercury is the fastest planet traveling at 29 miles per second. It has a rocky composition, also known as a terrestrial planet with a solid, cratered surface, much like the Earth’s moon.
+      ",
+      "info4": "Mercury’s thin atmosphere., or exosphere, is composed mostly of Oxygen (O2), Sodium (Na), hydrogen (H2), helium (He) and potassium(K)",
+      "diameter": 4879,
+      "orbit": 88,
+      "rotation": 1408,
+      "moons": 0,
+      "temp": 1,
+      "link": "",   },
+   {
+      "name": "Venus",
+      "info1": "Venus is the second planet from the Sun and is Earth’s closest neighbor often being called its twin due to similar size and density. Other than this the two cannot be any different with the thick, toxic atmosphere filled with carbon dioxide perpetually shrouding the planet in thick, yellowish clouds of sulfuric acid that trap heat causing the surface temperature to soar to approximately 900 degree Fahrenheit, or enough to melt lead.",
+      "info2": "The rusty colored surface is peppered with intensely crunched mountains and thousands of large volcanoes with scientists theorizing that some are still active.",
+      "info3": "The air pressure on Venus is more than 90 times that of Earth which is similar to being a mile below the ocean.",
+      "info4": "The most unique trait of Venus is that unlike the other planets of the solar system Venus rotates backward. This means that the Sun rises in the West and sets in the East.",      
+      "diameter": 12104,
+      "orbit": 225,
+      "rotation": 5832,
+      "moons": 0,
+      "temp": 646,
+      "link": "",
+   },
+   {
+      "name": "Mars",
+      "info1": "Mars is the fourth planet from the Sun and one of the most explored bodies in our solar system being the only planet to have rovers sent from Earth too explore the cold, desert world.",
+      "info2": "Described as a dynamic planet it has seasons, polar ice caps, canyons, extinct volcanoes and evidence that it was even more active in the past. NASA currently has two rovers (Curiosity and Perseverance), one lander (InSight), and one helicopter (Ingenuity) exploring the surface of Mars.",
+      "info3": "Often the center of many SciFi novels and movies Mars is seen as a potential second home for future human civilizations, however at current the surface is unable to support life, there are ongoing missions determining future potential for life.",
+      "info4": "Mars is commonly known as the Red Planet because iron minerals in the Martian soil oxidize, or rust, causing the soil and atmosphere to look red.",
+      "diameter": 6779,
+      "orbit": 365,
+      "rotation": 24,
+      "moons": "info",
+      "temp": 1,
+      "link": "",
+   },
+   {
+      "name": "Jupiter",
+      "info1": "When Galileo Galilei first found Jupiter’s moons beyond Earth in 1610 the way we see the universe changed forever. The fifth furthest planet from the Sun, Jupiter is by far the largest planet in the solar system, more than twice as massive as all the other planets combined.",
+      "info2": "The familiar stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. The iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+      "info3": "NASA’s, Juno orbiter, is currently exploring this giant world and recently celebrated 50 orbits around the planet. ",
+      "info4": "Like the other giant planets in the solar system, it was discovered that Jupiter has a faint ring system around the planet in addition to the more than 75 moons.",
+      "diameter": 139820,
+      "orbit": 4333,
+      "rotation": 10,
+      "moons": 75,
+      "temp": -110,
+      "link": "",
+   },
+   {
+      "name": "Saturn",
+      "info1": "Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with thousands of beautiful ringlets, Saturn is unique among the planets. It is not the only planet to have rings - made of chunks of ice and rock - but none are as spectacular or as complicated as Saturn’s.",
+      "info2": "Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium. On face value it does not have a solid surface like Earth however it may have a solid core somewhere inside it.",
+      "info3": "Saturn has 53 known moons with an additional 29 moons awaiting confirmation of their discovery which can be thought of as a mini solar system.",
+      "info4": "Few missions have visited Saturn: Pioneer 11 and Voyagers 1 and 2 flew by, but Cassini orbited Saturn 294 times from 2004 to 2017 before intentionally being vaporized in Saturn’s atmosphere leaving two tonnes of mass from Earth.",
+      "diameter": 116460,
+      "orbit": 10759,
+      "rotation": 11,
+      "moons": 53,
+      "temp": -140,
+      "link": "",
+   },
+   {
+      "name": "Uranus",
+      "info1": "Uranus is the seventh planet from the Sun, and has the third largest diameter in our solar system. It was the first planet found with the aid of a telescope in 1891 by astronomer William Herschel, although initially it was thought to be a comet or star and was not recognized as a planet until two years later",
+      "info2": "Like Neptune, Uranus is an ice giant. Most of its mass is a hot, dense fluid of “icy” materials, water, methane and ammonia, above a small rocky core. The atmosphere is made mostly of molecular hydrogen and atomic helium, with a small amount of methane.",
+      "info3": "There are 27 known moons orbiting Uranus and they are all named after characters from the works of William Shakespeare and Alexander Pope. In addition to this there are 13 known rings ranging from narrow, dark rings to wider, brighter rings.",
+      "info4": "Like Venus, Uranus rotates east to west but is unique in that it rotates on its side. Much of the planet remains a mystery as Voyager 2 is the only spacecraft to fly by it but none have orbited it.",
+      "diameter": 50724,
+      "orbit": 30687,
+      "rotation": 17,
+      "moons": 127,
+      "temp": -195,
+      "link": "",
+   },
+   {
+      "name": "Neptune",
+      "info1": "Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system. In fact, at 30 times as far from the Sun as Earth, Neptune is the only planet you cannot see with the naked eye. It was first predicted to exist by mathematical calculations in 1846.",
+      "info2": "Neptune is an “Ice Giant.” Most of its mass is a hot, dense fluid of “icy” materials, water, methane and ammonia, above a small rocky core. The atmosphere is made up mostly of molecular hydrogen, atomic helium and methane.",
+      "info3": "There are 14 known moons which are named after sea goods and nymphs in Greek mythology. In addition, Neptune has at least five main rings and four more ring arcs, which are clumps of dust and debris likely formed by the gravity of a nearby moon.",
+      "info4": "Interestingly, because of Pluto’s elliptical orbit, Pluto is sometimes closer to the Sun, and Earth, then Neptune is.",
+      "diameter": 49244,
+      "orbit": 60190,
+      "rotation": 16,
+      "moons": 14,
+      "temp": -200,
+      "link": "",
+   }
+];

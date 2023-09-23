@@ -8,10 +8,80 @@ body {
     width: 100vw;
     height: 100vh;
     background: black;
-    display: ;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.full-width {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.planet-modal {
+    width: 90vw;
+    height: 95vh;
+    background: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px;
+}
+
+
+
+.top-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.planet-image-container {
+    width: 50%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#planet-image {
+    height: 100%;
+    width: 100%;
+}
+
+.planet-info-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+} 
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.stat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.757);
+    padding: 50px
 }
 
 
@@ -24,6 +94,25 @@ body {
     display: none
 }
 
+.planet-trail {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: white;
+    animation: trailfade 1s linear; 
+    animation-iteration-count: 1
+}
+
+@keyframes trailfade {
+    
+    100% {
+        opacity: 0%;
+        width: 0.5px;
+        height: 0.5px;
+    }
+  }
+
 
 
 .star {
@@ -32,7 +121,11 @@ body {
     position: absolute;
     height: 20px;
     width: 20px;
+    animation: movingStar 100s linear; 
+    animation-iteration-count: 1
 }
+
+
 
 .star-map {
     width: 100%;
@@ -91,7 +184,7 @@ body {
 
 .planet {
     border-radius: 50%;
-    z-index: 1;
+    z-index: 5;
     overflow: hidden;
     transform: rotate(110deg);
 }
@@ -135,11 +228,13 @@ body {
     width: 100%;
     height: 100%;
     box-shadow: inset .5vw 0px 0 0px #00000083;
+    z-index: 8
 }
 
 .venus-rotate {
     height: 12vw;
     width: 12vw;
+    
 } 
 
 
@@ -153,7 +248,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* display: none */
+    
+}
+
+#earth-shadow {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0.7vw 0px 0 0px #00000083;
 }
 
 .earth-rotate {
@@ -271,6 +372,7 @@ body {
 .uranus-rotate {
     height: 67vw;
     width: 67vw;
+    z-index: 2
 } 
 
 #neptune {
@@ -290,12 +392,16 @@ body {
 .neptune-rotate {
     height: 75vw;
     width: 75vw;
-    
+    z-index: 1
 } 
 
 
 .display-none {
     display: none;
+}
+
+.hidden {
+    display: none
 }
 
 
