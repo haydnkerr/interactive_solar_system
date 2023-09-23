@@ -30,23 +30,30 @@
     </section>
     <div class="hidden full-width">
         <div class="planet-modal">
+            
             <div class="top-container">
-                <div class="planet-image-container">
-                    <img id="planet-image">
+                <div class="close-btn">
+                    <h1>X</h1>
                 </div>
-                <div class="planet-info-container">
-                    <h1 id="planet-name">Jupiter</h1>
-                    <p class="planet-info" id="planet-info-one">
-                    </p>
-                    <p class="planet-info" id="planet-info-two">
-                        
-                    </p>
-                    <p class="planet-info" id="planet-info-three"> 
-                        
-                    </p>
-                    <p class="planet-info" id="planet-info-four">
-                    </p>
+                <div class="flex-row">
+                    <div class="planet-image-container">
+                        <img id="planet-image">
+                    </div>
+                    <div class="planet-info-container">
+                        <h1 id="planet-name">Jupiter</h1>
+                        <p class="planet-info" id="planet-info-one">
+                        </p>
+                        <p class="planet-info" id="planet-info-two">
+                            
+                        </p>
+                        <p class="planet-info" id="planet-info-three"> 
+                            
+                        </p>
+                        <p class="planet-info" id="planet-info-four">
+                        </p>
+                    </div>
                 </div>
+                
             </div>
 
             <div class="bottom-container">
@@ -261,7 +268,7 @@
 
 
         /* =============== Initial Function for animating orbits =================== */
-        window.addEventListener('load', pauseOrbit);
+        window.addEventListener('load', fastOrbit);
 
         /* ===================== Function for Different Orbit Speeds/Types ================ */
         function realisticOrbit() {
@@ -500,6 +507,7 @@
 
 
         let n = 0;
+        let modalOpen = false;
 
 
         earthShadow.addEventListener("click", earthInteraction);
@@ -510,6 +518,15 @@
         saturn.addEventListener('click', saturnInteraction);
         uranus.addEventListener('click', uranusInteraction);
         neptune.addEventListener('click', neptuneInteraction);
+
+        window.addEventListener('click', function() {
+            setTimeout(function() {
+                if (modalOpen == true) {
+                planetModal.classList.add("hidden");
+                n = 0;
+                modalOpen = false;
+            }}, 10)
+            });
 
         
         function mercuryInteraction() {
@@ -565,7 +582,8 @@
             planetImage.src = planets[n].image;
             n = 0
             console.log(n)
-            
+            setTimeout(function() {
+                modalOpen = true }, 100)
         }
 
 

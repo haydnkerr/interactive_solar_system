@@ -35,13 +35,23 @@ body {
     padding: 50px;
 }
 
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 
 
 .top-container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    
+}
+
+.flex-row {
+    display: flex;
 }
 
 .planet-image-container {
