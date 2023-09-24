@@ -58,24 +58,24 @@
 
             <div class="bottom-container">
                 <div class="stat-box">
-                    <h2>Diameter</h2>
-                    <h3 id="planet-diameter"></h3>
+                    <h4>Diameter</h4>
+                    <h2 id="planet-diameter"></h2>
                 </div>
                 <div class="stat-box">
-                    <h2>Rotation</h2>
-                    <h3 id="planet-rotation"></h3>
+                    <h4>Rotation</h4>
+                    <h2 id="planet-rotation"></h2>
                 </div>
                 <div class="stat-box">
-                    <h2>Orbit</h2>
-                    <h3 id="planet-orbit"></h3>
+                    <h4>Orbit</h4>
+                    <h2 id="planet-orbit"></h2>
                 </div>
                 <div class="stat-box">
-                    <h2>Moons</h2>
-                    <h3 id="planet-moons"></h3>
+                    <h4>Moons</h4>
+                    <h2 id="planet-moons"></h2>
                 </div>
                 <div class="stat-box">
-                    <h2>Temp</h2>
-                    <h3 id="planet-temp"></h3>
+                    <h4>Temperature</h4>
+                    <h2 id="planet-temp"></h2>
                 </div>
             </div>
         </div>
@@ -176,6 +176,18 @@
         </div>
     </div>
 
+    <section class="orbit-controls-container">
+        <div class="orbit-control" id="pause-orbit">
+            <h2>Pause</h2>
+        </div>
+        <div class="orbit-control active-orbit" id="normal-orbit">
+            <h2>Normal</h2>
+        </div>
+        <div class="orbit-control" id="realistic-orbit">
+            <h2>Realistic</h2>
+        </div>
+    </section>
+
    
 
     
@@ -246,16 +258,14 @@
 
 
 
-        let slideSpeed = 8;
-        let rotationSpeed = 16;
-
         /* =========== Setting Up Landing Page ====================== */
         /* =========== Array of stars with randomized position, size and opacity  ====================== */
-        for (let i = 0; i < 1500; i++) {
+        for (let i = 0; i < 1000; i++) {
             let star = document.createElement('span');
             let randomSize = Math.ceil((Math.random() * 4));
             let width = window.innerWidth;
             let starPos = (Math.random() * width);
+            let randomSpeed =  Math.floor((Math.random() * 100) + 100);
             star.classList.add('star');
             star.style.opacity = (Math.random());
             star.style.top = (Math.random() * 100) + '%';
@@ -263,14 +273,116 @@
             star.style.width = randomSize + 'px';
             star.style.height = randomSize + 'px';
             stars.appendChild(star);
+            star.style.animation = `cometMoveRight ${randomSpeed}s linear`;
+            console.log(randomSpeed)
+        }
+
+        for (let i = 0; i < 1000; i++) {
+        let star = document.createElement('span');
+            let randomSize = Math.ceil((Math.random() * 4));
+            let width = window.innerWidth;
+            let starPos = (Math.random() * width) * -1;
+            let randomSpeed = Math.floor((Math.random()*50) + 100);
+            star.classList.add('star');
+            star.style.opacity = (Math.random());
+            star.style.top = (Math.random() * 100) + '%';
+            star.style.left = starPos + 'px';
+            star.style.width = randomSize + 'px';
+            star.style.height = randomSize + 'px';
+            stars.appendChild(star);
+            star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
+        }
+
+        /* ============== Shooting Star ================ */
+
+        setInterval(shootingStarLeft, 10000);
+        // setInterval(shootingStarRight, 100);
+
+        // function shootingStarRight() {
+        //     let comet = document.createElement('span');
+        //     let randomSpeed = (Math.random() * 3);
+        //     comet.classList.add('comet');
+        //     cometXPos = -10;
+        //     cometYPos = (Math.random() * 800);
+        //     comet.style.left = cometXPos + "px";
+        //     comet.style.top = cometYPos + "px";
+        //     stars.appendChild(comet)
+        //     console.log(cometYPos)
+        // }
+
+        // function shootingStarRight() {
+        //     let star = document.createElement('span');
+        //     let randomSize = Math.ceil((Math.random() * 4));
+        //     let width = window.innerWidth;
+        //     let starPos = (Math.random() * width) * -1;
+        //     let randomSpeed = Math.floor((Math.random()*50) + 100);
+        //     star.classList.add('star');
+        //     star.style.opacity = (Math.random());
+        //     star.style.top = (Math.random() * 100) + '%';
+        //     star.style.left = starPos + 'px';
+        //     star.style.width = randomSize + 'px';
+        //     star.style.height = randomSize + 'px';
+        //     stars.appendChild(star);
+        //     star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
+        // }
+
+        function shootingStarLeft() {
+            let comet = document.createElement('span');
+            let randomSpeed = (Math.random() * 2);
+            comet.classList.add('asteroid');
+            cometXPos = 105;
+            cometYPos = (Math.random() * 800);
+            comet.style.left = cometXPos + "vw";
+            comet.style.top = cometYPos + "px";
+            stars.appendChild(comet)
+            console.log(cometYPos)
         }
 
 
 
         /* =============== Initial Function for animating orbits =================== */
-        window.addEventListener('load', fastOrbit);
+        window.addEventListener('load', orbit);
+
+        /* ========== orbit Controls =============== */
+        let currentOrbit = 1;
+        let slideSpeed = 6;
+        let rotationSpeed = 12;
+        let pauseOrbitBtn = document.getElementById('pause-orbit')
+        let normalOrbitBtn = document.getElementById('normal-orbit')
+        let realisticOrbitBtn = document.getElementById('realistic-orbit')
+
+        pauseOrbitBtn.addEventListener("click",pauseBtn);
+        normalOrbitBtn.addEventListener("click",normalBtn);
+        realisticOrbitBtn.addEventListener("click",realisticBtn);
+
+
+        function pauseBtn() {
+            slideSpeed = 0;
+            rotationSpeed = 0;
+            orbit();
+            pauseOrbitBtn.classList.add('active-orbit')
+            normalOrbitBtn.classList.remove('active-orbit')
+            realisticOrbitBtn.classList.remove('active-orbit')
+        }
+        function normalBtn() {
+            slideSpeed = 6;
+            rotationSpeed = 12;
+            orbit();
+            pauseOrbitBtn.classList.remove('active-orbit')
+            normalOrbitBtn.classList.add('active-orbit')
+            realisticOrbitBtn.classList.remove('active-orbit')
+        }
+        function realisticBtn() {
+            slideSpeed = 6;
+            rotationSpeed = 12;
+            realisticOrbit();
+            pauseOrbitBtn.classList.remove('active-orbit')
+            normalOrbitBtn.classList.remove('active-orbit')
+            realisticOrbitBtn.classList.add('active-orbit')
+        }
 
         /* ===================== Function for Different Orbit Speeds/Types ================ */
+
         function realisticOrbit() {
             mercurySlide.style.animation = `slide ${slideSpeed * 0.24}s ease-in-out infinite alternate`;
             venusSlide.style.animation = `slide ${slideSpeed * 0.62}s ease-in-out infinite alternate`;
@@ -289,27 +401,29 @@
             saturnRotate.style.animation = `rotate ${rotationSpeed * 29}s linear infinite`;
             uranusRotate.style.animation = `rotate ${rotationSpeed * 84}s linear infinite`;
             neptuneRotate.style.animation = `rotate ${rotationSpeed * 164}s linear infinite`;
+            
+            
         }
 
-        function normalOrbit() {
-            mercurySlide.style.animation = `slide ${slideSpeed * 0.5}s ease-in-out infinite alternate`;
-            venusSlide.style.animation = `slide ${slideSpeed * 0.75}s ease-in-out infinite alternate`;
-            earthSlide.style.animation = `slide ${slideSpeed}s ease-in-out infinite alternate`;
-            marsSlide.style.animation = `slide ${slideSpeed * 1.9}s ease-in-out infinite alternate`;
-            jupiterSlide.style.animation = `slide ${slideSpeed * 3}s ease-in-out infinite alternate`;
-            saturnSlide.style.animation = `slide ${slideSpeed * 5}s ease-in-out infinite alternate`;
-            uranusSlide.style.animation = `slide ${slideSpeed * 7}s ease-in-out infinite alternate`;
-            neptuneSlide.style.animation = `slide ${slideSpeed * 10}s ease-in-out infinite alternate`;
+        // function normalOrbit() {
+        //     mercurySlide.style.animation = `slide ${slideSpeed * 0.5}s ease-in-out infinite alternate`;
+        //     venusSlide.style.animation = `slide ${slideSpeed * 0.75}s ease-in-out infinite alternate`;
+        //     earthSlide.style.animation = `slide ${slideSpeed}s ease-in-out infinite alternate`;
+        //     marsSlide.style.animation = `slide ${slideSpeed * 1.9}s ease-in-out infinite alternate`;
+        //     jupiterSlide.style.animation = `slide ${slideSpeed * 3}s ease-in-out infinite alternate`;
+        //     saturnSlide.style.animation = `slide ${slideSpeed * 5}s ease-in-out infinite alternate`;
+        //     uranusSlide.style.animation = `slide ${slideSpeed * 7}s ease-in-out infinite alternate`;
+        //     neptuneSlide.style.animation = `slide ${slideSpeed * 10}s ease-in-out infinite alternate`;
 
-            mercuryRotate.style.animation = `rotate ${rotationSpeed * 0.5}s linear infinite`;
-            venusRotate.style.animation = `rotate ${rotationSpeed * 0.75}s linear infinite`;
-            earthRotate.style.animation = `rotate ${rotationSpeed}s linear infinite`;
-            marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
-            jupiterRotate.style.animation = `rotate ${rotationSpeed * 3}s linear infinite`;
-            saturnRotate.style.animation = `rotate ${rotationSpeed * 5}s linear infinite`;
-            uranusRotate.style.animation = `rotate ${rotationSpeed * 7}s linear infinite`;
-            neptuneRotate.style.animation = `rotate ${rotationSpeed * 10}s linear infinite`;
-        }
+        //     mercuryRotate.style.animation = `rotate ${rotationSpeed * 0.5}s linear infinite`;
+        //     venusRotate.style.animation = `rotate ${rotationSpeed * 0.75}s linear infinite`;
+        //     earthRotate.style.animation = `rotate ${rotationSpeed}s linear infinite`;
+        //     marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
+        //     jupiterRotate.style.animation = `rotate ${rotationSpeed * 3}s linear infinite`;
+        //     saturnRotate.style.animation = `rotate ${rotationSpeed * 5}s linear infinite`;
+        //     uranusRotate.style.animation = `rotate ${rotationSpeed * 7}s linear infinite`;
+        //     neptuneRotate.style.animation = `rotate ${rotationSpeed * 10}s linear infinite`;
+        // }
 
         function pauseOrbit() {
             mercurySlide.style.animation = `slide 0s ease-in-out infinite alternate`;
@@ -331,9 +445,8 @@
             neptuneRotate.style.animation = `rotate 0s linear infinite`;
         }
 
-        function fastOrbit() {
-            slideSpeed = 6;
-            rotationSpeed = 12;
+        function orbit() {
+            
             mercurySlide.style.animation = `slide ${slideSpeed * 0.5}s ease-in-out infinite alternate`;
             venusSlide.style.animation = `slide ${slideSpeed * 0.75}s ease-in-out infinite alternate`;
             earthSlide.style.animation = `slide ${slideSpeed}s ease-in-out infinite alternate`;
