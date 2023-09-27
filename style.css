@@ -7,7 +7,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: black;
+    background: rgb(0, 1, 40);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -15,7 +15,9 @@ body {
 }
 
 h1 {
-    color: white
+    color: white;
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -35,7 +37,10 @@ h4 {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
 }
 
 header {
@@ -71,7 +76,7 @@ nav li:hover {
 .planet-modal {
     width: 90vw;
     height: 95vh;
-    background: rgb(0, 0, 0);
+
     color: white;
     display: flex;
     flex-direction: column;
@@ -82,9 +87,17 @@ nav li:hover {
 }
 
 .close-btn {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 15px;;
+}
+
+.close-btn p{
+    font-size: 40px;
+    color: black;
 }
 
 
@@ -123,6 +136,12 @@ nav li:hover {
     align-items: flex-start;
 } 
 
+.planet-info-container p {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    color: rgba(240, 248, 255, 0.9);
+
+}
 .bottom-container {
     display: flex;
     justify-content: space-between;
@@ -143,14 +162,16 @@ nav li:hover {
 
 
 #sun {
-    background: orangered;
+    /* background: #fde025; */
+    background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
     width: 100px;
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: 46vh;
+    top: 45vh;
     left: 48vw;
     animation: index 9s linear infinite; 
+    box-shadow: 0px 0px 15px 5px #fde025;
 }
 
 .planet-trail {
@@ -241,7 +262,8 @@ nav li:hover {
 }
 
 .active-orbit {
-    background: rgb(94, 201, 255);
+    /* background: rgb(94, 201, 255); */
+    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255))
 }
 
 .modal {
@@ -258,7 +280,7 @@ nav li:hover {
     left: 25vw;
     z-index: 15;
     color: white;
-    border: 0.5px solid white;
+    border: 0.25px solid rgba(255, 255, 255, 0.394);
     display: flex;
 }
 
@@ -289,10 +311,10 @@ nav li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation-name: slide;
+    /* animation-name: slide;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -335,7 +357,7 @@ nav li:hover {
 #mercury-shadow {
     width: 100%;
     height: 100%;
-    box-shadow: inset 0.5vw 0px 0 0px #00000083;
+    box-shadow: inset 0.4vw 0px 0 0px #00000083;
 }
 
 .mercury-rotate {
@@ -351,19 +373,20 @@ nav li:hover {
     background-image: url("./assets/planets/venus.png");
     background-repeat: no-repeat;
     background-size: cover;
+    position: absolute;
+    z-index: 41;
 }
 
 #venus-shadow {
     width: 100%;
     height: 100%;
-    box-shadow: inset .5vw 0px 0 0px #00000083;
+    box-shadow: inset .4vw 0px 0 0px #00000083;
     z-index: 8
 }
 
 .venus-rotate {
     height: 12vw;
     width: 12vw;
-    
 } 
 
 
@@ -383,7 +406,7 @@ nav li:hover {
 #earth-shadow {
     width: 100%;
     height: 100%;
-    box-shadow: inset 0.7vw 0px 0 0px #00000083;
+    box-shadow: inset 0.6vw 0px 0 0px #00000083;
 }
 
 .earth-rotate {
@@ -439,19 +462,24 @@ nav li:hover {
 
 
 #saturn-shadow {
-    
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 3vw 0px 0 0px #00000083;
-
+    width: 110%;
+    height: 110%;
+    box-shadow: inset 3vw 0px 0 -5px #00000083;
+    position: absolute;
+    top: 0;
 }
 
 #saturn {
     height: 7vw;
-    width: 9vw;
-    background-image: url("./assets/planets/saturn.png");
+    width: 10vw;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: visible;
+}
+
+#saturn img {
+    width: 100%;
+    height: 100%;
 }
 
 .saturn-rotate {
@@ -499,8 +527,8 @@ nav li:hover {
 }
 
 .uranus-rotate {
-    height: 67vw;
-    width: 67vw;
+    height: 70vw;
+    width: 70vw;
     z-index: 2
 } 
 
@@ -515,12 +543,12 @@ nav li:hover {
 #neptune-shadow {
     width: 100%;
     height: 100%;
-    box-shadow: inset 1vw 0px 0 0px #00000083;
+    box-shadow: inset 0.8vw 0px 0 0px #00000083;
 }
 
 .neptune-rotate {
-    height: 75vw;
-    width: 75vw;
+    height: 85vw;
+    width: 85vw;
     z-index: 1
 } 
 
@@ -544,15 +572,30 @@ nav li:hover {
 
 @keyframes slide {
     
-    to {
+    
+    100% {
         transform: translateX(4vw) translateY(-2vw);
 
     }
 
   }
+
+
   
 
   @keyframes rotate {
+    
+    /*  10% {
+        transform: rotate(-10deg);
+    } 
+
+    5% {
+        transform: rotate(40deg);
+    }
+    
+    40% {
+        transform: rotate(70deg);
+    } */
     
     100% {
         transform: rotate(250deg);
@@ -575,7 +618,7 @@ nav li:hover {
 
   @keyframes index {
     0% {
-        z-index: 40
+        z-index: 20
     }
 
     50% {
