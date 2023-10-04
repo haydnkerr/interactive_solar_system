@@ -4,6 +4,44 @@
     box-sizing: border-box;
 }
 
+.info-toggle-container {
+    width: 300px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    margin-top: 25px;
+
+}
+
+.info-toggle {
+    display: flex;
+    background: none;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.info-toggle:hover {
+    cursor: pointer;
+}
+
+.fill-bar-container {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    justify-content: flex-start;
+}
+
+.fill-bar {
+    width: 50%;
+    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+    border-radius: 25px;
+    transform: translateY(-1px);
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -11,13 +49,18 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: 'Montserrat';
+}
+
+p {
+    font-family: 'Montserrat';
 }
 
 h1 {
     color: white;
     font-size: 2.5rem;
     text-transform: uppercase;
+    font-family: 'Montserrat';
 }
 
 h2 {
@@ -46,7 +89,7 @@ h4 {
 header {
     position: absolute;
     top: 0vh;
-    left: 0pvw;
+    left: 0vw;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -59,7 +102,7 @@ nav {
     display: flex;
     color: white;
     justify-content: flex-end;
-    width: 100%;
+    width: 50%;
 }
 
 nav li {
@@ -90,14 +133,15 @@ nav li:hover {
     position: absolute;
     top: 50px;
     right: 100px;
-    background-color: white;
-    border-radius: 50%;
-    padding: 10px 15px;;
 }
 
 .close-btn p{
     font-size: 40px;
-    color: black;
+    font-weight: 800;
+}
+
+.close-btn:hover {
+    cursor: pointer;
 }
 
 
@@ -300,7 +344,7 @@ nav li:hover {
 
 /* =========================== The Planets ========================== */
 .rotate {
-    background: none;
+    /* background: none; */
     animation-name: rotate;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -320,7 +364,7 @@ nav li:hover {
     left: 50%;
     height: 33px;
     width: 33px;
-    background: none;
+    /* background: none; */
     transform: translateX(-4vw) translateY(2vw);;
     z-index: 5;;
 }
