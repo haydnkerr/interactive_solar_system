@@ -5,12 +5,11 @@
 }
 
 .info-toggle-container {
-    width: 300px;
-    height: 50px;
+    width: 250px;
+    height: 40px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 25px;
-    margin-top: 25px;
-
+    /* padding: 20px */
 }
 
 .info-toggle {
@@ -20,6 +19,8 @@
     height: 100%;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 98;
     
 }
 
@@ -27,12 +28,18 @@
     cursor: pointer;
 }
 
+.info-toggle p {
+    font-weight: 600;
+}
+
 .fill-bar-container {
     display: flex;
-    width: 300px;
-    height: 50px;
+    width: 250px;
+    height: 40px;
     position: absolute;
     justify-content: flex-start;
+    z-index: 1;
+   
 }
 
 .fill-bar {
@@ -81,7 +88,7 @@ h4 {
     width: 100vw;
     height: 100vh;
     z-index: 50;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     top: 0;
     left: 0;
 }
@@ -92,7 +99,7 @@ header {
     left: 0vw;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items:center;
     z-index: 22;
     padding: 15px;
@@ -101,19 +108,59 @@ header {
 nav {
     display: flex;
     color: white;
-    justify-content: flex-end;
-    width: 50%;
+    justify-content: center;
 }
 
 nav li {
     margin-left: 50px;
     list-style-type: none;
-    
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.expand-btn {
+    width: 12px;
+    height: 7px;
+    margin-left: 5px;
+    transform: translateY(-3px);
 }
 
 nav li:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+
+/* .hidden-objects {
+    display: none;
+} */
+
+.objects-menu-container {
+    height: 20px; 
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.objects-menu-container:hover {
+    height: 150px
+}
+
+/* #moon-menu {
+    display: none;
+} */
+
+.earth-menu-container {
+    height: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.earth-menu-container:hover {
+    height: 50px;
+}
+
+.earth-menu-container:hover ~ .expand-btn {
+    transform: rotate(180deg);
 }
 
 .planet-modal {
@@ -132,12 +179,12 @@ nav li:hover {
 .close-btn {
     position: absolute;
     top: 50px;
-    right: 100px;
+    right: 50px;
 }
 
 .close-btn p{
     font-size: 40px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .close-btn:hover {
@@ -155,6 +202,7 @@ nav li:hover {
 
 .flex-row {
     display: flex;
+    align-items: center;
 }
 
 .planet-image-container {
@@ -173,19 +221,25 @@ nav li:hover {
 
 .planet-info-container {
     width: 50%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    /* padding: 50px 0px; */
 } 
 
 .planet-info-container p {
-    font-family: sans-serif;
-    font-size: 1.1rem;
+    font-family: 'montserrat';
+    font-weight: 300;
+    line-height: 22px;
+    font-size: 1rem;
     color: rgba(240, 248, 255, 0.9);
 
 }
+/* #planet-info-five {
+    margin-bottom: 50px;
+} */
 .bottom-container {
     display: flex;
     justify-content: space-between;
@@ -208,8 +262,8 @@ nav li:hover {
 #sun {
     /* background: #fde025; */
     background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
-    width: 100px;
-    height: 100px;
+    width: 7vw;
+    height: 7vw;
     border-radius: 50%;
     position: absolute;
     top: 45vh;
@@ -217,6 +271,8 @@ nav li:hover {
     animation: index 9s linear infinite; 
     box-shadow: 0px 0px 15px 5px #fde025;
 }
+
+
 
 .planet-trail {
     position: absolute;
@@ -376,9 +432,9 @@ nav li:hover {
     transform: rotate(110deg);
 }
 
-.planet:hover {
+/* .planet:hover {
     box-shadow: 0px 0px 15px 5px #fde025;
-}
+} */
 
 .shadow-rotate {
     border-radius: 50%;
@@ -506,12 +562,16 @@ nav li:hover {
 
 
 #saturn-shadow {
-    width: 110%;
-    height: 110%;
+    width: 7vw;
+    height: 7vw;
     box-shadow: inset 3vw 0px 0 -5px #00000083;
     position: absolute;
-    top: 0;
+    top: 0px;
+    right: 1.5vw;
 }
+
+
+
 
 #saturn {
     height: 7vw;
@@ -563,12 +623,28 @@ nav li:hover {
 
 
 #uranus {
-    width: 4vw;
-    height: 4vw;
-    background-image: url("./assets/planets/uranus.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 7vw;
+    height: 5vw;
+    overflow: visible;
 }
+
+#uranus img {
+    width: 100%;
+    height: 100%;
+}
+
+#uranus-shadow {
+    width: 5.2vw;
+    height: 5.2vw;
+    box-shadow: inset 2.8vw 0px 0 -17px #00000083;
+    position: absolute;
+    top: 0px;
+    right: 0.8vw;
+}
+
+/* #uranus-shadow:hover {
+    cursor: pointer;
+} */
 
 .uranus-rotate {
     height: 70vw;
@@ -595,6 +671,18 @@ nav li:hover {
     width: 85vw;
     z-index: 1
 } 
+
+.space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .display-none {
@@ -624,6 +712,25 @@ nav li:hover {
 
   }
 
+  @keyframse enlarge {
+    25% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.5);
+    }
+
+    
+    100% {
+        transform: scale(1);
+    }
+  }
+
 
   
 
@@ -635,9 +742,12 @@ nav li:hover {
 
     5% {
         transform: rotate(40deg);
-    }
+    } */
+
+
+
     
-    40% {
+    /*40% {
         transform: rotate(70deg);
     } */
     
