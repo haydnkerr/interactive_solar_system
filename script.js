@@ -677,6 +677,28 @@
                 link: "",
                 image: "./assets/planets/mercury.png"
             }
+            ,
+            {
+                name: "Astronauts",
+                info1: "<strong></strong>Weightlessness Changes Your Body**: Spending extended periods in space can lead to a range of physiological changes. These include muscle and bone density loss, fluid shifts, and changes in vision.",
+                info2: "<strong></strong>Vigorous Training**: Astronauts undergo rigorous training for years before they're selected for a mission. This includes physical fitness, technical skills, survival training, and simulations of space missions.",
+                info3: "<strong></strong>International Collaboration**: The International Space Station (ISS) is one of the most remarkable examples of international cooperation. It's a joint project involving space agencies from the United States, Russia, Europe, Japan, and Canada.",
+                info4: "<strong></strong>Space Food**: Astronauts eat specially prepared food that is packaged to last long periods and is easy to consume in a microgravity environment. Some dishes are dehydrated and need to be rehydrated before consumption.",
+                info5: "<strong></strong>Seeing Earth from Space**: Many astronauts report experiencing a profound sense of awe and a shift in perspective after seeing Earth from space. The 'Overview Effect' is a term used to describe this feeling of interconnectedness and environmental awareness.",
+                info6: "<strong></strong>Space Walks (EVA)**: Extravehicular Activity (EVA), or spacewalks, are one of the most challenging tasks for astronauts. They require extensive training and careful preparation to perform tasks outside the spacecraft or space station.",
+                info7: "<strong></strong>Longest Spaceflight**: The longest consecutive time spent in space by a single person is 437 days, a record held by Russian astronaut Valeri Polyakov. He spent this time aboard the Mir space station from 1994 to 1995.",
+                info8: "<strong></strong>*First Human in Space**: Yuri Gagarin, a Soviet cosmonaut, was the first human to journey into space. On April 12, 1961, he completed one orbit around Earth aboard the Vostok 1 spacecraft.",
+                info9: "<strong></strong>Astronaut Selection Criteria**: Besides technical expertise, astronauts are selected based on their ability to work well in a team, handle stress, and adapt to challenging situations. They also undergo extensive medical examinations.",
+                info10: "<strong></strong>Space Travel Age Range**: The age range for astronauts is quite varied. John Glenn, the oldest person to travel in space, was 77 when he flew on the Space Shuttle Discovery in 1998. The youngest astronaut, Gherman Titov, was only 25 years old when he orbited Earth in 1961.",
+                funFact: "Mercury has a crater named after Dr.Seuss",
+                diameter: "4,879 km",
+                orbit: "88 days",
+                rotation: "1,408 hours",
+                moons: "0",
+                temp: "167&deg;C",
+                link: "",
+                image: "./assets/planets/mercury.png"
+            }
         ];
 
         let planetModal = document.querySelector('.full-width')

@@ -19,6 +19,8 @@
         rel="stylesheet">
     <!-- <script href="script.js"></script>
     <link href="script.js"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Interactive Solar System</title>
 </head>
@@ -47,7 +49,11 @@
                     <li id="satellite-menu">Satellite</li>
                 </div>
             </div>
-            <li id="alien-menu">Alien</li>
+            <div class="explorers-menu-container">
+                <div class="display-flex"><li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png"></div>
+                <li id="astronaut-menu">Astronauts</li>
+                <li id="alien-menu">Aliens</li>
+            </div>
         </nav>
     </header>
 
@@ -151,7 +157,7 @@
 
 
 
-    <div class="slide neptune-slide">
+    <div  class="slide neptune-slide">
         <div class="rotate neptune-rotate" id="neptune-container">
             <div class="planet" id="neptune">
                 <div class="shadow-rotate" id="neptune-shadow">
