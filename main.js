@@ -3,6 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 
+
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -167,8 +168,15 @@ function moonInteraction() {
 
 let isAnimationRunning = true;
 
-let al = new THREE.AmbientLight(0xffffff, 4);
-    scene.add(al)
+// let al = new THREE.AmbientLight(0xffffff, 0.1);
+// scene.add(al)
+
+    let directionalLight = new THREE.DirectionalLight(0xffffff, 3); // Color, Intensity
+directionalLight.position.set(1, 1, 1); // Set the direction
+scene.add(directionalLight);
+
+// const hemisphereLight = new THREE.HemisphereLight(0x87cefa, 0xffffff, 0.6); // Sky color, Ground color, Intensity
+// scene.add(hemisphereLight);
 
 function populatePlanet() {
 
@@ -203,13 +211,16 @@ function populatePlanet() {
     let planetImageContainerReal = document.getElementById('planet-image-container')
     let renderer = new THREE.WebGLRenderer();
     renderer.setClearColor(0x000000, 0); // the default
-    renderer.setSize(900, 400);
+    renderer.setSize(window.innerWidth, window.innerHeight);
     planetImageContainerReal.appendChild(renderer.domElement);
-    camera.position.z = 2;
+    camera.position.z = 2.5;
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.antialias = true;
 
     let controls = new OrbitControls(camera, renderer.domElement);
 
-    
+
 
     let modalCloseBtn = document.getElementById('close-btn')
 
@@ -217,7 +228,7 @@ function populatePlanet() {
 
 
     function closeModal() {
-    
+
         isAnimationRunning = false; // Stop the animation when the modal is closed
     }
 
@@ -235,6 +246,8 @@ function populatePlanet() {
 
     animate();
 }
+
+
 
 
 
