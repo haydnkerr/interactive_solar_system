@@ -172,7 +172,7 @@ nav li:hover {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 50px;
+    padding: 50px 50px 0px 50px;
     z-index: 55;
 }
 
@@ -198,21 +198,26 @@ nav li:hover {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .flex-row {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .planet-image-container {
     width: 50%;
     height: 100%;
-    padding: 100px;
+    /* padding: 100px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
+
+
 
 #planet-image {
     height: 100%;
@@ -221,12 +226,22 @@ nav li:hover {
 
 .planet-info-container {
     width: 50%;
-    height: 90%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    /* align-items: flex-start; */
     /* padding: 50px 0px; */
+    padding-bottom: 30px;
+} 
+
+.planet-info-cont {
+    height: 100%;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 25px;
 } 
 
 .planet-info-container p {
@@ -268,7 +283,7 @@ nav li:hover {
     position: absolute;
     top: 45vh;
     left: 48vw;
-    animation: index 9s linear infinite; 
+    animation: index 11s linear infinite; 
     box-shadow: 0px 0px 15px 5px #fde025;
 }
 

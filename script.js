@@ -548,7 +548,7 @@
                 info1: "<strong>Earth's Only Natural Satellite:</strong> The Moon is the only natural satellite of Earth. It's about 1/6th the size of Earth.",
                 info2: "<strong>Close Neighbor:</strong> The Moon is relatively close to Earth, about 238,855 miles (384,400 kilometers) away on average.",
                 info3: "<strong>Tidally Locked:</strong> The Moon is tidally locked to Earth, which means it always shows the same face to our planet. This is why we only see one side of the Moon from Earth.",
-                info4: "<strong>*No Atmosphere:</strong> Unlike Earth, the Moon doesn't have an atmosphere. This means there's no air to breathe, and it also leads to extreme temperature differences between day and night.",
+                info4: "<strong>No Atmosphere:</strong> Unlike Earth, the Moon doesn't have an atmosphere. This means there's no air to breathe, and it also leads to extreme temperature differences between day and night.",
                 info5: "<strong>Moon Phases:</strong> The Moon goes through different phases during its orbit around Earth, including full moon, crescent moon, and new moon. These changes in appearance are due to the position of the Moon relative to the Sun and Earth.",
                 info6: "<strong>Gravity Differences:</strong> The gravity on the Moon is much weaker than on Earth. If you were on the Moon, you would weigh about 1/6th of what you do on Earth.",
                 info7: "<strong>Apollo Missions:</strong> Between 1969 and 1972, NASA's Apollo program sent astronauts to the Moon. The first manned mission, Apollo 11, resulted in Neil Armstrong and Buzz Aldrin becoming the first humans to walk on the Moon.",
@@ -723,9 +723,12 @@
 
         modalCloseBtn.addEventListener('click', closeModal);
 
+        let planetImageContainerReal = document.getElementById('planet-image-container')
+
         function closeModal() {
             planetModal.classList.add("hidden")
             n = 0;
+            planetImageContainerReal.removeChild(planetImageContainerReal.firstElementChild)
         }
 
 
@@ -856,7 +859,7 @@
             planetRotation.innerHTML = planets[n].rotation;
             planetMoons.innerHTML = planets[n].moons;
             planetTemp.innerHTML = planets[n].temp;
-            planetImage.src = planets[n].image;
+            // planetImage.src = planets[n].image;
             setTimeout(function () {
                 modalOpen = true
             }, 1000)
@@ -874,11 +877,14 @@
             planetRotation.innerHTML = planets[n].rotation;
             planetMoons.innerHTML = planets[n].moons;
             planetTemp.innerHTML = planets[n].temp;
-            planetImage.src = planets[n].image;
+            // planetImage.src = planets[n].image;
             setTimeout(function () {
                 modalOpen = true
             }, 1000)
         }
+
+
+        
 
 
 
