@@ -168,10 +168,10 @@ function moonInteraction() {
 
 let isAnimationRunning = true;
 
-// let al = new THREE.AmbientLight(0xffffff, 0.1);
-// scene.add(al)
+let al = new THREE.AmbientLight(0xffffff, 0.07);
+scene.add(al)
 
-    let directionalLight = new THREE.DirectionalLight(0xffffff, 3); // Color, Intensity
+    let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
 directionalLight.position.set(1, 1, 1); // Set the direction
 scene.add(directionalLight);
 
