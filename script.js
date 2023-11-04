@@ -759,9 +759,37 @@
         let childBtn = document.getElementById('child-toggle')
         let adultBtn = document.getElementById('adult-toggle')
         let fillBar = document.querySelector('.fill-bar-container')
+        let expandPlanetBtn = document.getElementById('expand-planet-btn')
+        let infoToggle = document.querySelector('.info-toggle')
+        let planetExpandCloseContainer = document.getElementById('planet-expand-close-btn')
+        let planetExpandCloseBtn = document.getElementById('planet-close-btn')
 
+
+        
+        expandPlanetBtn.addEventListener('click', expandPlanet)
         adultBtn.addEventListener('click', toggleAdult);
         childBtn.addEventListener('click', toggleChild);
+        planetExpandCloseBtn.addEventListener('click', closePlanet)
+
+        function expandPlanet() {
+            planetImageContainerReal.style.position = 'absolute'
+            planetImageContainerReal.style.height = '100vh'
+            planetImageContainerReal.style.width = '100vw'
+            planetImageContainerReal.style.left = '0'
+            planetImageContainerReal.style.top = '0'
+            planetImageContainerReal.style.backgroundImage =  'url("./assets/black-bg.png")';
+            infoToggle.classList.add('display-none')
+            planetExpandCloseContainer.classList.remove('display-none')
+        }
+
+        function closePlanet() {
+            infoToggle.classList.remove('display-none')
+            planetExpandCloseContainer.classList.add('display-none')
+            planetImageContainerReal.style.width = '50%';
+            planetImageContainerReal.style.height = '100%';
+            planetImageContainerReal.style.backgroundImage =  'none';
+            planetImageContainerReal.style.position = 'relative'
+        }
 
         function toggleAdult() {
             fillBar.style.justifyContent = 'flex-end';

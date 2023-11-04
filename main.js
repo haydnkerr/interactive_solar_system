@@ -77,7 +77,7 @@ let sun = document.getElementById('sun-menu');
 let moonImage = './assets/moon-real.glb';
 let earthImage = './assets/earth-real-2.glb';
 let sunImage = './assets/sun-real.glb';
-let mercuryImage = './assets/mercury-real.glb';
+let mercuryImage = './assets/mercury.glb';
 let venusImage = './assets/venus-real.glb';
 let marsImage = './assets/mars-real.glb';
 let jupiterImage = './assets/jupiter-real.glb';
@@ -194,13 +194,13 @@ function populatePlanet() {
             scene.add(planetDisplay);
 
         },
-        // called while loading is progressing
+        
         function (xhr) {
 
             console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 
         },
-        // called when loading has errors
+        
         function (error) {
 
             console.log('An error happened');
@@ -229,13 +229,13 @@ function populatePlanet() {
 
     function closeModal() {
 
-        isAnimationRunning = false; // Stop the animation when the modal is closed
+        isAnimationRunning = false; 
     }
 
 
 
     function animate() {
-        if (isAnimationRunning) { // Check the flag before continuing the animation
+        if (isAnimationRunning) { 
             requestAnimationFrame(animate);
             planetDisplay.rotation.y += 0.003;
             renderer.render(scene, camera);

@@ -38,7 +38,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="">
         <nav>
             <li id="sun-menu">Sun</li>
             <li id="mercury-menu">Mercury</li>
@@ -84,6 +84,10 @@
             </div>
         </div>
     </section>
+
+    <div class="planet-expand-close-btn display-none" id="planet-expand-close-btn">
+        <p id="planet-close-btn">X</p>
+    </div>
     <div class="hidden full-width">
         <div class="planet-modal">
 
@@ -93,7 +97,7 @@
                 </div>
                 <div class="flex-row">
                     <div class="planet-image-container" id="planet-image-container">
-                        <!-- <img id="planet-image"> -->
+                        
                     </div>
                     <div class="planet-info-container space-between">
                         <div class="planet-info-cont">
@@ -117,16 +121,24 @@
                             </p>
                         </div>
 
-                        <div class="info-toggle-container">
-                            <div class="fill-bar-container">
-                                <div class="fill-bar"></div>
+                        <div class="info-toggle">
+                            <button id="expand-planet-btn">Expand Planet</button>
+                            <div class="info-toggle-container ">
+                            
+                                <div class="fill-bar-container">
+                                    <div class="fill-bar"></div>
+                                </div>
+                                <div class="toggle-container">
+                                    
+                                        <p id="child-toggle">Page 1</p>
+                                    <p id="adult-toggle">Page 2</p>
+                                    
+                                </div>
+    
                             </div>
-                            <div class="info-toggle">
-                                <p id="child-toggle">Page 1</p>
-                                <p id="adult-toggle">Page 2</p>
-                            </div>
-
                         </div>
+
+                        
                     </div>
                 </div>
 
