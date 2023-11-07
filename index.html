@@ -28,11 +28,11 @@
           }
         }
       </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
-       
+
 
     <title>Interactive Solar System</title>
 </head>
@@ -44,7 +44,9 @@
             <li id="mercury-menu">Mercury</li>
             <li id="venus-menu">Venus</li>
             <div class="earth-menu-container">
-                <div class="display-flex"><li id="earth-menu">Earth</li><img class="expand-btn" src="./assets/expand-btn.png"></div>
+                <div class="display-flex">
+                    <li id="earth-menu">Earth</li><img class="expand-btn" src="./assets/expand-btn.png">
+                </div>
                 <li id="moon-menu">Moon</li>
             </div>
             <li id="mars-menu">Mars</li>
@@ -53,7 +55,9 @@
             <li id="uranus-menu">Uranus</li>
             <li id="neptune-menu">Neptune</li>
             <div class="objects-menu-container">
-                <div class="display-flex"><li id="objects-menu">Objects</li><img class="expand-btn" src="./assets/expand-btn.png"></div>
+                <div class="display-flex">
+                    <li id="objects-menu">Objects</li><img class="expand-btn" src="./assets/expand-btn.png">
+                </div>
                 <div class="hidden-objects">
                     <li id="asteroid-menu">Asteroid</li>
                     <li id="comet-menu">Comet</li>
@@ -62,7 +66,9 @@
                 </div>
             </div>
             <div class="explorers-menu-container">
-                <div class="display-flex"><li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png"></div>
+                <div class="display-flex">
+                    <li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png">
+                </div>
                 <li id="astronaut-menu">Astronauts</li>
                 <li id="alien-menu">Aliens</li>
             </div>
@@ -97,7 +103,7 @@
                 </div>
                 <div class="flex-row">
                     <div class="planet-image-container" id="planet-image-container">
-                        
+
                     </div>
                     <div class="planet-info-container space-between">
                         <div class="planet-info-cont">
@@ -122,8 +128,8 @@
                         </div>
 
                         <div class="info-toggle">
-                            <button id="expand-planet-btn">Expand Planet</button>
-                            <div class="info-toggle-container ">
+                            <button class="btn-primary" id="expand-planet-btn">Expand Planet</button>
+                            <!-- <div class="info-toggle-container ">
                             
                                 <div class="fill-bar-container">
                                     <div class="fill-bar"></div>
@@ -135,10 +141,17 @@
                                     
                                 </div>
     
+                            </div> -->
+
+                            <div class="toggle-container">
+
+                                <p class="page-toggle active-page" id="child-toggle">Page 1</p>
+                                <p class="page-toggle" id="adult-toggle">Page 2</p>
+
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </div>
 
@@ -181,7 +194,7 @@
 
 
 
-    <div  class="slide neptune-slide">
+    <div class="slide neptune-slide">
         <div class="rotate neptune-rotate" id="neptune-container">
             <div class="planet" id="neptune">
                 <div class="shadow-rotate" id="neptune-shadow">
@@ -292,10 +305,10 @@
     <script src="script.js"></script>
 
 
-      
 
 
-       
+
+
 </body>
 
 </html>

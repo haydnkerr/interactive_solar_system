@@ -25,6 +25,7 @@
         let saturn = document.getElementById('saturn');
         let neptune = document.getElementById('neptune');
         let uranus = document.getElementById('uranus');
+        let sun = document.getElementById('sun')
 
 
 
@@ -725,11 +726,7 @@
 
         let planetImageContainerReal = document.getElementById('planet-image-container')
 
-        function closeModal() {
-            planetModal.classList.add("hidden")
-            n = 0;
-            planetImageContainerReal.removeChild(planetImageContainerReal.firstElementChild)
-        }
+       
 
 
         earth.addEventListener("click", earthInteraction);
@@ -740,6 +737,7 @@
         saturn.addEventListener('click', saturnInteraction);
         uranus.addEventListener('click', uranusInteraction);
         neptune.addEventListener('click', neptuneInteraction);
+        sun.addEventListener('click', sunInteraction);
 
         earthMenuBtn.addEventListener("click", earthInteraction);
         mercuryMenuBtn.addEventListener('click', mercuryInteraction);
@@ -763,6 +761,15 @@
         let infoToggle = document.querySelector('.info-toggle')
         let planetExpandCloseContainer = document.getElementById('planet-expand-close-btn')
         let planetExpandCloseBtn = document.getElementById('planet-close-btn')
+
+        function closeModal() {
+            childBtn.classList.add('active-page')
+            adultBtn.classList.remove('active-page')
+            planetModal.classList.add("hidden")
+            n = 0;
+            planetImageContainerReal.removeChild(planetImageContainerReal.firstElementChild)
+            
+        }
 
 
         
@@ -789,15 +796,18 @@
             planetImageContainerReal.style.height = '100%';
             planetImageContainerReal.style.backgroundImage =  'none';
             planetImageContainerReal.style.position = 'relative'
+            
         }
 
         function toggleAdult() {
-            fillBar.style.justifyContent = 'flex-end';
+            adultBtn.classList.add('active-page')
+            childBtn.classList.remove('active-page')
             populateAdultInfo();
         }
 
         function toggleChild() {
-            fillBar.style.justifyContent = 'flex-start';
+            childBtn.classList.add('active-page')
+            adultBtn.classList.remove('active-page')
             populatePlanet();
         }
 

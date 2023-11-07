@@ -63,16 +63,32 @@ let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 // Instantiate a loader
 let loader = new GLTFLoader();
 
-let mercury = document.getElementById('mercury-menu');
-let venus = document.getElementById('venus-menu');
-let earth = document.getElementById('earth-menu');
-let mars = document.getElementById('mars-menu');
-let jupiter = document.getElementById('jupiter-menu');
-let saturn = document.getElementById('saturn-menu');
-let neptune = document.getElementById('neptune-menu');
-let uranus = document.getElementById('uranus-menu');
-let moon = document.getElementById('moon-menu');
-let sun = document.getElementById('sun-menu');
+let mercuryMenuBtn = document.getElementById("mercury-menu")
+let venusMenuBtn = document.getElementById("venus-menu")
+let earthMenuBtn = document.getElementById("earth-menu")
+let marsMenuBtn = document.getElementById("mars-menu")
+let jupiterMenuBtn = document.getElementById("jupiter-menu")
+let saturnMenuBtn = document.getElementById("saturn-menu")
+let uranusMenuBtn = document.getElementById("uranus-menu")
+let neptuneMenuBtn = document.getElementById("neptune-menu")
+let sunMenuBtn = document.getElementById("sun-menu")
+let moonMenuBtn = document.getElementById("moon-menu")
+let cometMenuBtn = document.getElementById("comet-menu")
+let meteorMenuBtn = document.getElementById("meteor-menu")
+let satelliteMenuBtn = document.getElementById("satellite-menu")
+let alienMenuBtn = document.getElementById("alien-menu")
+
+
+/* =========================== Individual Planets ===================== */
+let mercury = document.getElementById('mercury');
+let venus = document.getElementById('venus');
+let earth = document.getElementById('earth');
+let mars = document.getElementById('mars');
+let jupiter = document.getElementById('jupiter');
+let saturn = document.getElementById('saturn');
+let neptune = document.getElementById('neptune');
+let uranus = document.getElementById('uranus');
+let sun = document.getElementById('sun')
 
 let moonImage = './assets/moon-real.glb';
 let earthImage = './assets/earth-real-2.glb';
@@ -96,8 +112,24 @@ jupiter.addEventListener('click', jupiterInteraction);
 saturn.addEventListener('click', saturnInteraction);
 uranus.addEventListener('click', uranusInteraction);
 neptune.addEventListener('click', neptuneInteraction);
-moon.addEventListener('click', moonInteraction);
 sun.addEventListener('click', sunInteraction);
+
+earth.addEventListener("touchstart", earthInteraction);
+
+earthMenuBtn.addEventListener("click", earthInteraction);
+mercuryMenuBtn.addEventListener('click', mercuryInteraction);
+venusMenuBtn.addEventListener('click', venusInteraction);
+marsMenuBtn.addEventListener('click', marsInteraction);
+jupiterMenuBtn.addEventListener('click', jupiterInteraction);
+saturnMenuBtn.addEventListener('click', saturnInteraction);
+uranusMenuBtn.addEventListener('click', uranusInteraction);
+neptuneMenuBtn.addEventListener('click', neptuneInteraction);
+sunMenuBtn.addEventListener('click', sunInteraction);
+moonMenuBtn.addEventListener('click', moonInteraction);
+cometMenuBtn.addEventListener('click', cometInteraction);
+meteorMenuBtn.addEventListener('click', meteorInteraction);
+satelliteMenuBtn.addEventListener('click', satelliteInteraction);
+alienMenuBtn.addEventListener('click', alienInteraction);
 
 
 let planetImageFile;
@@ -171,7 +203,7 @@ let isAnimationRunning = true;
 // let al = new THREE.AmbientLight(0xffffff, 0.2);
 // scene.add(al)
 
-    let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
+let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
 directionalLight.position.set(1, 1, 1); // Set the direction
 scene.add(directionalLight);
 
@@ -194,13 +226,13 @@ function populatePlanet() {
             scene.add(planetDisplay);
 
         },
-        
+
         function (xhr) {
 
             console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 
         },
-        
+
         function (error) {
 
             console.log('An error happened');
@@ -229,13 +261,13 @@ function populatePlanet() {
 
     function closeModal() {
 
-        isAnimationRunning = false; 
+        isAnimationRunning = false;
     }
 
 
 
     function animate() {
-        if (isAnimationRunning) { 
+        if (isAnimationRunning) {
             requestAnimationFrame(animate);
             planetDisplay.rotation.y += 0.003;
             renderer.render(scene, camera);
