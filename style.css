@@ -313,6 +313,10 @@ nav li:hover {
     padding-bottom: 30px;
 } 
 
+.content-overflow {
+    overflow: scroll;
+}
+
 .planet-info-cont {
     height: 100%;
     overflow: scroll;
