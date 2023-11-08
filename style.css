@@ -319,7 +319,7 @@ nav li:hover {
 
 .planet-info-cont {
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -432,6 +432,7 @@ nav li:hover {
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
 }
 
 .comet {
@@ -528,6 +529,7 @@ nav li:hover {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform: rotate(-110deg);
+    pointer-events: none;
 }
 
 .slide {
@@ -547,6 +549,7 @@ nav li:hover {
     /* background: none; */
     transform: translateX(-4vw) translateY(2vw);;
     z-index: 5;;
+    pointer-events: none;
 }
 
 .planet {

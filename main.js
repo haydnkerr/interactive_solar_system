@@ -49,16 +49,16 @@ let neptune = document.getElementById('neptune');
 let uranus = document.getElementById('uranus');
 let sun = document.getElementById('sun')
 
-let moonImage = './assets/moon-real.glb';
-let earthImage = './assets/earth-real-2.glb';
-let sunImage = './assets/sun-real.glb';
+let moonImage = './assets/moon-real-8k.glb';
+let earthImage = './assets/earth-real-8k.glb';
+let sunImage = './assets/sun-real-8k.glb';
 let mercuryImage = './assets/mercury.glb';
 let venusImage = './assets/venus-real.glb';
-let marsImage = './assets/mars-real.glb';
-let jupiterImage = './assets/jupiter-real.glb';
-let saturnImage = './assets/earth-real.glb';
-let neptuneImage = './assets/neptune-real.glb';
-let uranusImage = './assets/uranus-real.glb';
+let marsImage = './assets/mars-real-8k.glb';
+let jupiterImage = './assets/jupiter-real-8k.glb';
+let saturnImage = './assets/saturn-real-8k.glb';
+let neptuneImage = './assets/neptune-real-8k.glb';
+let uranusImage = './assets/uranus-real-8k.glb';
 let planetImage;
 
 let counter = 0;
@@ -204,7 +204,7 @@ function populatePlanet() {
     renderer.setClearColor(0x000000, 0); 
     renderer.setSize(window.innerWidth, window.innerHeight);
     planetImageContainerReal.appendChild(renderer.domElement);
-    camera.position.z = 2.5;
+    camera.position.z = 1;
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.antialias = true;
@@ -228,7 +228,7 @@ function populatePlanet() {
     function animate() {
         if (isAnimationRunning) {
             requestAnimationFrame(animate);
-            planetDisplay.rotation.y += 0.003;
+            planetDisplay.rotation.y += 0.001;
             renderer.render(scene, camera);
         }
     }
