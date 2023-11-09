@@ -50,10 +50,12 @@ let uranus = document.getElementById('uranus');
 let sun = document.getElementById('sun')
 
 let moonImage = './assets/moon-real-8k.glb';
-let earthImage = './assets/earth-real-8k.glb';
+let earthImage = './assets/earth-moon-real-8k.glb';
 let sunImage = './assets/sun-real-8k.glb';
-let mercuryImage = './assets/mercury.glb';
-let venusImage = './assets/venus-real.glb';
+let mercuryImage = './assets/mercury-real-8k.glb';
+// mercuryImage = './assets/multi-planet-test.glb';
+// mercuryImage = './assets/asteroid.glb';
+let venusImage = './assets/venus-real-8k.glb';
 let marsImage = './assets/mars-real-8k.glb';
 let jupiterImage = './assets/jupiter-real-8k.glb';
 let saturnImage = './assets/saturn-real-8k.glb';
@@ -159,12 +161,16 @@ function moonInteraction() {
 
 let isAnimationRunning = true;
 
-// let al = new THREE.AmbientLight(0xffffff, 0.2);
-// scene.add(al)
+
+
+let ambientLight = new THREE.AmbientLight(0xffffff, 0.02); // Color, Intensity
+scene.add(ambientLight);
 
 let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
-directionalLight.position.set(1, 1, 1); // Set the direction
+directionalLight.position.set(1,1,1); // Set the direction
 scene.add(directionalLight);
+
+directionalLight.castShadow = true;
 
 // const hemisphereLight = new THREE.HemisphereLight(0x87cefa, 0xffffff, 0.6); // Sky color, Ground color, Intensity
 // scene.add(hemisphereLight);
@@ -182,6 +188,7 @@ function populatePlanet() {
         // called when the resource is loaded
         function (gltf) {
             planetDisplay = gltf.scene
+            // planetDisplay.position.set(1, 1, 1);
             scene.add(planetDisplay);
 
         },
@@ -228,7 +235,7 @@ function populatePlanet() {
     function animate() {
         if (isAnimationRunning) {
             requestAnimationFrame(animate);
-            planetDisplay.rotation.y += 0.001;
+            planetDisplay.rotation.y += 0.0005;
             renderer.render(scene, camera);
         }
     }

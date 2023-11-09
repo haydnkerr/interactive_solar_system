@@ -315,7 +315,13 @@ nav li:hover {
 
 .content-overflow {
     overflow: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
+
+.content-overflow::-webkit-scrollbar {
+    display: none;
+  }
 
 .planet-info-cont {
     height: 100%;
