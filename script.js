@@ -1,3 +1,5 @@
+
+ 
  /* =========================== Declarations =========================== */
         /* =========================== Menu Buttons =========================== */
         let mercuryMenuBtn = document.getElementById("mercury-menu")
