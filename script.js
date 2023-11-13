@@ -13,6 +13,7 @@
         let sunMenuBtn = document.getElementById("sun-menu")
         let moonMenuBtn = document.getElementById("moon-menu")
         let cometMenuBtn = document.getElementById("comet-menu")
+        let asteroidMenuBtn = document.getElementById("asteroid-menu")
         let meteorMenuBtn = document.getElementById("meteor-menu")
         let satelliteMenuBtn = document.getElementById("satellite-menu")
         let alienMenuBtn = document.getElementById("alien-menu")
@@ -582,11 +583,11 @@
                 info9: "<strong>Exploration Missions:</strong> Space agencies like NASA and JAXA have sent spacecraft to study and even land on asteroids. For example, NASA's OSIRIS-REx mission successfully collected a sample from the asteroid Bennu in 2020.",
                 info10: "<strong>Potential Resources:</strong> Some scientists believe that asteroids could be mined for valuable resources like metals, water, and even rare minerals in the future. This idea is being explored for potential use in space exploration and industry. ",
                 funFact: "Mercury has a crater named after Dr.Seuss",
-                diameter: "4,879 km",
-                orbit: "88 days",
-                rotation: "1,408 hours",
+                diameter: "<10 km",
+                orbit: "Varies",
+                rotation: "Nil",
                 moons: "0",
-                temp: "167&deg;C",
+                temp: "-50&deg;C",
                 link: "",
                 image: "./assets/planets/mercury.png"
             }
@@ -605,11 +606,11 @@
                 info9: "<strong>Comet NEOWISE:</strong> In 2020, Comet NEOWISE became visible to the naked eye and put on a spectacular show for observers around the world.",
                 info10: "<strong>Comet Hyakutake:</strong> In 1996, Comet Hyakutake made one of the closest approaches to Earth of any comet in centuries, allowing for stunning views from the ground.",
                 funFact: "Mercury has a crater named after Dr.Seuss",
-                diameter: "4,879 km",
-                orbit: "88 days",
-                rotation: "1,408 hours",
+                diameter: "10 km",
+                orbit: "Varies",
+                rotation: "Nil",
                 moons: "0",
-                temp: "167&deg;C",
+                temp: "-230&deg;C",
                 link: "",
                 image: "./assets/planets/mercury.png"
             }
@@ -627,12 +628,12 @@
                 info8: "<strong>Meteor Craters:</strong> When a larger meteoroid or asteroid hits Earth and survives the journey through the atmosphere, it can create an impact crater. One famous example is the Meteor Crater in Arizona.",
                 info9: "<strong>Space Debris Cleanup:</strong> The increasing amount of space debris, including defunct satellites and spent rocket stages, can sometimes lead to collisions with meteoroids, creating meteors. Efforts are being made to find ways to reduce space debris.",
                 info10: "<strong>Meteorite Classification:</strong> Meteorites are classified into three main types: stony meteorites, iron meteorites, and stony-iron meteorites. Each type provides valuable information about the early solar system.",
-                funFact: "Mercury has a crater named after Dr.Seuss",
-                diameter: "4,879 km",
-                orbit: "88 days",
-                rotation: "1,408 hours",
+                funFact: "",
+                diameter: "<200feet",
+                orbit: "Varies",
+                rotation: "Nil",
                 moons: "0",
-                temp: "167&deg;C",
+                temp: "2400&deg;C",
                 link: "",
                 image: "./assets/planets/mercury.png"
             }
@@ -752,6 +753,7 @@
         sunMenuBtn.addEventListener('click', sunInteraction);
         moonMenuBtn.addEventListener('click', moonInteraction);
         cometMenuBtn.addEventListener('click', cometInteraction);
+        asteroidMenuBtn.addEventListener('click', asteroidInteraction);
         meteorMenuBtn.addEventListener('click', meteorInteraction);
         satelliteMenuBtn.addEventListener('click', satelliteInteraction);        
         alienMenuBtn.addEventListener('click', alienInteraction); 
@@ -866,20 +868,25 @@
             n += 9;
             populatePlanet();
         }
-        function cometInteraction() {
+
+        function asteroidInteraction() {
             n += 10;
             populatePlanet();
         }
-        function meteorInteraction() {
+        function cometInteraction() {
             n += 11;
             populatePlanet();
         }
-        function satelliteInteraction() {
+        function meteorInteraction() {
             n += 12;
             populatePlanet();
         }
-        function alienInteraction() {
+        function satelliteInteraction() {
             n += 13;
+            populatePlanet();
+        }
+        function alienInteraction() {
+            n += 14;
             populatePlanet();
         }
 
