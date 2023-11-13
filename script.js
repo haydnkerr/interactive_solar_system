@@ -121,19 +121,19 @@
 
         /* ============== Shooting Star ================ */
 
-        document.addEventListener('click', createStar)
+        // document.addEventListener('click', createStar)
 
-        function createStar(e) {
-            let comet = document.createElement('span');
-            let randomSpeed = (Math.random() * 100);
-            comet.classList.add('asteroid');
-            cometXPos = e.clientX;
-            cometYPos = e.clientY;
-            comet.style.left = cometXPos + "px";
-            comet.style.top = cometYPos + "px";
-            stars.appendChild(comet)
-            console.log(cometYPos)
-        }
+        // function createStar(e) {
+        //     let comet = document.createElement('span');
+        //     let randomSpeed = (Math.random() * 100);
+        //     comet.classList.add('asteroid');
+        //     cometXPos = e.clientX;
+        //     cometYPos = e.clientY;
+        //     comet.style.left = cometXPos + "px";
+        //     comet.style.top = cometYPos + "px";
+        //     stars.appendChild(comet)
+        //     console.log(cometYPos)
+        // }
 
         setInterval(shootingStarLeft, 10000);
         // setInterval(shootingStarRight, 100);
@@ -629,7 +629,7 @@
                 info9: "<strong>Space Debris Cleanup:</strong> The increasing amount of space debris, including defunct satellites and spent rocket stages, can sometimes lead to collisions with meteoroids, creating meteors. Efforts are being made to find ways to reduce space debris.",
                 info10: "<strong>Meteorite Classification:</strong> Meteorites are classified into three main types: stony meteorites, iron meteorites, and stony-iron meteorites. Each type provides valuable information about the early solar system.",
                 funFact: "",
-                diameter: "<200feet",
+                diameter: "<200 feet",
                 orbit: "Varies",
                 rotation: "Nil",
                 moons: "0",
@@ -650,12 +650,12 @@
                 info8: "<strong>Space Telescopes:</strong> Telescopes in space, like the Hubble Space Telescope, allow astronomers to observe distant galaxies, stars, and other celestial objects with unparalleled clarity.",
                 info9: "<strong>Space Exploration:</strong> Satellites are crucial for exploring other planets and celestial bodies in our solar system. They relay information back to Earth and help us understand the cosmos.",
                 info10: "<strong>Space Junk and Debris:</strong> Over time, defunct satellites and fragments from launches have created a cloud of space debris around Earth. This debris can pose a risk to operational satellites and spacecraft.",
-                funFact: "Mercury has a crater named after Dr.Seuss",
-                diameter: "4,879 km",
-                orbit: "88 days",
-                rotation: "1,408 hours",
-                moons: "0",
-                temp: "167&deg;C",
+                funFact: "",
+                diameter: "",
+                orbit: "",
+                rotation: "",
+                moons: "",
+                temp: "",
                 link: "",
                 image: "./assets/planets/mercury.png"
             }
