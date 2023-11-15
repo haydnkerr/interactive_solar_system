@@ -175,14 +175,15 @@ let isAnimationRunning = true;
 let ambientLight = new THREE.AmbientLight(0xffffff, 0.02); // Color, Intensity
 scene.add(ambientLight);
 
+
+
 let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
 directionalLight.position.set(1,1,1); // Set the direction
 scene.add(directionalLight);
 
 directionalLight.castShadow = true;
 
-// const hemisphereLight = new THREE.HemisphereLight(0x87cefa, 0xffffff, 0.6); // Sky color, Ground color, Intensity
-// scene.add(hemisphereLight);
+
 
 function populatePlanet() {
 
