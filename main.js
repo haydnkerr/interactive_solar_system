@@ -61,6 +61,7 @@ let jupiterImage = './assets/jupiter-real-8k.glb';
 let saturnImage = './assets/saturn-real-8k.glb';
 let neptuneImage = './assets/neptune-real-8k.glb';
 let uranusImage = './assets/uranus-real-8k.glb';
+let asteroidImage = './assets/asteroids.glb';
 let planetImage;
 
 let counter = 0;
@@ -87,8 +88,9 @@ uranusMenuBtn.addEventListener('click', uranusInteraction);
 neptuneMenuBtn.addEventListener('click', neptuneInteraction);
 sunMenuBtn.addEventListener('click', sunInteraction);
 moonMenuBtn.addEventListener('click', moonInteraction);
-cometMenuBtn.addEventListener('click', cometInteraction);
 meteorMenuBtn.addEventListener('click', meteorInteraction);
+cometMenuBtn.addEventListener('click', cometInteraction);
+
 satelliteMenuBtn.addEventListener('click', satelliteInteraction);
 alienMenuBtn.addEventListener('click', alienInteraction);
 
@@ -154,6 +156,13 @@ function sunInteraction() {
 }
 function moonInteraction() {
     planetImageFile = moonImage;
+    counter = 0;
+    isAnimationRunning = true;
+    populatePlanet()
+}
+
+function meteorInteraction() {
+    planetImageFile = asteroidImage;
     counter = 0;
     isAnimationRunning = true;
     populatePlanet()
