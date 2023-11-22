@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+#mobile-modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    color: white;
+    z-index: 991;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    display: none;
+}
+
+#mobile-modal h3 {
+    max-width: 600px;
+    text-align: center;
+}
+
 
 
 
@@ -936,5 +956,13 @@ nav li:hover {
         z-index: 1
 
     }
+  }
+
+  /***** Responsiveness ******/
+  @media only screen and (max-width: 1000px) {
+    #mobile-modal {
+        display: flex;
+    }
+    
   }
 
