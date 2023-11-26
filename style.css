@@ -558,7 +558,7 @@ nav li:hover {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transform: rotate(-110deg);
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .slide {
@@ -577,13 +577,13 @@ nav li:hover {
     width: 33px;
     /* background: none; */
     transform: translateX(-4vw) translateY(2vw);;
-    z-index: 5;;
-    pointer-events: none;
+    z-index: 5;
+    /* pointer-events: none; */
 }
 
 .planet {
     border-radius: 50%;
-    z-index: 5;
+    z-index: 7;
     overflow: hidden;
     transform: rotate(110deg);
 }
@@ -598,6 +598,10 @@ nav li:hover {
 
 .shadow-rotate {
     border-radius: 50%;
+}
+
+.shadow-rotate:hover {
+    cursor: pointer;
 }
 
 #mercury {

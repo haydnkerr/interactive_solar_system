@@ -732,15 +732,15 @@ let planetImageContainerReal = document.getElementById('planet-image-container')
 
 
 
-//earth.addEventListener("click", earthInteraction);
-//mercury.addEventListener('click', mercuryInteraction);
-//venus.addEventListener('click', venusInteraction);
-//mars.addEventListener('click', marsInteraction);
-//jupiter.addEventListener('click', jupiterInteraction);
-//saturn.addEventListener('click', saturnInteraction);
-//uranus.addEventListener('click', uranusInteraction);
-//neptune.addEventListener('click', neptuneInteraction);
-//sun.addEventListener('click', sunInteraction);
+earth.addEventListener("click", earthInteraction);
+mercury.addEventListener('click', mercuryInteraction);
+venus.addEventListener('click', venusInteraction);
+mars.addEventListener('click', marsInteraction);
+jupiter.addEventListener('click', jupiterInteraction);
+saturn.addEventListener('click', saturnInteraction);
+uranus.addEventListener('click', uranusInteraction);
+neptune.addEventListener('click', neptuneInteraction);
+sun.addEventListener('click', sunInteraction);
 
 earthMenuBtn.addEventListener("click", earthInteraction);
 mercuryMenuBtn.addEventListener('click', mercuryInteraction);
@@ -945,43 +945,43 @@ function populateAdultInfo() {
 }
 
 
-const myPlanets = document.querySelectorAll('.planet');
+// const myPlanets = document.querySelectorAll('.planet');
 
-// Calculate the distance between two points using the Pythagorean theorem
-function calculateDistance(x1, y1, x2, y2) {
-  const deltaX = x2 - x1;
-  const deltaY = y2 - y1;
-  return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-}
+// // Calculate the distance between two points using the Pythagorean theorem
+// function calculateDistance(x1, y1, x2, y2) {
+//   const deltaX = x2 - x1;
+//   const deltaY = y2 - y1;
+//   return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+// }
 
-// Function to be called when the document is clicked
-function onDocumentClick(event) {
-    console.log("mouse is clicked");
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
+// // Function to be called when the document is clicked
+// function onDocumentClick(event) {
+//     console.log("mouse is clicked");
+//   const mouseX = event.clientX;
+//   const mouseY = event.clientY;
 
-  let closestPlanet = null;
-  let minDistance = Infinity;
+//   let closestPlanet = null;
+//   let minDistance = Infinity;
 
-  myPlanets.forEach((planet) => {
-    const planetX = planet.getBoundingClientRect().left + planet.offsetWidth / 2;
-    const planetY = planet.getBoundingClientRect().top + planet.offsetHeight / 2;
+//   myPlanets.forEach((planet) => {
+//     const planetX = planet.getBoundingClientRect().left + planet.offsetWidth / 2;
+//     const planetY = planet.getBoundingClientRect().top + planet.offsetHeight / 2;
 
-    const distance = calculateDistance(mouseX, mouseY, planetX, planetY);
+//     const distance = calculateDistance(mouseX, mouseY, planetX, planetY);
 
-    if (distance < minDistance) {
-      minDistance = distance;
-      closestPlanet = planet;
-    }
-  });
+//     if (distance < minDistance) {
+//       minDistance = distance;
+//       closestPlanet = planet;
+//     }
+//   });
 
-  if (minDistance.toFixed(2)<15) {
-    const planetId = closestPlanet.getAttribute('id');
-    console.log(`clicked on planet: ${planetId}`);
-//    console.log(`Minimum distance: ${minDistance.toFixed(2)} pixels`);
-  }
-}
+//   if (minDistance.toFixed(2)<15) {
+//     const planetId = closestPlanet.getAttribute('id');
+//     console.log(`clicked on planet: ${planetId}`);
+// //    console.log(`Minimum distance: ${minDistance.toFixed(2)} pixels`);
+//   }
+// }
 
-// Add a click event listener to the document
-document.addEventListener('click', onDocumentClick);
+// // Add a click event listener to the document
+// document.addEventListener('click', onDocumentClick);
 
