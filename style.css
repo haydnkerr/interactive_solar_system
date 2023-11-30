@@ -554,7 +554,7 @@ nav li:hover {
     position: absolute;
     left: 25px;
     bottom: 15px;
-    padding: 25px;
+    padding: 20px;
     border: 0.5px solid  rgb(112, 207, 255);
     
     border-radius: 20px;
@@ -566,7 +566,7 @@ nav li:hover {
     transform: translateX(-250px);
     transition: 0.8s;
     opacity: 0;
-    width: 250px;
+    width: 275px;
     box-shadow: 0px 0px 10px 3px rgb(112, 207, 255);
     z-index: 10;
     animation: pulsate 3s linear infinite;
@@ -585,8 +585,8 @@ nav li:hover {
 @keyframes pulsate {
     
     50% {
-        box-shadow: 0px 0px 20px 0px rgb(112, 207, 255,0.5);
-        border: 0.5px solid  rgba(112, 207, 255, 0.485);
+        box-shadow: 0px 0px 20px 0px rgb(112, 207, 255,0.35);
+        border: 0.5px solid  rgba(112, 207, 255, 0.35);
     }
   }
 
