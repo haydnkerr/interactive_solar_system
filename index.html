@@ -246,10 +246,18 @@
 
     <div class="slide earth-slide">
         <div class="rotate earth-rotate" id="earth-container">
+            
             <div class="planet" id="earth">
                 <div class="shadow-rotate" id="earth-shadow">
+                    
                 </div>
+                
             </div>
+            <!-- <div class="orbit-info-container" id="earth-orbit-info">
+                <h3>Earth</h3>
+                <p><strong>Orbit:</strong><span id="earth-orbit-days"></span>days</p>
+
+            </div> -->
         </div>
     </div>
 
@@ -285,9 +293,16 @@
         </div>
     </div>
 
+    <section  id="planet-hover" class="planet-hover-info-container">
+        <h2 id="orbit-planet-name"></h2>
+        <img id="orbit-planet-img" src="">
+        <p><strong>Orbit: </strong><span id="years-in-orbit"></span> years <span id="days-in-orbit"></span> days</p>
+        <p><strong>Speed: </strong><span id="planet-orbit-speed"></span> km/s</p>
+    </section>
 
 
-    <section class="orbit-controls-container">
+
+    <section class="orbit-controls-container display-none">
         <div class="orbit-control" id="pause-orbit">
             <h2>Pause</h2>
         </div>

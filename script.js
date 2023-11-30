@@ -370,7 +370,7 @@ const planets = [
         temp: "167&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            },
+    },
     {
         name: "Venus",
         info1: "<strong>Morning and Evening Star:</strong> Venus is often called the 'Morning Star' or the 'Evening Star' because it's one of the brightest objects in the sky and can be seen just before sunrise or just after sunset.",
@@ -392,7 +392,7 @@ const planets = [
         temp: "464&deg;C",
         link: "",
         image: "./assets/planets/venus.png"
-            },
+    },
     {
         name: "Earth",
         info1: "<strong>Third Rock from the Sun:</strong> Earth is the third planet from the Sun in our solar system. It's just the right distance from the Sun to have the perfect conditions for life.",
@@ -414,7 +414,7 @@ const planets = [
         temp: "15&deg;C",
         link: "",
         image: "./assets/planets/earth.png"
-            },
+    },
     {
         name: "Mars",
         info1: "<strong>Fourth Planet from the Sun:</strong> Mars is the fourth planet from the Sun in our solar system, making it Earth's neighbor.",
@@ -436,7 +436,7 @@ const planets = [
         temp: "-65&deg;C",
         link: "",
         image: "./assets/planets/mars.png"
-            },
+    },
     {
         name: "Jupiter",
         info1: "<strong>Giant of the Solar System:</strong> Jupiter is the largest planet in our solar system. It's so big that over 1,300 Earths could fit inside it!",
@@ -458,7 +458,7 @@ const planets = [
         temp: "-110&deg;C",
         link: "",
         image: "./assets/planets/jupiter.png"
-            },
+    },
     {
         name: "Saturn",
         info1: "<strong>Ringed Wonder:</strong> Saturn is famous for its spectacular ring system, which is made up of icy particles and dust. These rings make Saturn one of the most recognizable planets in the solar system.",
@@ -480,7 +480,7 @@ const planets = [
         temp: "-140&deg;C",
         link: "",
         image: "./assets/planets/saturn.png"
-            },
+    },
     {
         name: "Uranus",
         info1: "<strong>Tilted on Its Side:</strong> Uranus is unique among the planets because it spins on its side. This means its poles experience long periods of sunlight followed by long periods of darkness.",
@@ -502,7 +502,7 @@ const planets = [
         temp: "-195&deg;C",
         link: "",
         image: "./assets/planets/uranus.png"
-            },
+    },
     {
         name: "Neptune",
         info1: "<strong>Eighth Planet from the Sun:</strong> Neptune is the eighth planet from the Sun in our solar system, making it the farthest known planet from our star.",
@@ -523,8 +523,8 @@ const planets = [
         temp: "-200&deg;C",
         link: "",
         image: "./assets/planets/neptune.png"
-            }
-            ,
+    }
+    ,
     {
         name: "Sun",
         info1: "<strong>Solar Sizzle:</strong> The Sun is so hot that you could cook a pizza in just a few seconds if it were close enough (though, I wouldn't recommend trying!).",
@@ -545,8 +545,8 @@ const planets = [
         temp: "5,600&deg;C",
         link: "",
         image: "./assets/planets/sun.png"
-            }
-            ,
+    }
+    ,
     {
         name: "Moon",
         info1: "<strong>Earth's Only Natural Satellite:</strong> The Moon is the only natural satellite of Earth. It's about 1/6th the size of Earth.",
@@ -568,8 +568,8 @@ const planets = [
         temp: "-183 to 106&deg;C",
         link: "",
         image: ""
-            }
-            ,
+    }
+    ,
     {
         name: "Asteroid",
         info1: "<strong>Rocky Celestial Bodies:</strong> Asteroids are small, rocky objects that orbit the Sun. They're like leftover building materials from the formation of the solar system.",
@@ -590,9 +590,9 @@ const planets = [
         temp: "-50&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
+    }
 
-            ,
+    ,
     {
         name: "Comet",
         info1: "<strong>Icy Visitors:</strong> Comets are icy bodies that originate from the outer regions of the solar system, often referred to as the Oort Cloud or the Kuiper Belt. They are sometimes called 'dirty snowballs.'",
@@ -613,9 +613,9 @@ const planets = [
         temp: "-230&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
+    }
 
-            ,
+    ,
     {
         name: "Meteor",
         info1: "<strong>Falling Stars:</strong> Meteors, often referred to as 'shooting stars,'' are streaks of light that appear in the night sky when tiny particles called meteoroids burn up upon entering Earth's atmosphere.",
@@ -636,8 +636,8 @@ const planets = [
         temp: "2400&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
-            ,
+    }
+    ,
     {
         name: "Satellite",
         info1: "<strong>Launched Since 1957:</strong> The first artificial satellite, Sputnik 1, was launched by the Soviet Union on October 4, 1957. This event marked the beginning of the space age.",
@@ -658,8 +658,8 @@ const planets = [
         temp: "",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
-            ,
+    }
+    ,
     {
         name: "Aliens",
         info1: "<strong>Exoplanets Abound:</strong> Scientists have discovered thousands of exoplanets, or planets outside our solar system, some of which are located in their star's 'habitable zone' where conditions might be right for life.",
@@ -680,8 +680,8 @@ const planets = [
         temp: "167&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
-            ,
+    }
+    ,
     {
         name: "Astronauts",
         info1: "<strong></strong>Weightlessness Changes Your Body**: Spending extended periods in space can lead to a range of physiological changes. These include muscle and bone density loss, fluid shifts, and changes in vision.",
@@ -702,8 +702,8 @@ const planets = [
         temp: "167&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
-            }
-        ];
+    }
+];
 
 let planetModal = document.querySelector('.full-width')
 let planetName = document.getElementById('planet-name');
@@ -729,6 +729,183 @@ modalCloseBtn.addEventListener('click', closeModal);
 
 let planetImageContainerReal = document.getElementById('planet-image-container')
 
+let planetHoverInfoContainer = document.getElementById('planet-hover')
+
+let daysInOrbit = document.getElementById('days-in-orbit')
+let orbitPlanetName = document.getElementById('orbit-planet-name')
+let orbitPlanetImg = document.getElementById('orbit-planet-img')
+let planetOrbitSpeed = document.getElementById('planet-orbit-speed')
+let yearsInOrbit = document.getElementById('years-in-orbit')
+
+let mercuryOrbitDay = 0
+let mercuryOrbitYear = 0
+let mercuryOrbitOn = false
+
+let venusOrbitDay = 0
+let venusOrbitYear = 0
+let venusOrbitOn = false
+
+let earthOrbitDay = 0
+let earthOrbitYear = 0
+let earthOrbitOn = false
+
+let marsOrbitDay = 0
+let marsOrbitYear = 0
+let marsOrbitOn = false
+
+let jupiterOrbitDay = 0
+let jupiterOrbitYear = 0
+let jupiterOrbitOn = false
+
+let saturnOrbitDay = 0
+let saturnOrbitYear = 0
+let saturnOrbitOn = false
+
+let neptuneOrbitDay = 0
+let neptuneOrbitYear = 0
+let neptuneOrbitOn = false
+
+let uranusOrbitDay = 0
+let uranusOrbitYear = 0
+let uranusOrbitOn = false
+
+setInterval(mercuryOrbitDays, 100)
+setInterval(venusOrbitDays, 100)
+setInterval(earthOrbitDays, 100)
+setInterval(marsOrbitDays, 100)
+setInterval(jupiterOrbitDays, 100)
+setInterval(saturnOrbitDays, 100)
+setInterval(uranusOrbitDays, 100)
+setInterval(neptuneOrbitDays, 100)
+
+function mercuryOrbitDays() {
+    if (mercuryOrbitDay > 80) {
+        mercuryOrbitDay = 0
+        mercuryOrbitYear += 1
+    } else {
+        mercuryOrbitDay += 5
+    }
+    if (mercuryOrbitOn) {
+        daysInOrbit.innerHTML = mercuryOrbitDay
+        orbitPlanetName.innerHTML = "MERCURY"
+        orbitPlanetImg.src = "./assets/planets/mercury.png"
+        planetOrbitSpeed.innerHTML = "47.9"
+        yearsInOrbit.innerHTML = mercuryOrbitYear
+    }
+}
+
+function venusOrbitDays() {
+    if (venusOrbitDay > 225) {
+        venusOrbitDay = 0
+        venusOrbitYear += 1
+    } else {
+        venusOrbitDay += 10
+    }
+    if (venusOrbitOn) {
+        daysInOrbit.innerHTML = venusOrbitDay
+        orbitPlanetName.innerHTML = "VENUS"
+        orbitPlanetImg.src = "./assets/planets/venus.png"
+        planetOrbitSpeed.innerHTML = "35"
+        yearsInOrbit.innerHTML = venusOrbitYear
+    }
+}
+
+function earthOrbitDays() {
+    if (earthOrbitDay > 365) {
+        earthOrbitDay = 0
+        earthOrbitYear += 1
+    } else {
+        earthOrbitDay += 10
+    }
+    if (earthOrbitOn) {
+        daysInOrbit.innerHTML = earthOrbitDay
+        orbitPlanetName.innerHTML = "EARTH"
+        orbitPlanetImg.src = "./assets/planets/earth.png"
+        planetOrbitSpeed.innerHTML = "29.8"
+        yearsInOrbit.innerHTML = earthOrbitYear
+    }
+}
+
+function marsOrbitDays() {
+    if (marsOrbitDay > 365) {
+        marsOrbitDay = 0
+        marsOrbitYear += 1
+    } else {
+        marsOrbitDay += 10
+    }
+    if (marsOrbitOn) {
+        daysInOrbit.innerHTML = marsOrbitDay
+        orbitPlanetName.innerHTML = "MARS"
+        orbitPlanetImg.src = "./assets/planets/mars.png"
+        planetOrbitSpeed.innerHTML = "24"
+        yearsInOrbit.innerHTML = marsOrbitYear
+    }
+}
+
+function jupiterOrbitDays() {
+    if (jupiterOrbitDay > 4333) {
+        jupiterOrbitDay = 0
+        jupiterOrbitYear += 1
+    } else {
+        jupiterOrbitDay += 20
+    }
+    if (jupiterOrbitOn) {
+        daysInOrbit.innerHTML = jupiterOrbitDay
+        orbitPlanetName.innerHTML = "JUPITER"
+        orbitPlanetImg.src = "./assets/planets/jupiter.png"
+        planetOrbitSpeed.innerHTML = "13.1"
+        yearsInOrbit.innerHTML = jupiterOrbitYear
+    }
+}
+
+function saturnOrbitDays() {
+    if (saturnOrbitDay > 10759) {
+        saturnOrbitDay = 0
+        saturnOrbitYear += 1
+    } else {
+        saturnOrbitDay += 40
+    }
+    if (saturnOrbitOn) {
+        daysInOrbit.innerHTML = saturnOrbitDay
+        orbitPlanetName.innerHTML = "SATURN"
+        orbitPlanetImg.src = "./assets/planets/saturn.png"
+        planetOrbitSpeed.innerHTML = "9.69"
+        yearsInOrbit.innerHTML = saturnOrbitYear
+    }
+}
+
+function neptuneOrbitDays() {
+    if (neptuneOrbitDay > 60190) {
+        neptuneOrbitDay = 0
+        neptuneOrbitYear += 1
+    } else {
+        neptuneOrbitDay += 100
+    }
+    if (neptuneOrbitOn) {
+        daysInOrbit.innerHTML = neptuneOrbitDay
+        orbitPlanetName.innerHTML = "NEPTUNE"
+        orbitPlanetImg.src = "./assets/planets/neptune.png"
+        planetOrbitSpeed.innerHTML = "5.43"
+        yearsInOrbit.innerHTML = neptuneOrbitYear
+    }
+}
+
+function uranusOrbitDays() {
+    if (uranusOrbitDay > 30875) {
+        uranusOrbitDay = 0
+        uranusOrbitYear += 1
+    } else {
+        uranusOrbitDay += 5
+    }
+    if (uranusOrbitOn) {
+        daysInOrbit.innerHTML = uranusOrbitDay
+        orbitPlanetName.innerHTML = "URANUS"
+        orbitPlanetImg.src = "./assets/planets/uranus.png"
+        planetOrbitSpeed.innerHTML = "6.81"
+        yearsInOrbit.innerHTML = uranusOrbitYear
+    }
+}
+
 
 
 
@@ -743,15 +920,45 @@ neptune.addEventListener('click', neptuneInteraction);
 sun.addEventListener('click', sunInteraction);
 
 earthMenuBtn.addEventListener("click", earthInteraction);
+earthMenuBtn.addEventListener("mouseover", earthHover)
+earthMenuBtn.addEventListener("mouseout", closeHover)
+
 mercuryMenuBtn.addEventListener('click', mercuryInteraction);
+mercuryMenuBtn.addEventListener("mouseover", mercuryHover)
+mercuryMenuBtn.addEventListener("mouseout", closeHover)
+
 venusMenuBtn.addEventListener('click', venusInteraction);
+venusMenuBtn.addEventListener("mouseover", venusHover)
+venusMenuBtn.addEventListener("mouseout", closeHover)
+
 marsMenuBtn.addEventListener('click', marsInteraction);
+marsMenuBtn.addEventListener("mouseover", marsHover)
+marsMenuBtn.addEventListener("mouseout", closeHover)
+
 jupiterMenuBtn.addEventListener('click', jupiterInteraction);
+jupiterMenuBtn.addEventListener("mouseover", jupiterHover)
+jupiterMenuBtn.addEventListener("mouseout", closeHover)
+
 saturnMenuBtn.addEventListener('click', saturnInteraction);
+saturnMenuBtn.addEventListener("mouseover", saturnHover)
+saturnMenuBtn.addEventListener("mouseout", closeHover)
+
 uranusMenuBtn.addEventListener('click', uranusInteraction);
+uranusMenuBtn.addEventListener("mouseover", uranusHover)
+uranusMenuBtn.addEventListener("mouseout", closeHover)
+
 neptuneMenuBtn.addEventListener('click', neptuneInteraction);
+neptuneMenuBtn.addEventListener("mouseover", neptuneHover)
+neptuneMenuBtn.addEventListener("mouseout", closeHover)
+
 sunMenuBtn.addEventListener('click', sunInteraction);
+sunMenuBtn.addEventListener("mouseover", earthHover)
+sunMenuBtn.addEventListener("mouseout", closeHover)
+
 moonMenuBtn.addEventListener('click', moonInteraction);
+moonMenuBtn.addEventListener("mouseover", earthHover)
+moonMenuBtn.addEventListener("mouseout", closeHover)
+
 cometMenuBtn.addEventListener('click', cometInteraction);
 asteroidMenuBtn.addEventListener('click', asteroidInteraction);
 meteorMenuBtn.addEventListener('click', meteorInteraction);
@@ -781,6 +988,54 @@ expandPlanetBtn.addEventListener('click', expandPlanet)
 adultBtn.addEventListener('click', toggleAdult);
 childBtn.addEventListener('click', toggleChild);
 planetExpandCloseBtn.addEventListener('click', closePlanet)
+
+function closeHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    mercuryOrbitOn = false
+    venusOrbitOn = false
+    earthOrbitOn = false
+    marsOrbitOn = false
+    jupiterOrbitOn = false
+    saturnOrbitOn = false
+    uranusOrbitOn = false
+    neptuneOrbitOn = false
+}
+
+function mercuryHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    mercuryOrbitOn = true
+}
+
+function venusHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    venusOrbitOn = true
+}
+
+function earthHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    earthOrbitOn = true
+}
+
+function marsHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    marsOrbitOn = true
+}
+function jupiterHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    jupiterOrbitOn = true
+}
+function saturnHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    saturnOrbitOn = true
+}
+function neptuneHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    neptuneOrbitOn = true
+}
+function uranusHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    uranusOrbitOn = true
+}
 
 function expandPlanet() {
     planetImageContainerReal.style.position = 'absolute'
