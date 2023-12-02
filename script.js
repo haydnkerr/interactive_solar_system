@@ -27,12 +27,7 @@ let saturn = document.getElementById('saturn');
 let neptune = document.getElementById('neptune');
 let uranus = document.getElementById('uranus');
 let sun = document.getElementById('sun')
-
-
-
-
-
-
+let moon = document.getElementById('moon')
 
 /* ========================= Planet Rotation ======================== */
 let mercuryRotate = document.querySelector('.mercury-rotate')
@@ -43,8 +38,9 @@ let jupiterRotate = document.querySelector('.jupiter-rotate')
 let saturnRotate = document.querySelector('.saturn-rotate')
 let uranusRotate = document.querySelector('.uranus-rotate')
 let neptuneRotate = document.querySelector('.neptune-rotate')
+let moonRotate = document.querySelector('.moon-rotate')
 
-/* ========================= Planet Side Motion ======================== */
+/* ========================= Planet Slide Motion ======================== */
 let mercurySlide = document.querySelector('.mercury-slide')
 let venusSlide = document.querySelector('.venus-slide')
 let earthSlide = document.querySelector('.earth-slide')
@@ -63,6 +59,7 @@ let jupiterShadow = document.getElementById('jupiter-shadow')
 let saturnShadow = document.getElementById('saturn-shadow')
 let uranusShadow = document.getElementById('uranus-shadow')
 let neptuneShadow = document.getElementById('neptune-shadow')
+let moonShadow = document.getElementById('moon-shadow')
 
 /* ============ Star Background ========================== */
 let stars = document.querySelector('.star-map')
@@ -119,50 +116,9 @@ for (let i = 0; i < 1000; i++) {
 
 /* ============== Shooting Star ================ */
 
-// document.addEventListener('click', createStar)
 
-// function createStar(e) {
-//     let comet = document.createElement('span');
-//     let randomSpeed = (Math.random() * 100);
-//     comet.classList.add('asteroid');
-//     cometXPos = e.clientX;
-//     cometYPos = e.clientY;
-//     comet.style.left = cometXPos + "px";
-//     comet.style.top = cometYPos + "px";
-//     stars.appendChild(comet)
-//     console.log(cometYPos)
-// }
 
 setInterval(shootingStarLeft, 10000);
-// setInterval(shootingStarRight, 100);
-
-// function shootingStarRight() {
-//     let comet = document.createElement('span');
-//     let randomSpeed = (Math.random() * 3);
-//     comet.classList.add('comet');
-//     cometXPos = -10;
-//     cometYPos = (Math.random() * 800);
-//     comet.style.left = cometXPos + "px";
-//     comet.style.top = cometYPos + "px";
-//     stars.appendChild(comet)
-//     console.log(cometYPos)
-// }
-
-// function shootingStarRight() {
-//     let star = document.createElement('span');
-//     let randomSize = Math.ceil((Math.random() * 4));
-//     let width = window.innerWidth;
-//     let starPos = (Math.random() * width) * -1;
-//     let randomSpeed = Math.floor((Math.random()*50) + 100);
-//     star.classList.add('star');
-//     star.style.opacity = (Math.random());
-//     star.style.top = (Math.random() * 100) + '%';
-//     star.style.left = starPos + 'px';
-//     star.style.width = randomSize + 'px';
-//     star.style.height = randomSize + 'px';
-//     stars.appendChild(star);
-//     star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
-// }
 
 function shootingStarLeft() {
     let comet = document.createElement('span');
@@ -264,25 +220,7 @@ function realisticOrbit() {
 
 }
 
-// function normalOrbit() {
-//     mercurySlide.style.animation = `slide ${slideSpeed * 0.5}s ease-in-out infinite alternate`;
-//     venusSlide.style.animation = `slide ${slideSpeed * 0.75}s ease-in-out infinite alternate`;
-//     earthSlide.style.animation = `slide ${slideSpeed}s ease-in-out infinite alternate`;
-//     marsSlide.style.animation = `slide ${slideSpeed * 1.9}s ease-in-out infinite alternate`;
-//     jupiterSlide.style.animation = `slide ${slideSpeed * 3}s ease-in-out infinite alternate`;
-//     saturnSlide.style.animation = `slide ${slideSpeed * 5}s ease-in-out infinite alternate`;
-//     uranusSlide.style.animation = `slide ${slideSpeed * 7}s ease-in-out infinite alternate`;
-//     neptuneSlide.style.animation = `slide ${slideSpeed * 10}s ease-in-out infinite alternate`;
 
-//     mercuryRotate.style.animation = `rotate ${rotationSpeed * 0.5}s linear infinite`;
-//     venusRotate.style.animation = `rotate ${rotationSpeed * 0.75}s linear infinite`;
-//     earthRotate.style.animation = `rotate ${rotationSpeed}s linear infinite`;
-//     marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
-//     jupiterRotate.style.animation = `rotate ${rotationSpeed * 3}s linear infinite`;
-//     saturnRotate.style.animation = `rotate ${rotationSpeed * 5}s linear infinite`;
-//     uranusRotate.style.animation = `rotate ${rotationSpeed * 7}s linear infinite`;
-//     neptuneRotate.style.animation = `rotate ${rotationSpeed * 10}s linear infinite`;
-// }
 
 function pauseOrbit() {
     mercurySlide.style.animation = `slide 0s ease-in-out infinite alternate`;
@@ -304,6 +242,7 @@ function pauseOrbit() {
     neptuneRotate.style.animation = `rotate 0s linear infinite`;
 }
 
+/* ======== This is the default orbit animation =============== */
 function orbit() {
 
     mercurySlide.style.animation = `slide ${slideSpeed * .75}s ease-in-out infinite alternate`;
@@ -318,6 +257,7 @@ function orbit() {
     mercuryRotate.style.animation = `rotate ${rotationSpeed * .75}s linear infinite`;
     venusRotate.style.animation = `rotate ${rotationSpeed * 1}s linear infinite`;
     earthRotate.style.animation = `rotate ${rotationSpeed * 1.4}s linear infinite`;
+    moonRotate.style.animation = `rotate ${rotationSpeed * 0.5}s linear infinite`;
     marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
     jupiterRotate.style.animation = `rotate ${rotationSpeed * 3}s linear infinite`;
     saturnRotate.style.animation = `rotate ${rotationSpeed * 5}s linear infinite`;
@@ -327,6 +267,7 @@ function orbit() {
     mercury.style.animation = `spin ${rotationSpeed * .75}s linear infinite`;
     venus.style.animation = `spin ${rotationSpeed * 1}s linear infinite`;
     earth.style.animation = `spin ${rotationSpeed * 1.4}s linear infinite`;
+    moon.style.animation = `spin ${rotationSpeed * 0.5}s linear infinite`;
     mars.style.animation = `spin ${rotationSpeed * 1.9}s linear infinite`;
     jupiter.style.animation = `spin ${rotationSpeed * 3}s linear infinite`;
     saturn.style.animation = `spin ${rotationSpeed * 5}s linear infinite`;
@@ -338,6 +279,7 @@ function orbit() {
     mercuryShadow.style.animation = `shadowSpin ${rotationSpeed * .75}s linear infinite`;
     venusShadow.style.animation = `shadowSpin ${rotationSpeed * 1}s linear infinite`;
     earthShadow.style.animation = `shadowSpin ${rotationSpeed * 1.4}s linear infinite`;
+    moonShadow.style.animation = `shadowSpin ${rotationSpeed * 1.4}s linear infinite`;
     marsShadow.style.animation = `shadowSpin ${rotationSpeed * 1.9}s linear infinite`;
     jupiterShadow.style.animation = `shadowSpin ${rotationSpeed * 3}s linear infinite`;
     saturnShadow.style.animation = `shadowSpin ${rotationSpeed * 5}s linear infinite`;
@@ -347,6 +289,8 @@ function orbit() {
 
 
 }
+
+/*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */
 
 
 const planets = [
@@ -769,6 +713,14 @@ let uranusOrbitDay = 0
 let uranusOrbitYear = 0
 let uranusOrbitOn = false
 
+let moonOrbitDay = 0
+let moonOrbitYear = 0
+let moonOrbitOn = false
+
+let sunOrbitDay = 0
+let sunOrbitYear = 0
+let sunOrbitOn = false
+
 setInterval(mercuryOrbitDays, 100)
 setInterval(venusOrbitDays, 100)
 setInterval(earthOrbitDays, 100)
@@ -777,6 +729,8 @@ setInterval(jupiterOrbitDays, 100)
 setInterval(saturnOrbitDays, 100)
 setInterval(uranusOrbitDays, 100)
 setInterval(neptuneOrbitDays, 100)
+setInterval(moonOrbitDays, 100)
+setInterval(sunOrbitDays, 100)
 
 function mercuryOrbitDays() {
     if (mercuryOrbitDay > 80) {
@@ -906,8 +860,40 @@ function uranusOrbitDays() {
     }
 }
 
+function moonOrbitDays() {
+    if (moonOrbitDay > 30875) {
+        moonOrbitDay = 0
+        moonOrbitYear += 1
+    } else {
+        moonOrbitDay += 5
+    }
+    if (moonOrbitOn) {
+        daysInOrbit.innerHTML = moonOrbitDay
+        orbitPlanetName.innerHTML = "MOON"
+        orbitPlanetImg.src = "./assets/planets/moon.png"
+        planetOrbitSpeed.innerHTML = "1.02"
+        yearsInOrbit.innerHTML = moonOrbitYear
+    }
+}
+
+function sunOrbitDays() {
+    if (sunOrbitDay > 30875) {
+        sunOrbitDay = 0
+        sunOrbitYear += 1
+    } else {
+        sunOrbitDay += 5
+    }
+    if (sunOrbitOn) {
+        daysInOrbit.innerHTML = sunOrbitDay
+        orbitPlanetName.innerHTML = "SUN"
+        orbitPlanetImg.src = "./assets/planets/sun.png"
+        planetOrbitSpeed.innerHTML = "6.81"
+        yearsInOrbit.innerHTML = sunOrbitYear
+    }
+}
 
 
+/*============== Event listeners for menu items and the planets themselves. Includes click interactions and hover interactions  ==================*/
 
 earth.addEventListener("click", earthInteraction);
 mercury.addEventListener('click', mercuryInteraction);
@@ -922,42 +908,63 @@ sun.addEventListener('click', sunInteraction);
 earthMenuBtn.addEventListener("click", earthInteraction);
 earthMenuBtn.addEventListener("mouseover", earthHover)
 earthMenuBtn.addEventListener("mouseout", closeHover)
+earth.addEventListener("mouseover", earthHover)
+earth.addEventListener("mouseout", closeHover)
 
 mercuryMenuBtn.addEventListener('click', mercuryInteraction);
 mercuryMenuBtn.addEventListener("mouseover", mercuryHover)
 mercuryMenuBtn.addEventListener("mouseout", closeHover)
+mercury.addEventListener("mouseover", mercuryHover)
+mercury.addEventListener("mouseout", closeHover)
 
 venusMenuBtn.addEventListener('click', venusInteraction);
 venusMenuBtn.addEventListener("mouseover", venusHover)
 venusMenuBtn.addEventListener("mouseout", closeHover)
+venus.addEventListener("mouseover", venusHover)
+venus.addEventListener("mouseout", closeHover)
 
 marsMenuBtn.addEventListener('click', marsInteraction);
 marsMenuBtn.addEventListener("mouseover", marsHover)
 marsMenuBtn.addEventListener("mouseout", closeHover)
+mars.addEventListener("mouseover", marsHover)
+mars.addEventListener("mouseout", closeHover)
 
 jupiterMenuBtn.addEventListener('click', jupiterInteraction);
 jupiterMenuBtn.addEventListener("mouseover", jupiterHover)
 jupiterMenuBtn.addEventListener("mouseout", closeHover)
+jupiter.addEventListener("mouseover", jupiterHover)
+jupiter.addEventListener("mouseout", closeHover)
 
 saturnMenuBtn.addEventListener('click', saturnInteraction);
 saturnMenuBtn.addEventListener("mouseover", saturnHover)
 saturnMenuBtn.addEventListener("mouseout", closeHover)
+saturn.addEventListener("mouseover", saturnHover)
+saturn.addEventListener("mouseout", closeHover)
 
 uranusMenuBtn.addEventListener('click', uranusInteraction);
 uranusMenuBtn.addEventListener("mouseover", uranusHover)
 uranusMenuBtn.addEventListener("mouseout", closeHover)
+uranus.addEventListener("mouseover", uranusHover)
+uranus.addEventListener("mouseout", closeHover)
 
 neptuneMenuBtn.addEventListener('click', neptuneInteraction);
 neptuneMenuBtn.addEventListener("mouseover", neptuneHover)
 neptuneMenuBtn.addEventListener("mouseout", closeHover)
+neptune.addEventListener("mouseover", neptuneHover)
+neptune.addEventListener("mouseout", closeHover)
 
 sunMenuBtn.addEventListener('click', sunInteraction);
-sunMenuBtn.addEventListener("mouseover", earthHover)
+sunMenuBtn.addEventListener("mouseover", sunHover)
 sunMenuBtn.addEventListener("mouseout", closeHover)
+sun.addEventListener("mouseover", sunHover)
+sun.addEventListener("mouseout", closeHover)
 
 moonMenuBtn.addEventListener('click', moonInteraction);
-moonMenuBtn.addEventListener("mouseover", earthHover)
+moonMenuBtn.addEventListener("mouseover", moonHover)
 moonMenuBtn.addEventListener("mouseout", closeHover)
+moon.addEventListener("mouseover", moonHover)
+moon.addEventListener("mouseout", closeHover)
+
 
 cometMenuBtn.addEventListener('click', cometInteraction);
 asteroidMenuBtn.addEventListener('click', asteroidInteraction);
@@ -999,6 +1006,8 @@ function closeHover() {
     saturnOrbitOn = false
     uranusOrbitOn = false
     neptuneOrbitOn = false
+    moonOrbitOn = false
+    sunOrbitOn = false
 }
 
 function mercuryHover() {
@@ -1036,7 +1045,16 @@ function uranusHover() {
     planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
     uranusOrbitOn = true
 }
+function sunHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    sunOrbitOn = true
+}
+function moonHover() {
+    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    moonOrbitOn = true
+}
 
+/*============ Functions to expand/close 3D planet to full screen ===============*/
 function expandPlanet() {
     planetImageContainerReal.style.position = 'absolute'
     planetImageContainerReal.style.height = '100vh'
@@ -1058,6 +1076,8 @@ function closePlanet() {
 
 }
 
+
+/*===== Toggle between the two pages of planet info in the modal ======== */
 function toggleAdult() {
     adultBtn.classList.add('active-page')
     childBtn.classList.remove('active-page')
@@ -1092,7 +1112,6 @@ function venusInteraction() {
 }
 
 function earthInteraction() {
-    console.log("This is an earth message.");
 
     n += 2;
     populatePlanet();
@@ -1161,7 +1180,7 @@ function alienInteraction() {
 
 
 
-
+/* ====== pulls in info from planet list and populates modal with appropriate information ========= */
 function populatePlanet() {
     planetModal.classList.remove("hidden")
     planetName.innerHTML = planets[n].name;
@@ -1175,7 +1194,6 @@ function populatePlanet() {
     planetRotation.innerHTML = planets[n].rotation;
     planetMoons.innerHTML = planets[n].moons;
     planetTemp.innerHTML = planets[n].temp;
-    // planetImage.src = planets[n].image;
     setTimeout(function () {
         modalOpen = true
     }, 1000)
