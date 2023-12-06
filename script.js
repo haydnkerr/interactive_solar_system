@@ -656,6 +656,11 @@ let planetInfo2 = document.getElementById('planet-info-two');
 let planetInfo3 = document.getElementById('planet-info-three');
 let planetInfo4 = document.getElementById('planet-info-four');
 let planetInfo5 = document.getElementById('planet-info-five');
+let planetInfo6 = document.getElementById('planet-info-six');
+let planetInfo7 = document.getElementById('planet-info-seven');
+let planetInfo8 = document.getElementById('planet-info-eight');
+let planetInfo9 = document.getElementById('planet-info-nine');
+let planetInfo10 = document.getElementById('planet-info-ten');
 let planetDiameter = document.getElementById('planet-diameter');
 let planetOrbit = document.getElementById('planet-orbit');
 let planetRotation = document.getElementById('planet-rotation');
@@ -972,8 +977,8 @@ meteorMenuBtn.addEventListener('click', meteorInteraction);
 satelliteMenuBtn.addEventListener('click', satelliteInteraction);
 alienMenuBtn.addEventListener('click', alienInteraction);
 
-let childBtn = document.getElementById('child-toggle')
-let adultBtn = document.getElementById('adult-toggle')
+// let childBtn = document.getElementById('child-toggle')
+// let adultBtn = document.getElementById('adult-toggle')
 let fillBar = document.querySelector('.fill-bar-container')
 let expandPlanetBtn = document.getElementById('expand-planet-btn')
 let infoToggle = document.querySelector('.info-toggle')
@@ -981,8 +986,8 @@ let planetExpandCloseContainer = document.getElementById('planet-expand-close-bt
 let planetExpandCloseBtn = document.getElementById('planet-close-btn')
 
 function closeModal() {
-    childBtn.classList.add('active-page')
-    adultBtn.classList.remove('active-page')
+    // childBtn.classList.add('active-page')
+    // adultBtn.classList.remove('active-page')
     planetModal.classList.add("hidden")
     n = 0;
     planetImageContainerReal.removeChild(planetImageContainerReal.firstElementChild)
@@ -992,8 +997,8 @@ function closeModal() {
 
 
 expandPlanetBtn.addEventListener('click', expandPlanet)
-adultBtn.addEventListener('click', toggleAdult);
-childBtn.addEventListener('click', toggleChild);
+// adultBtn.addEventListener('click', toggleAdult);
+// childBtn.addEventListener('click', toggleChild);
 planetExpandCloseBtn.addEventListener('click', closePlanet)
 
 function closeHover() {
@@ -1078,17 +1083,17 @@ function closePlanet() {
 
 
 /*===== Toggle between the two pages of planet info in the modal ======== */
-function toggleAdult() {
-    adultBtn.classList.add('active-page')
-    childBtn.classList.remove('active-page')
-    populateAdultInfo();
-}
+// function toggleAdult() {
+//     adultBtn.classList.add('active-page')
+//     childBtn.classList.remove('active-page')
+//     populateAdultInfo();
+// }
 
-function toggleChild() {
-    childBtn.classList.add('active-page')
-    adultBtn.classList.remove('active-page')
-    populatePlanet();
-}
+// function toggleChild() {
+//     childBtn.classList.add('active-page')
+//     adultBtn.classList.remove('active-page')
+//     populatePlanet();
+// }
 
 
 // window.addEventListener('click', function() {
@@ -1189,6 +1194,11 @@ function populatePlanet() {
     planetInfo3.innerHTML = planets[n].info3;
     planetInfo4.innerHTML = planets[n].info4;
     planetInfo5.innerHTML = planets[n].info5;
+    planetInfo6.innerHTML = planets[n].info6;
+    planetInfo7.innerHTML = planets[n].info7;
+    planetInfo8.innerHTML = planets[n].info8;
+    planetInfo9.innerHTML = planets[n].info9;
+    planetInfo10.innerHTML = planets[n].info10;
     planetDiameter.innerHTML = planets[n].diameter;
     planetOrbit.innerHTML = planets[n].orbit;
     planetRotation.innerHTML = planets[n].rotation;
