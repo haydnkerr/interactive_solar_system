@@ -1,12 +1,18 @@
 let liftOffBtn = document.querySelector('.lift-off-btn');
 let spaceship = document.querySelector('.spaceship-bg')
 let modalInfo = document.querySelector('.modal-info')
+let trialModal = document.querySelector('.trial-modal')
 
 liftOffBtn.addEventListener('click', liftOff);
 
 function liftOff() {
     modalInfo.style.opacity = "0"
     spaceship.classList.add('takeoff-animation');
+    setInterval(displayNone,4000)
+}
+
+function displayNone() {
+    trialModal.classList.add('display-none')
 }
 
 /* =========================== Declarations =========================== */
