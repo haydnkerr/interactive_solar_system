@@ -4,6 +4,76 @@
     box-sizing: border-box;
 }
 
+/* .trial-modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+    background: url("./assets/trial-spaceship-2.png");
+    background-position: top right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    transition: transform 5s ease;
+    opacity: 1;
+    color: white;
+    padding: 175px 0px 0px 150px;
+} */
+
+.trial-modal {
+    position: relative;
+    z-index: 998;
+}
+
+.spaceship-bg {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    top: 0;
+    left: 0;
+    
+}
+
+.modal-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: opacity 0.3s;
+    color: white;
+    padding: 175px 0px 0px 150px;
+}
+
+@media only screen and (max-width: 1350px) {
+    .modal-info {
+        padding: 100px 125px
+    }
+}
+
+.modal-info h1 {
+    font-size: 5rem;
+}
+
+.modal-info p {
+    line-height: 1.5rem;
+    max-width: 650px;
+}
+
+.fade-animation {
+    opacity: 0;
+}
+
+.takeoff-animation {
+    transition: 3s ease-in-out;
+    top: -1500px;
+}
+
+
+
 #mobile-modal {
     position: absolute;
     width: 100vw;
@@ -136,6 +206,10 @@ h1 {
 h2 {
     margin: 5px 0px;
 }
+
+h3 {
+    color: white
+}
 h4 {
     text-transform: uppercase;
     font-weight: 500;
@@ -162,10 +236,10 @@ header {
     left: 0vw;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items:center;
+    justify-content: space-between;
+    align-items: baseline;
     z-index: 22;
-    padding: 15px;
+    padding: 25px;
 }
 
 nav {
@@ -630,11 +704,12 @@ nav li:hover {
     border-radius: 50%;
     z-index: 7;
     overflow: hidden;
-    transform: rotate(110deg);
+    transform: rotate(90deg);
 }
 
 .planet:hover {
     cursor: pointer;
+    filter: drop-shadow(0px 0px 10px rgb(112, 207, 255));
 }
 
 /* .planet:hover {
@@ -658,12 +733,14 @@ nav li:hover {
     background-size: cover;
     position: relative;
     animation: index 1s linear infinite; 
+    animation-play-state: paused;
     
 }
 
 #mercury-slide {
     /* position: relative; */
     animation: index 1s linear infinite; 
+    animation-play-state: paused;
     
 }
 
@@ -988,8 +1065,8 @@ nav li:hover {
   @keyframes spin {
     
     100% {
-        transform: rotate(-250deg);
-        -webkit-transform: rotate(-250deg);
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
     }
   }
 
@@ -1023,6 +1100,17 @@ nav li:hover {
   @media only screen and (max-width: 1000px) {
     #mobile-modal {
         display: flex;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .bottom-container {
+        flex-wrap: wrap;
     }
 
 

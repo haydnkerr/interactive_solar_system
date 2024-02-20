@@ -1,3 +1,14 @@
+let liftOffBtn = document.querySelector('.lift-off-btn');
+let spaceship = document.querySelector('.spaceship-bg')
+let modalInfo = document.querySelector('.modal-info')
+
+liftOffBtn.addEventListener('click', liftOff);
+
+function liftOff() {
+    modalInfo.style.opacity = "0"
+    spaceship.classList.add('takeoff-animation');
+}
+
 /* =========================== Declarations =========================== */
 /* =========================== Menu Buttons =========================== */
 let mercuryMenuBtn = document.getElementById("mercury-menu")
@@ -81,7 +92,7 @@ for (let i = 0; i < 1000; i++) {
     star.style.width = randomSize + 'px';
     star.style.height = randomSize + 'px';
     stars.appendChild(star);
-    star.style.animation = `cometMoveRight ${randomSpeed}s linear`;
+    star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
 }
 
 for (let i = 0; i < 100; i++) {
@@ -285,9 +296,6 @@ function orbit() {
     saturnShadow.style.animation = `shadowSpin ${rotationSpeed * 5}s linear infinite`;
     uranusShadow.style.animation = `shadowSpin ${rotationSpeed * 7}s linear infinite`;
     neptuneShadow.style.animation = `shadowSpin ${rotationSpeed * 10}s linear infinite`;
-
-
-
 }
 
 /*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */

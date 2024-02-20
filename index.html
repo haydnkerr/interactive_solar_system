@@ -38,9 +38,28 @@
 </head>
 
 <body>
-    <header class="">
 
-        <nav>
+
+    
+    
+    <section class="trial-modal">
+       
+        <img class="spaceship-bg" src="./assets/trial-spaceship-2.png">
+        <div class="modal-info">
+            <h1>Cosmic Journey</h1>
+            <p>
+                Welcome to Cosmic Journey, where the wonders of our celestial neighborhood await your exploration.
+                Embark on an interactive voyage through our solar system, delving into the mysteries of each planet in
+                both 2D and 3D formats. Discover the beauty and complexity of our cosmic companions as you immerse
+                yourself in this captivating astronomical adventure.
+            </p>
+            <button class="btn-primary lift-off-btn">Lift Off</button>
+        </div>
+    </section>
+    <header class="">
+        <h3>Cosmic Journey</h3>
+
+        <nav class="desktop-nav">
             <li id="sun-menu">Sun</li>
             <li id="mercury-menu">Mercury</li>
             <li id="venus-menu">Venus</li>
@@ -76,9 +95,9 @@
         </nav>
     </header>
 
-    <div id="mobile-modal">
+    <!-- <div id="mobile-modal">
         <h3>Please note that this experience is intended for a desktop. We are currently working on expanding accessibility to all devices. Thank You</h3>
-    </div>
+    </div> -->
 
 
     <section class="content-container display-none">
@@ -154,7 +173,7 @@
                         </div>
 
                         <div class="info-toggle">
-                            <button class="btn-primary" id="expand-planet-btn">Expand Planet</button>
+                            <button class="btn-primary" id="expand-planet-btn">Explore Planet</button>
 
                             <!-- <div class="toggle-container">
 
@@ -171,23 +190,23 @@
             </div>
 
             <div class="bottom-container">
-                <div class="stat-box">
+                <div class="stat-box half-width">
                     <h4>Diameter</h4>
                     <h2 id="planet-diameter">Km</h2>
                 </div>
-                <div class="stat-box">
+                <div class="stat-box rotation-stat half-width">
                     <h4>Rotation</h4>
                     <h2 id="planet-rotation">Hours</h2>
                 </div>
-                <div class="stat-box">
+                <div class="stat-box orbit-stat half-width">
                     <h4>Orbit</h4>
                     <h2 id="planet-orbit">Days</h2>
                 </div>
-                <div class="stat-box">
+                <div class="stat-box moon-stat half-width">
                     <h4>Moons</h4>
                     <h2 id="planet-moons"></h2>
                 </div>
-                <div class="stat-box">
+                <div class="stat-box temperature-stat half-width">
                     <h4>Temperature</h4>
                     <h2 id="planet-temp">Celsius</h2>
                 </div>
@@ -239,28 +258,28 @@
         </div>
     </div>
 
-    
+
 
 
 
     <div class="slide earth-slide">
         <div class="rotate earth-rotate" id="earth-container">
-            
+
             <div class="planet" id="earth">
                 <div class="rotate moon-rotate">
                     <div class="planet" id="moon">
-                
+
                         <div class="shadow-rotate" id="moon-shadow">
-                            
+
                         </div>
-                        
+
                     </div>
                 </div>
-                
+
                 <div class="shadow-rotate" id="earth-shadow">
-                    
+
                 </div>
-                
+
             </div>
 
         </div>
@@ -298,7 +317,7 @@
         </div>
     </div>
 
-    <section  id="planet-hover" class="planet-hover-info-container">
+    <section id="planet-hover" class="planet-hover-info-container">
         <h2 id="orbit-planet-name"></h2>
         <img id="orbit-planet-img" src="">
         <p><strong>Orbit: </strong><span id="years-in-orbit"></span> years <span id="days-in-orbit"></span> days</p>

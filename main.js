@@ -245,7 +245,7 @@ function populatePlanet() {
     function animate() {
         if (isAnimationRunning) {
             requestAnimationFrame(animate);
-            planetDisplay.rotation.y += 0.0005;
+            planetDisplay.rotation.y += 0.0010;
             renderer.render(scene, camera);
         }
     }
