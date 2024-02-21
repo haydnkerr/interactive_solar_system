@@ -4,24 +4,78 @@
     box-sizing: border-box;
 }
 
-/* .trial-modal {
+#mobile-popup {
     position: absolute;
     width: 100vw;
+    height: 100dvh;
+    background: black;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 25px;
+    text-align: center;
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #mobile-popup {
+        display: flex;
+    }
+}
+
+
+.gradient-bg {
+    position: relative;
+    width: 100vw; 
+    height: 100dvh; 
+    z-index: 995;
+  }
+  
+  .gradient-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
+    background: linear-gradient(to bottom,#000, #2f0078,#640082,#982100,#c94d12, #e27e40, #f4b711, #fff900); /* Your gradient background */
+    -webkit-mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
+    mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: top right;
+    -webkit-mask-position: top right;
+
+    
+  }
+
+  .modal-move {
+    transition: mask-position 5s ease-in-out;
+    mask-position: 0 -1500px;
+  }
+  
+
+.rocket-modal {
+    background: url("./assets/spaceship-smoke.png");
+    position: absolute;
+    width: 100vw;
+    height: 120vh;
     z-index: 998;
-    background: url("./assets/trial-spaceship-2.png");
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    transition: transform 5s ease;
+    transition: transform 5s ease-in-out;
     opacity: 1;
     color: white;
     padding: 175px 0px 0px 150px;
-} */
+    top: 0;
+    left: 0;
+} 
 
-.trial-modal {
-    position: relative;
+.rocket-modal {
     z-index: 998;
 }
 
@@ -34,6 +88,15 @@
     
 }
 
+.rocket-modal-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 998;
+}
+
 .modal-info {
     position: absolute;
     top: 0;
@@ -43,7 +106,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-    transition: opacity 0.3s;
+    transition: opacity 1s;
     color: white;
     padding: 175px 0px 0px 150px;
 }
@@ -68,7 +131,7 @@
 }
 
 .takeoff-animation {
-    transition: 3s ease-in-out;
+    transition: 5s ease-in-out;
     top: -1500px;
 }
 

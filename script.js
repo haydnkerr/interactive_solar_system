@@ -1,18 +1,26 @@
 let liftOffBtn = document.querySelector('.lift-off-btn');
-let spaceship = document.querySelector('.spaceship-bg')
+let spaceship = document.querySelector('.rocket-modal')
 let modalInfo = document.querySelector('.modal-info')
-let trialModal = document.querySelector('.trial-modal')
+let gradientModal = document.querySelector('.gradient-bg')
+let rocketInfoContainer = document.querySelector('.rocket-modal-info')
+let gradientMask = document.querySelector('.gradient-mask')
+
 
 liftOffBtn.addEventListener('click', liftOff);
+
+
 
 function liftOff() {
     modalInfo.style.opacity = "0"
     spaceship.classList.add('takeoff-animation');
+    gradientMask.classList.add('modal-move')
     setInterval(displayNone,4000)
 }
 
 function displayNone() {
-    trialModal.classList.add('display-none')
+    spaceship.classList.add('display-none')
+    rocketInfoContainer.classList.add('display-none')
+    gradientModal.classList.add('display-none')
 }
 
 /* =========================== Declarations =========================== */
