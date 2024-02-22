@@ -38,7 +38,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 125vh;
     background: linear-gradient(to bottom,#000, #2f0078,#640082,#982100,#c94d12, #e27e40, #f4b711, #fff900); /* Your gradient background */
     -webkit-mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
     mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
@@ -46,13 +46,29 @@
     mask-repeat: no-repeat;
     mask-position: top right;
     -webkit-mask-position: top right;
-
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: opacity 1s;
+    color: white;
+    padding: 175px 0px 0px 150px;
   }
+
+  .gradient-mask h1 {
+    font-size: 5rem;
+}
+
+.gradient-mask p {
+    line-height: 1.5rem;
+    max-width: 650px;
+}
 
   .modal-move {
     transition: mask-position 5s ease-in-out;
-    mask-position: 0 -1500px;
+    mask-position: 100% -1500px;
+    -webkit-mask-position: 100% -1500px;
   }
   
 
@@ -60,7 +76,7 @@
     background: url("./assets/spaceship-smoke.png");
     position: absolute;
     width: 100vw;
-    height: 120vh;
+    height: 125vh;
     z-index: 998;
     background-position: top right;
     background-size: cover;
@@ -112,6 +128,10 @@
 
 @media only screen and (max-width: 1350px) {
     .modal-info {
+        padding: 100px 125px
+    }
+
+    .gradient-mask {
         padding: 100px 125px
     }
 }
@@ -654,8 +674,19 @@ nav li:hover {
 }
 
 .active-orbit {
-    /* background: rgb(94, 201, 255); */
-    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255))
+    border: none;
+    color: white;
+    height: 100%;
+    padding: 0px 25px;
+    transition: opacity 0.5s;
+    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+    transform: translateX(18px);
+    opacity: 0;
+}
+
+.active-orbit:hover {
+    cursor: pointer;
+    background: linear-gradient(rgb(112, 207, 255),rgb(0, 125, 228) )
 }
 
 .modal {
@@ -666,22 +697,16 @@ nav li:hover {
 
 .orbit-controls-container {
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: auto;
     top: 93vh;
-    left: 25vw;
+    left: 0;
     z-index: 15;
-    color: white;
-    border: 0.25px solid rgba(255, 255, 255, 0.394);
-    display: flex;
-}
-
-.orbit-control {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .orbit-control:hover {
     cursor: pointer;
@@ -1068,6 +1093,7 @@ nav li:hover {
 
 
 
+
 @keyframes slide {
     
 
@@ -1132,6 +1158,70 @@ nav li:hover {
     }
   }
 
+  @keyframes mercurySpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  } 
+
+  @keyframes venusSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  }
+
+  @keyframes earthSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  } 
+
+  @keyframes marsSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  }
+
+  @keyframes jupiterSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  } 
+
+  @keyframes saturnSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  }
+
+  @keyframes uranusSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  } 
+
+  @keyframes neptuneSpin {
+    
+    100% {
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+    }
+  }
+
   @keyframes shadowSpin {
     
     100% {
@@ -1178,4 +1268,9 @@ nav li:hover {
 
     
   }
+
+
+
+
+
 

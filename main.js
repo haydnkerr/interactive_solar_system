@@ -7,18 +7,6 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Instantiate a loader
 let loader = new GLTFLoader();
 
@@ -178,7 +166,7 @@ scene.add(ambientLight);
 
 
 let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
-directionalLight.position.set(1,1,1); // Set the direction
+directionalLight.position.set(1, 1, 1); // Set the direction
 scene.add(directionalLight);
 
 directionalLight.castShadow = true;
@@ -218,15 +206,31 @@ function populatePlanet() {
 
     let planetImageContainerReal = document.getElementById('planet-image-container')
     let renderer = new THREE.WebGLRenderer();
-    renderer.setClearColor(0x000000, 0); 
+    renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
     planetImageContainerReal.appendChild(renderer.domElement);
-    camera.position.z = 1;
+
+    if (n == 5) {
+        camera.position.z = 1.5;
+        camera.position.set(0, 0, camera.position.z);
+    } else {
+        camera.position.z = 0.85;
+        camera.position.set(0, 0, camera.position.z);
+    }
+ 
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.antialias = true;
 
+    const minDistance = 0.5;
+    const maxDistance = 3; 
+
     let controls = new OrbitControls(camera, renderer.domElement);
+    controls.minDistance = minDistance;
+    controls.maxDistance = maxDistance;
+
+
+
 
 
 

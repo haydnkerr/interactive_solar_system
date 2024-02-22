@@ -14,13 +14,14 @@ function liftOff() {
     modalInfo.style.opacity = "0"
     spaceship.classList.add('takeoff-animation');
     gradientMask.classList.add('modal-move')
-    setInterval(displayNone,4000)
+    setInterval(displayNone, 4000)
 }
 
 function displayNone() {
     spaceship.classList.add('display-none')
     rocketInfoContainer.classList.add('display-none')
     gradientModal.classList.add('display-none')
+    orbitControlBtn.style.opacity = "1"
 }
 
 /* =========================== Declarations =========================== */
@@ -40,6 +41,7 @@ let asteroidMenuBtn = document.getElementById("asteroid-menu")
 let meteorMenuBtn = document.getElementById("meteor-menu")
 let satelliteMenuBtn = document.getElementById("satellite-menu")
 let alienMenuBtn = document.getElementById("alien-menu")
+
 
 
 /* =========================== Individual Planets ===================== */
@@ -161,111 +163,6 @@ function shootingStarLeft() {
 /* =============== Initial Function for animating orbits =================== */
 window.addEventListener('load', orbit);
 
-/* ========== orbit Controls =============== */
-let currentOrbit = 1;
-let slideSpeed = 6;
-let rotationSpeed = 12;
-let pauseOrbitBtn = document.getElementById('pause-orbit')
-let normalOrbitBtn = document.getElementById('normal-orbit')
-let realisticOrbitBtn = document.getElementById('realistic-orbit')
-
-pauseOrbitBtn.addEventListener("click", pauseBtn);
-normalOrbitBtn.addEventListener("click", normalBtn);
-realisticOrbitBtn.addEventListener("click", realisticBtn);
-
-
-function pauseBtn() {
-    slideSpeed = 0;
-    rotationSpeed = 0;
-    orbit();
-    pauseOrbitBtn.classList.add('active-orbit')
-    normalOrbitBtn.classList.remove('active-orbit')
-    realisticOrbitBtn.classList.remove('active-orbit')
-}
-
-function normalBtn() {
-    slideSpeed = 6;
-    rotationSpeed = 12;
-    orbit();
-    pauseOrbitBtn.classList.remove('active-orbit')
-    normalOrbitBtn.classList.add('active-orbit')
-    realisticOrbitBtn.classList.remove('active-orbit')
-}
-
-function realisticBtn() {
-    slideSpeed = 6;
-    rotationSpeed = 12;
-    realisticOrbit();
-    pauseOrbitBtn.classList.remove('active-orbit')
-    normalOrbitBtn.classList.remove('active-orbit')
-    realisticOrbitBtn.classList.add('active-orbit')
-}
-
-/* ===================== Function for Different Orbit Speeds/Types ================ */
-
-function realisticOrbit() {
-    mercurySlide.style.animation = `slide ${slideSpeed * 0.24}s ease-in-out infinite alternate`;
-    venusSlide.style.animation = `slide ${slideSpeed * 0.62}s ease-in-out infinite alternate`;
-    earthSlide.style.animation = `slide ${slideSpeed}s ease-in-out infinite alternate`;
-    marsSlide.style.animation = `slide ${slideSpeed * 1.9}s ease-in-out infinite alternate`;
-    jupiterSlide.style.animation = `slide ${slideSpeed * 11.8}s ease-in-out infinite alternate`;
-    saturnSlide.style.animation = `slide ${slideSpeed * 29}s ease-in-out infinite alternate`;
-    uranusSlide.style.animation = `uranusSlide ${slideSpeed * 84}s ease-in-out infinite alternate`;
-    neptuneSlide.style.animation = `neptuneSlide ${slideSpeed * 164}s ease-in-out infinite alternate`;
-
-    mercuryRotate.style.animation = `rotate ${rotationSpeed * 0.24}s linear infinite`;
-    venusRotate.style.animation = `rotate ${rotationSpeed * 0.62}s linear infinite`;
-    earthRotate.style.animation = `rotate ${rotationSpeed}s linear infinite`;
-    marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
-    jupiterRotate.style.animation = `rotate ${rotationSpeed * 11.8}s linear infinite`;
-    saturnRotate.style.animation = `rotate ${rotationSpeed * 29}s linear infinite`;
-    uranusRotate.style.animation = `rotate ${rotationSpeed * 84}s linear infinite`;
-    neptuneRotate.style.animation = `rotate ${rotationSpeed * 164}s linear infinite`;
-
-    mercury.style.animation = `spin ${rotationSpeed * .24}s linear infinite`;
-    venus.style.animation = `spin ${rotationSpeed * 0.62}s linear infinite`;
-    earth.style.animation = `spin ${rotationSpeed}s linear infinite`;
-    mars.style.animation = `spin ${rotationSpeed * 1.9}s linear infinite`;
-    jupiter.style.animation = `spin ${rotationSpeed * 11.8}s linear infinite`;
-    saturn.style.animation = `spin ${rotationSpeed * 29}s linear infinite`;
-    uranus.style.animation = `spin ${rotationSpeed * 84}s linear infinite`;
-    neptune.style.animation = `spin ${rotationSpeed * 164}s linear infinite`;
-
-    saturnShadow.style.animation = 'shadowSpin 20s linear infinite';
-
-    mercuryShadow.style.animation = `shadowSpin ${rotationSpeed * .24}s linear infinite`;
-    venusShadow.style.animation = `shadowSpin ${rotationSpeed * 0.62}s linear infinite`;
-    earthShadow.style.animation = `shadowSpin ${rotationSpeed}s linear infinite`;
-    marsShadow.style.animation = `shadowSpin ${rotationSpeed * 1.9}s linear infinite`;
-    jupiterShadow.style.animation = `shadowSpin ${rotationSpeed * 11.8}s linear infinite`;
-    saturnShadow.style.animation = `shadowSpin ${rotationSpeed * 29}s linear infinite`;
-    uranusShadow.style.animation = `shadowSpin ${rotationSpeed * 84}s linear infinite`;
-    neptuneShadow.style.animation = `shadowSpin ${rotationSpeed * 164}s linear infinite`;
-
-
-}
-
-
-
-function pauseOrbit() {
-    mercurySlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    venusSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    earthSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    marsSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    jupiterSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    saturnSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    uranusSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-    neptuneSlide.style.animation = `slide 0s ease-in-out infinite alternate`;
-
-    mercuryRotate.style.animation = `rotate 0s linear infinite`;
-    venusRotate.style.animation = `rotate 0s linear infinite`;
-    earthRotate.style.animation = `rotate 0s linear infinite`;
-    marsRotate.style.animation = `rotate 0s linear infinite`;
-    jupiterRotate.style.animation = `rotate 0s linear infinite`;
-    saturnRotate.style.animation = `rotate 0s linear infinite`;
-    uranusRotate.style.animation = `rotate 0s linear infinite`;
-    neptuneRotate.style.animation = `rotate 0s linear infinite`;
-}
 
 /* ======== This is the default orbit animation =============== */
 function orbit() {
@@ -310,6 +207,101 @@ function orbit() {
     saturnShadow.style.animation = `shadowSpin ${rotationSpeed * 5}s linear infinite`;
     uranusShadow.style.animation = `shadowSpin ${rotationSpeed * 7}s linear infinite`;
     neptuneShadow.style.animation = `shadowSpin ${rotationSpeed * 10}s linear infinite`;
+}
+
+/* ========== orbit Controls =============== */
+let currentOrbit = 1;
+let slideSpeed = 6;
+let rotationSpeed = 12;
+
+let orbitControlBtn = document.querySelector('.orbit-control-btn')
+let orbitActive = true
+
+orbitControlBtn.addEventListener("click", toggleOrbit);
+
+
+function toggleOrbit() {
+    if (orbitActive) {
+        orbitActive = false
+        mercury.style.animationPlayState = "paused";
+        venus.style.animationPlayState = "paused";
+        sun.style.animationPlayState = "paused";
+        earth.style.animationPlayState = "paused";
+        moon.style.animationPlayState = "paused";
+        mars.style.animationPlayState = "paused";
+        jupiter.style.animationPlayState = "paused";
+        saturn.style.animationPlayState = "paused";
+        uranus.style.animationPlayState = "paused";
+        neptune.style.animationPlayState = "paused";
+
+        mercurySlide.style.animationPlayState = "paused";
+        venusSlide.style.animationPlayState = "paused";
+        earthSlide.style.animationPlayState = "paused";
+        marsSlide.style.animationPlayState = "paused";
+        jupiterSlide.style.animationPlayState = "paused";
+        saturnSlide.style.animationPlayState = "paused";
+        uranusSlide.style.animationPlayState = "paused";
+        neptuneSlide.style.animationPlayState = "paused";
+
+        mercuryShadow.style.animationPlayState = "paused";
+        venusShadow.style.animationPlayState = "paused";
+        earthShadow.style.animationPlayState = "paused";
+        marsShadow.style.animationPlayState = "paused";
+        jupiterShadow.style.animationPlayState = "paused";
+        saturnShadow.style.animationPlayState = "paused";
+        uranusShadow.style.animationPlayState = "paused";
+        neptuneShadow.style.animationPlayState = "paused";
+
+        mercuryRotate.style.animationPlayState = "paused";
+        venusRotate.style.animationPlayState = "paused";
+        earthRotate.style.animationPlayState = "paused";
+        moonRotate.style.animationPlayState = "paused";
+        marsRotate.style.animationPlayState = "paused";
+        jupiterRotate.style.animationPlayState = "paused";
+        saturnRotate.style.animationPlayState = "paused";
+        uranusRotate.style.animationPlayState = "paused";
+        neptuneRotate.style.animationPlayState = "paused";
+    } else {
+        orbitActive = true
+        mercury.style.animationPlayState = "running";
+        sun.style.animationPlayState = "running";
+        venus.style.animationPlayState = "running";
+        earth.style.animationPlayState = "running";
+        mars.style.animationPlayState = "running";
+        jupiter.style.animationPlayState = "running";
+        saturn.style.animationPlayState = "running";
+        uranus.style.animationPlayState = "running";
+        neptune.style.animationPlayState = "running";
+
+        mercuryShadow.style.animationPlayState = "running";
+        venusShadow.style.animationPlayState = "running";
+        earthShadow.style.animationPlayState = "running";
+        marsShadow.style.animationPlayState = "running";
+        jupiterShadow.style.animationPlayState = "running";
+        saturnShadow.style.animationPlayState = "running";
+        uranusShadow.style.animationPlayState = "running";
+        neptuneShadow.style.animationPlayState = "running";
+
+        mercurySlide.style.animationPlayState = "running";
+        venusSlide.style.animationPlayState = "running";
+        earthSlide.style.animationPlayState = "running";
+        marsSlide.style.animationPlayState = "running";
+        jupiterSlide.style.animationPlayState = "running";
+        saturnSlide.style.animationPlayState = "running";
+        uranusSlide.style.animationPlayState = "running";
+        neptuneSlide.style.animationPlayState = "running";
+
+        mercuryRotate.style.animationPlayState = "running";
+        venusRotate.style.animationPlayState = "running";
+        earthRotate.style.animationPlayState = "running";
+        marsRotate.style.animationPlayState = "running";
+        jupiterRotate.style.animationPlayState = "running";
+        saturnRotate.style.animationPlayState = "running";
+        uranusRotate.style.animationPlayState = "running";
+        neptuneRotate.style.animationPlayState = "running";
+    }
+
+    console.log('click')
 }
 
 /*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */
