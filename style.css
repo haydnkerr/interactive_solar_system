@@ -40,8 +40,8 @@
     width: 100vw;
     height: 125vh;
     background: linear-gradient(to bottom,#000, #2f0078,#640082,#982100,#c94d12, #e27e40, #f4b711, #fff900); /* Your gradient background */
-    -webkit-mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
-    mask-image: url('./assets/trial-shape.png'); /* Your custom shape image */
+    -webkit-mask-image: url('./assets/trial-shape-1.png'); /* Your custom shape image */
+    mask-image: url('./assets/trial-shape-1.png'); /* Your custom shape image */
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: top right;
@@ -73,7 +73,7 @@
   
 
 .rocket-modal {
-    background: url("./assets/spaceship-smoke.png");
+    background: url("./assets/spaceship-smoke-1.png");
     position: absolute;
     width: 100vw;
     height: 125vh;
