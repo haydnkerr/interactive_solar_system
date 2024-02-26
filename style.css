@@ -28,20 +28,23 @@
 
 .gradient-bg {
     position: relative;
-    width: 100vw; 
-    height: 100dvh; 
+    width: 100vw;
+    height: 100dvh;
     z-index: 995;
-  }
-  
-  .gradient-mask {
+}
+
+.gradient-mask {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 125vh;
-    background: linear-gradient(to bottom,#000, #2f0078,#640082,#982100,#c94d12, #e27e40, #f4b711, #fff900); /* Your gradient background */
-    -webkit-mask-image: url('./assets/trial-shape-1.png'); /* Your custom shape image */
-    mask-image: url('./assets/trial-shape-1.png'); /* Your custom shape image */
+    background: linear-gradient(to bottom, #000, #2f0078, #640082, #982100, #c94d12, #e27e40, #f4b711, #fff900);
+    /* Your gradient background */
+    -webkit-mask-image: url('./assets/trial-shape-1.png');
+    /* Your custom shape image */
+    mask-image: url('./assets/trial-shape-1.png');
+    /* Your custom shape image */
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: top right;
@@ -54,9 +57,10 @@
     transition: opacity 1s;
     color: white;
     padding: 175px 0px 0px 150px;
-  }
+    overflow: hidden;
+}
 
-  .gradient-mask h1 {
+.gradient-mask h1 {
     font-size: 5rem;
 }
 
@@ -65,12 +69,12 @@
     max-width: 650px;
 }
 
-  .modal-move {
+.modal-move {
     transition: mask-position 5s ease-in-out;
     mask-position: 100% -1500px;
     -webkit-mask-position: 100% -1500px;
-  }
-  
+}
+
 
 .rocket-modal {
     background: url("./assets/spaceship-smoke-1.png");
@@ -88,7 +92,7 @@
     padding: 175px 0px 0px 150px;
     top: 0;
     left: 0;
-} 
+}
 
 .rocket-modal {
     z-index: 998;
@@ -100,7 +104,7 @@
     height: auto;
     top: 0;
     left: 0;
-    
+
 }
 
 .rocket-modal-info {
@@ -156,6 +160,7 @@
 
 
 
+
 #mobile-modal {
     position: absolute;
     width: 100vw;
@@ -196,17 +201,17 @@
     justify-content: space-between;
     align-items: baseline;
     z-index: 980;
-    
+
 }
 
 
 
 .toggle-container {
     z-index: 984;
-display: flex;
-width: 200px;
-justify-content: space-between;
-align-items: center;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .page-toggle:hover {
@@ -224,7 +229,7 @@ align-items: center;
     position: absolute;
     justify-content: flex-start;
     z-index: 1;
-   
+
 }
 
 
@@ -235,19 +240,19 @@ align-items: center;
 
 .btn-primary {
     display: block;
-  background-color: rgb(0, 208, 38);
-  text-decoration: none;
-  border: none;
-  border-bottom: 3px solid rgb(0, 167, 31);
-  text-align: center;
-  border-radius: 8px;
-  padding: 8px;
-  overflow: hidden;
-  width: 150px;
-  margin-top: 10px;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 500;
+    background-color: rgb(0, 208, 38);
+    text-decoration: none;
+    border: none;
+    border-bottom: 3px solid rgb(0, 167, 31);
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+    width: 150px;
+    margin-top: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .btn-primary:hover {
@@ -292,6 +297,7 @@ h2 {
 h3 {
     color: white
 }
+
 h4 {
     text-transform: uppercase;
     font-weight: 500;
@@ -354,7 +360,7 @@ nav li:hover {
 } */
 
 .objects-menu-container {
-    height: 20px; 
+    height: 20px;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -378,7 +384,7 @@ nav li:hover {
     height: 50px;
 }
 
-.earth-menu-container:hover ~ .expand-btn {
+.earth-menu-container:hover~.expand-btn {
     transform: rotate(180deg);
 }
 
@@ -406,7 +412,7 @@ nav li:hover {
     transition: 0.4s;
 }
 
-.close-btn p{
+.close-btn p {
     font-size: 40px;
     font-weight: 500;
 }
@@ -453,7 +459,7 @@ nav li:hover {
     overflow: hidden;
 }
 
-#planet-expand-close-btn  {
+#planet-expand-close-btn {
     position: fixed;
     top: 50px;
     right: 50px;
@@ -490,17 +496,17 @@ nav li:hover {
     /* padding: 50px 0px; */
     padding-bottom: 30px;
     padding-left: 15px;
-} 
+}
 
 .content-overflow {
     overflow: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .content-overflow::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .planet-info-cont {
     height: 100%;
@@ -509,7 +515,7 @@ nav li:hover {
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 25px;
-} 
+}
 
 .planet-info-container p {
     font-family: 'montserrat';
@@ -520,6 +526,7 @@ nav li:hover {
     letter-spacing: 0.8px;
 
 }
+
 /* #planet-info-five {
     margin-bottom: 50px;
 } */
@@ -539,19 +546,20 @@ nav li:hover {
     padding: 5px 15px;
     overflow: hidden;
     color: white;
-    
-    
+
+
     border: 1px solid white;
 }
 
-#adult-toggle, #child-toggle {
+#adult-toggle,
+#child-toggle {
     font-size: 0.9rem;
     font-weight: 500;
 }
 
 .active-page {
     background: white;
-    color: black!important;
+    color: black !important;
     border: 1px solid white;
 }
 
@@ -567,20 +575,6 @@ nav li:hover {
 
 
 
-#sun {
-   
-    background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
-    width: 7vw;
-    height: 7vw;
-    border-radius: 50%;
-    position: absolute;
-    top: 45vh;
-    left: 48vw;
-    z-index: 5;
-    box-shadow: 0px 0px 15px 5px #fde025;
-    /* display: none; */
-    animation: index 9s linear infinite; 
-}
 
 
 
@@ -590,18 +584,18 @@ nav li:hover {
     height: 2px;
     border-radius: 50%;
     background: white;
-    animation: trailfade 1s linear; 
+    animation: trailfade 1s linear;
     animation-iteration-count: 1
 }
 
 @keyframes trailfade {
-    
+
     100% {
         opacity: 0%;
         width: 0.5px;
         height: 0.5px;
     }
-  }
+}
 
 
 
@@ -621,6 +615,35 @@ nav li:hover {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.twinkle {
+    animation: twinkle 5s linear infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.2;
+    }
+
+    47% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    53% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
 }
 
 .comet {
@@ -628,7 +651,7 @@ nav li:hover {
     height: 3px;
     border-radius: 50%;
     background-color: white;
-    animation: cometMoveRight 20s linear; 
+    animation: cometMoveRight 20s linear;
     animation-iteration-count: 1;
     position: absolute;
 }
@@ -638,25 +661,25 @@ nav li:hover {
     height: 3px;
     border-radius: 50%;
     background-color: white;
-    animation: cometMoveLeft 4s linear; 
+    animation: cometMoveLeft 4s linear;
     animation-iteration-count: 1;
     position: absolute;
 }
 
 @keyframes cometMoveRight {
-    
+
     100% {
         transform: translateX(190vw);
     }
-  }
+}
 
-  @keyframes cometMoveLeft {
-    
+@keyframes cometMoveLeft {
+
     100% {
         transform: translateX(-150vw);
         opacity: 0%
     }
-  }
+}
 
 
 .content-container {
@@ -686,7 +709,7 @@ nav li:hover {
 
 .active-orbit:hover {
     cursor: pointer;
-    background: linear-gradient(rgb(112, 207, 255),rgb(0, 125, 228) )
+    background: linear-gradient(rgb(112, 207, 255), rgb(0, 125, 228))
 }
 
 .modal {
@@ -719,8 +742,7 @@ nav li:hover {
     left: 25px;
     bottom: 15px;
     padding: 20px 10px;
-    border: 0.5px solid  rgb(112, 207, 255);
-    
+    border: 0.5px solid rgb(112, 207, 255);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -747,24 +769,39 @@ nav li:hover {
 }
 
 @keyframes pulsate {
-    
+
     50% {
-        box-shadow: 0px 0px 10px 0px rgb(112, 207, 255,0.35);
-        border: 0.5px solid  rgba(112, 207, 255, 0.35);
+        box-shadow: 0px 0px 10px 0px rgb(112, 207, 255, 0.35);
+        border: 0.5px solid rgba(112, 207, 255, 0.35);
     }
-  }
+}
 
 
 
 
 /* =========================== The Planets ========================== */
+#sun {
+
+    background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 45vh;
+    left: 48vw;
+    z-index: 5;
+    box-shadow: 0px 0px 15px 5px #fde025;
+    /* display: none; */
+    animation: index 9s linear infinite;
+    animation-play-state: paused;
+}
+
+
 .rotate {
     /* background: none; */
-    animation-name: rotate;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     transform: rotate(-110deg);
     /* pointer-events: none; */
+    animation: rotate 1s linear infinite;
 }
 
 .slide {
@@ -772,26 +809,25 @@ nav li:hover {
     /* display: none; */
     justify-content: center;
     align-items: center;
-    /* animation-name: slide;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; */
+    animation: slide 1s ease-in-out infinite alternate;
     position: absolute;
     top: 50%;
     left: 50%;
     height: 33px;
     width: 33px;
     /* background: none; */
-    transform: translateX(-4vw) translateY(2vw);;
+    transform: translateX(-4vw) translateY(2vw);
+    ;
     z-index: 5;
     /* pointer-events: none; */
+    animation-play-state: paused;
 }
 
 .planet {
     border-radius: 50%;
     z-index: 7;
     overflow: hidden;
-    transform: rotate(90deg);
+    animation: spin 1s infinite linear;
 }
 
 .planet:hover {
@@ -805,6 +841,7 @@ nav li:hover {
 
 .shadow-rotate {
     border-radius: 50%;
+    animation: shadowSpin 1s infinite linear;
 }
 
 .shadow-rotate:hover {
@@ -819,16 +856,23 @@ nav li:hover {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    animation: index 1s linear infinite; 
-    animation-play-state: paused;
-    
+
 }
 
-#mercury-slide {
-    /* position: relative; */
-    animation: index 1s linear infinite; 
-    animation-play-state: paused;
-    
+.mercury-planet {
+    transform: rotate(110deg);
+}
+
+#mercury-slide {}
+
+.mercury-slide {
+    animation-duration: 4.5s;
+}
+
+.mercury-planet,
+.mercury-rotate,
+.mercury-shadow {
+    animation-duration: 9s;
 }
 
 #mercury-shadow {
@@ -838,9 +882,9 @@ nav li:hover {
 }
 
 .mercury-rotate {
-    height:6vw;
+    height: 6vw;
     width: 6vw;
-} 
+}
 
 
 
@@ -854,6 +898,21 @@ nav li:hover {
     z-index: 41;
 }
 
+.venus {
+    transform: rotate(110deg);
+}
+
+.venus-slide {
+    animation-duration: 6s;
+}
+
+.venus,
+.venus-rotate,
+.venus-shadow {
+    animation-duration: 12s;
+}
+
+
 #venus-shadow {
     width: 100%;
     height: 100%;
@@ -864,7 +923,7 @@ nav li:hover {
 .venus-rotate {
     height: 12vw;
     width: 12vw;
-} 
+}
 
 
 
@@ -879,7 +938,12 @@ nav li:hover {
     align-items: center;
     z-index: 100 !important;
     overflow: visible;
-    
+
+}
+
+.earth {
+    transform: rotate(110deg);
+    /* animation: earthSpin 16.8s linear infinite; */
 }
 
 #earth-shadow {
@@ -891,10 +955,19 @@ nav li:hover {
 .earth-rotate {
     height: 20vw;
     width: 20vw;
-} 
+}
 
+.earth-slide {
+    animation-duration: 8.4s;
+}
 
-  #moon {
+.earth,
+.earth-rotate,
+.earth-shadow {
+    animation-duration: 16.8s;
+}
+
+#moon {
     width: 0.8vw;
     height: 0.8vw;
     background: white;
@@ -906,20 +979,34 @@ nav li:hover {
     align-items: center;
     border-radius: 50%;
     background-image: url("./assets/planets/moon.png");
-  }
+}
 
-  .moon-rotate {
+.moon-rotate {
     height: 4.2vw;
     width: 4.2vw;
-    /* animation-duration: 2s; */
+    transform: rotate(110deg);
+    animation: spin 4s linear infinite;
     position: absolute;
-  }
+    color: red;
+}
 
-  #moon-shadow {
+.moon {
+    border-radius: 50%;
+    z-index: 7;
+    overflow: hidden;
+    transform: rotate(-110deg);
+}
+
+.moon-shadow {
+    animation: moonShadow 4s linear infinite;
+    border-radius: 50%;
+}
+
+#moon-shadow {
     width: 100%;
     height: 100%;
     box-shadow: inset 0.2vw 0px 0 0px #00000083;
-  }
+}
 
 #mars {
     width: 2.5vw;
@@ -928,6 +1015,10 @@ nav li:hover {
     background-image: url("./assets/planets/mars.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.mars {
+    transform: rotate(110deg);
 }
 
 #mars-shadow {
@@ -940,16 +1031,25 @@ nav li:hover {
     width: 100%;
     height: 100%;
     transform: translateY(5px);
-    border-radius: 50%;;
+    border-radius: 50%;
+    ;
 }
 
 
 .mars-rotate {
     height: 26vw;
     width: 26vw;
+}
 
-    
-} 
+.mars-slide {
+    animation-duration: 11.4s;
+}
+
+.mars,
+.mars-rotate,
+.mars-shadow {
+    animation-duration: 22.8s;
+}
 
 
 #saturn-shadow {
@@ -961,15 +1061,16 @@ nav li:hover {
     right: 1.5vw;
 }
 
-
-
-
 #saturn {
     height: 7vw;
     width: 10vw;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: visible;
+}
+
+.saturn {
+    transform: rotate(110deg);
 }
 
 #saturn img {
@@ -980,7 +1081,17 @@ nav li:hover {
 .saturn-rotate {
     height: 58vw;
     width: 58vw;
-} 
+}
+
+.saturn-slide {
+    animation-duration: 30s;
+}
+
+.saturn,
+.saturn-rotate,
+.saturn-shadow {
+    animation-duration: 60s;
+}
 
 .shadow-rotate {
     width: 100%;
@@ -997,6 +1108,10 @@ nav li:hover {
     background-size: cover;
 }
 
+.jupiter {
+    transform: rotate(110deg);
+}
+
 #jupiter-shadow {
     width: 100%;
     height: 100%;
@@ -1007,9 +1122,17 @@ nav li:hover {
 .jupiter-rotate {
     height: 41vw;
     width: 41vw;
-  
-    
-} 
+}
+
+.jupiter-slide {
+    animation-duration: 18s;
+}
+
+.jupiter,
+.jupiter-rotate,
+.jupiter-shadow {
+    animation-duration: 36s;
+}
 
 
 
@@ -1017,6 +1140,10 @@ nav li:hover {
     width: 7vw;
     height: 5vw;
     overflow: visible;
+}
+
+.uranus {
+    transform: rotate(110deg);
 }
 
 #uranus img {
@@ -1033,6 +1160,16 @@ nav li:hover {
     right: 0.8vw;
 }
 
+.uranus-slide {
+    animation-duration: 42s;
+}
+
+.uranus,
+.uranus-rotate,
+.uranus-shadow {
+    animation-duration: 84s;
+}
+
 /* #uranus-shadow:hover {
     cursor: pointer;
 } */
@@ -1041,7 +1178,7 @@ nav li:hover {
     height: 70vw;
     width: 70vw;
     z-index: 2
-} 
+}
 
 #neptune {
     width: 4vw;
@@ -1049,6 +1186,10 @@ nav li:hover {
     background-image: url("./assets/planets/neptune.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.neptune {
+    transform: rotate(110deg);
 }
 
 #neptune-shadow {
@@ -1061,7 +1202,17 @@ nav li:hover {
     height: 85vw;
     width: 85vw;
     z-index: 1
-} 
+}
+
+.neptune-slide {
+    animation-duration: 60s;
+}
+
+.neptune,
+.neptune-rotate,
+.neptune-shadow {
+    animation-duration: 120s;
+}
 
 .space-between {
     display: flex;
@@ -1084,18 +1235,17 @@ nav li:hover {
     display: none
 }
 
-
-
-
-
-
-
-
+.rotate,
+.slide,
+.shadow-rotate,
+.planet {
+    animation-play-state: paused;
+}
 
 
 
 @keyframes slide {
-    
+
 
     100% {
         transform: translateX(4vw) translateY(-2vw);
@@ -1103,9 +1253,9 @@ nav li:hover {
 
     }
 
-  }
+}
 
-  /* @keyframse enlarge {
+/* @keyframse enlarge {
     25% {
         transform: scale(0.5);
     }
@@ -1125,131 +1275,60 @@ nav li:hover {
   } */
 
 
-  
-
-  @keyframes rotate {
-    
-    /*  10% {
-        transform: rotate(-10deg);
-    } 
-
-    5% {
-        transform: rotate(40deg);
-    } */
 
 
+@keyframes rotate {
 
-    
-    /*40% {
-        transform: rotate(70deg);
-    } */
-    
+
     100% {
         transform: rotate(250deg);
         -webkit-transform: rotate(250deg);
     }
-  }
+}
 
-  @keyframes spin {
-    
+@keyframes spin {
+
     100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
+        transform: rotate(-250deg);
+        -webkit-transform: rotate(-250deg);
     }
-  }
+}
 
-  @keyframes mercurySpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  } 
 
-  @keyframes venusSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  }
+@keyframes shadowSpin {
 
-  @keyframes earthSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  } 
-
-  @keyframes marsSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  }
-
-  @keyframes jupiterSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  } 
-
-  @keyframes saturnSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  }
-
-  @keyframes uranusSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  } 
-
-  @keyframes neptuneSpin {
-    
-    100% {
-        transform: rotate(-270deg);
-        -webkit-transform: rotate(-270deg);
-    }
-  }
-
-  @keyframes shadowSpin {
-    
     100% {
         transform: rotate(335deg);
         -webkit-transform: rotate(335deg);
     }
-  }
+}
 
-  @keyframes index {
+@keyframes index {
     0% {
         z-index: 7
     }
 
+    45% {
+        z-index: 7
+    }
+
     50% {
-        z-index:7
+        z-index: 1
     }
 
 
+    90% {
+        z-index: 1;
+    }
 
     100% {
 
         z-index: 1
-
     }
-  }
+}
 
-  /***** Responsiveness ******/
-  @media only screen and (max-width: 1000px) {
+/***** Responsiveness ******/
+@media only screen and (max-width: 1000px) {
     #mobile-modal {
         display: flex;
     }
@@ -1257,6 +1336,7 @@ nav li:hover {
     .desktop-nav {
         display: none;
     }
+
     .flex-row {
         flex-direction: column;
     }
@@ -1266,11 +1346,5 @@ nav li:hover {
     }
 
 
-    
-  }
 
-
-
-
-
-
+}

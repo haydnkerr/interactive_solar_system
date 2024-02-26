@@ -14,7 +14,9 @@ function liftOff() {
     modalInfo.style.opacity = "0"
     spaceship.classList.add('takeoff-animation');
     gradientMask.classList.add('modal-move')
-    setInterval(displayNone, 4000)
+    setTimeout(displayNone, 4000)
+    orbit()
+    setTimeout(toggleOrbit, 1000)
 }
 
 function displayNone() {
@@ -95,12 +97,12 @@ let stars = document.querySelector('.star-map')
 
 /* =========== Setting Up Landing Page ====================== */
 /* =========== Array of stars with randomized position, size and opacity  ====================== */
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 700; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 2));
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
-    let randomSpeed = Math.floor((Math.random() * 10) * 150);
+    let randomSpeed = Math.floor((Math.random() * 10) * 200);
     star.classList.add('star');
     star.style.opacity = (Math.random());
     star.style.top = (Math.random() * 100) + '%';
@@ -122,15 +124,17 @@ for (let i = 0; i < 100; i++) {
     star.style.left = starPos + 'px';
     star.style.width = randomSize + 'px';
     star.style.height = randomSize + 'px';
+    star.style.animation = `twinkle 7s linear infinite`;
+    star.style.animationDelay = (Math.random() * 400) + 's';
     stars.appendChild(star);
 }
 
-for (let i = 0; i < 1000; i++) {
+for (let i = 0; i < 700; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 2));
     let width = window.innerWidth;
     let starPos = (Math.random() * width) * -1;
-    let randomSpeed = Math.floor((Math.random() * 100) * 150);
+    let randomSpeed = Math.floor((Math.random() * 100) * 200);
     star.classList.add('star');
     star.style.opacity = (Math.random());
     star.style.top = (Math.random() * 100) + '%';
@@ -161,52 +165,12 @@ function shootingStarLeft() {
 
 
 /* =============== Initial Function for animating orbits =================== */
-window.addEventListener('load', orbit);
+// window.addEventListener('load', orbit);
 
 
 /* ======== This is the default orbit animation =============== */
 function orbit() {
 
-    mercurySlide.style.animation = `slide ${slideSpeed * .75}s ease-in-out infinite alternate`;
-    venusSlide.style.animation = `slide ${slideSpeed * 1}s ease-in-out infinite alternate`;
-    earthSlide.style.animation = `slide ${slideSpeed * 1.4}s ease-in-out infinite alternate`;
-    marsSlide.style.animation = `slide ${slideSpeed * 1.9}s ease-in-out infinite alternate`;
-    jupiterSlide.style.animation = `slide ${slideSpeed * 3}s ease-in-out infinite alternate`;
-    saturnSlide.style.animation = `slide ${slideSpeed * 5}s ease-in-out infinite alternate`;
-    uranusSlide.style.animation = `slide ${slideSpeed * 7}s ease-in-out infinite alternate`;
-    neptuneSlide.style.animation = `slide ${slideSpeed * 10}s ease-in-out infinite alternate`;
-
-    mercuryRotate.style.animation = `rotate ${rotationSpeed * .75}s linear infinite`;
-    venusRotate.style.animation = `rotate ${rotationSpeed * 1}s linear infinite`;
-    earthRotate.style.animation = `rotate ${rotationSpeed * 1.4}s linear infinite`;
-    moonRotate.style.animation = `rotate ${rotationSpeed * 0.5}s linear infinite`;
-    marsRotate.style.animation = `rotate ${rotationSpeed * 1.9}s linear infinite`;
-    jupiterRotate.style.animation = `rotate ${rotationSpeed * 3}s linear infinite`;
-    saturnRotate.style.animation = `rotate ${rotationSpeed * 5}s linear infinite`;
-    uranusRotate.style.animation = `rotate ${rotationSpeed * 7}s linear infinite`;
-    neptuneRotate.style.animation = `rotate ${rotationSpeed * 10}s linear infinite`;
-
-    mercury.style.animation = `spin ${rotationSpeed * .75}s linear infinite`;
-    venus.style.animation = `spin ${rotationSpeed * 1}s linear infinite`;
-    earth.style.animation = `spin ${rotationSpeed * 1.4}s linear infinite`;
-    moon.style.animation = `spin ${rotationSpeed * 0.5}s linear infinite`;
-    mars.style.animation = `spin ${rotationSpeed * 1.9}s linear infinite`;
-    jupiter.style.animation = `spin ${rotationSpeed * 3}s linear infinite`;
-    saturn.style.animation = `spin ${rotationSpeed * 5}s linear infinite`;
-    uranus.style.animation = `spin ${rotationSpeed * 7}s linear infinite`;
-    neptune.style.animation = `spin ${rotationSpeed * 10}s linear infinite`;
-
-    saturnShadow.style.animation = 'shadowSpin 20s linear infinite';
-
-    mercuryShadow.style.animation = `shadowSpin ${rotationSpeed * .75}s linear infinite`;
-    venusShadow.style.animation = `shadowSpin ${rotationSpeed * 1}s linear infinite`;
-    earthShadow.style.animation = `shadowSpin ${rotationSpeed * 1.4}s linear infinite`;
-    moonShadow.style.animation = `shadowSpin ${rotationSpeed * 1.4}s linear infinite`;
-    marsShadow.style.animation = `shadowSpin ${rotationSpeed * 1.9}s linear infinite`;
-    jupiterShadow.style.animation = `shadowSpin ${rotationSpeed * 3}s linear infinite`;
-    saturnShadow.style.animation = `shadowSpin ${rotationSpeed * 5}s linear infinite`;
-    uranusShadow.style.animation = `shadowSpin ${rotationSpeed * 7}s linear infinite`;
-    neptuneShadow.style.animation = `shadowSpin ${rotationSpeed * 10}s linear infinite`;
 }
 
 /* ========== orbit Controls =============== */
@@ -215,90 +179,44 @@ let slideSpeed = 6;
 let rotationSpeed = 12;
 
 let orbitControlBtn = document.querySelector('.orbit-control-btn')
-let orbitActive = true
+let orbitActive = false
 
-orbitControlBtn.addEventListener("click", toggleOrbit);
+let planetRotate = document.querySelectorAll('.rotate')
+let planetSlide = document.querySelectorAll('.slide')
+let shadowRotate = document.querySelectorAll('.shadow-rotate')
+let planet = document.querySelectorAll('.planet')
+
+orbitControlBtn.addEventListener("click", function () {
+    toggleOrbit()
+});
+
 
 
 function toggleOrbit() {
     if (orbitActive) {
         orbitActive = false
-        mercury.style.animationPlayState = "paused";
-        venus.style.animationPlayState = "paused";
-        sun.style.animationPlayState = "paused";
-        earth.style.animationPlayState = "paused";
-        moon.style.animationPlayState = "paused";
-        mars.style.animationPlayState = "paused";
-        jupiter.style.animationPlayState = "paused";
-        saturn.style.animationPlayState = "paused";
-        uranus.style.animationPlayState = "paused";
-        neptune.style.animationPlayState = "paused";
+        orbitControlBtn.innerHTML = '<h2>Orbit</h2>';
+        for (let i = 0; i < planetRotate.length; i++) {
+            planetRotate[i].style.animationPlayState = "paused"
+            planetSlide[i].style.animationPlayState = "paused"
+            shadowRotate[i].style.animationPlayState = "paused"
+            planet[i].style.animationPlayState = "paused"
+        }
+        moonRotate.style.animationPlayState = "paused"
+        sun.style.animationPlayState = "paused"
 
-        mercurySlide.style.animationPlayState = "paused";
-        venusSlide.style.animationPlayState = "paused";
-        earthSlide.style.animationPlayState = "paused";
-        marsSlide.style.animationPlayState = "paused";
-        jupiterSlide.style.animationPlayState = "paused";
-        saturnSlide.style.animationPlayState = "paused";
-        uranusSlide.style.animationPlayState = "paused";
-        neptuneSlide.style.animationPlayState = "paused";
 
-        mercuryShadow.style.animationPlayState = "paused";
-        venusShadow.style.animationPlayState = "paused";
-        earthShadow.style.animationPlayState = "paused";
-        marsShadow.style.animationPlayState = "paused";
-        jupiterShadow.style.animationPlayState = "paused";
-        saturnShadow.style.animationPlayState = "paused";
-        uranusShadow.style.animationPlayState = "paused";
-        neptuneShadow.style.animationPlayState = "paused";
-
-        mercuryRotate.style.animationPlayState = "paused";
-        venusRotate.style.animationPlayState = "paused";
-        earthRotate.style.animationPlayState = "paused";
-        moonRotate.style.animationPlayState = "paused";
-        marsRotate.style.animationPlayState = "paused";
-        jupiterRotate.style.animationPlayState = "paused";
-        saturnRotate.style.animationPlayState = "paused";
-        uranusRotate.style.animationPlayState = "paused";
-        neptuneRotate.style.animationPlayState = "paused";
     } else {
         orbitActive = true
-        mercury.style.animationPlayState = "running";
-        sun.style.animationPlayState = "running";
-        venus.style.animationPlayState = "running";
-        earth.style.animationPlayState = "running";
-        mars.style.animationPlayState = "running";
-        jupiter.style.animationPlayState = "running";
-        saturn.style.animationPlayState = "running";
-        uranus.style.animationPlayState = "running";
-        neptune.style.animationPlayState = "running";
-
-        mercuryShadow.style.animationPlayState = "running";
-        venusShadow.style.animationPlayState = "running";
-        earthShadow.style.animationPlayState = "running";
-        marsShadow.style.animationPlayState = "running";
-        jupiterShadow.style.animationPlayState = "running";
-        saturnShadow.style.animationPlayState = "running";
-        uranusShadow.style.animationPlayState = "running";
-        neptuneShadow.style.animationPlayState = "running";
-
-        mercurySlide.style.animationPlayState = "running";
-        venusSlide.style.animationPlayState = "running";
-        earthSlide.style.animationPlayState = "running";
-        marsSlide.style.animationPlayState = "running";
-        jupiterSlide.style.animationPlayState = "running";
-        saturnSlide.style.animationPlayState = "running";
-        uranusSlide.style.animationPlayState = "running";
-        neptuneSlide.style.animationPlayState = "running";
-
-        mercuryRotate.style.animationPlayState = "running";
-        venusRotate.style.animationPlayState = "running";
-        earthRotate.style.animationPlayState = "running";
-        marsRotate.style.animationPlayState = "running";
-        jupiterRotate.style.animationPlayState = "running";
-        saturnRotate.style.animationPlayState = "running";
-        uranusRotate.style.animationPlayState = "running";
-        neptuneRotate.style.animationPlayState = "running";
+        for (let i = 0; i < planetRotate.length; i++) {
+            planetRotate[i].style.animationPlayState = "running"
+            planetSlide[i].style.animationPlayState = "running"
+            shadowRotate[i].style.animationPlayState = "running"
+            planet[i].style.animationPlayState = "running"
+        }
+        orbitControlBtn.innerHTML = '<h2>Pause</h2>'
+        moonRotate.style.animationPlayState = "running"
+        sun.style.animationPlayState = "running"
     }
 
     console.log('click')
@@ -1080,9 +998,10 @@ function expandPlanet() {
     planetImageContainerReal.style.width = '100vw'
     planetImageContainerReal.style.left = '0'
     planetImageContainerReal.style.top = '0'
-    planetImageContainerReal.style.backgroundImage = 'url("./assets/black-bg.png")';
+    planetImageContainerReal.style.background = 'black';
     infoToggle.classList.add('display-none')
-    planetExpandCloseContainer.classList.remove('display-none')
+    planetExpandCloseContainer.classList.remove('display-none');
+    stars.style.zIndex = '50'
 }
 
 function closePlanet() {
@@ -1092,6 +1011,7 @@ function closePlanet() {
     planetImageContainerReal.style.height = '100%';
     planetImageContainerReal.style.backgroundImage = 'none';
     planetImageContainerReal.style.position = 'relative'
+    stars.style.zIndex = '0'
 
 }
 
