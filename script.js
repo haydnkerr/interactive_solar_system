@@ -446,7 +446,7 @@ function nextQuestion() {
         quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
     } else {
         // questionNumber.innerHTML = currentQuestionNumber
-        if (progressNumber > 100) {
+        if (progressNumber > 10) {
             winningAnimation()
         }
 
@@ -552,9 +552,9 @@ const planets = [
     {
         name: "Mars",
         info1: "<strong>Fourth Planet from the Sun:</strong> Mars is the fourth planet from the Sun in our solar system, making it Earth's neighbor.",
-        info2: "<strong>Nickname: The Red Planet:</strong> Mars gets its reddish color from iron oxide, which is like rust, covering its surface. This gives it a distinct and easily recognizable appearance.",
-        info3: "<strong>Olympus Mons: The Tallest Volcano:</strong> Mars is home to the largest volcano in the solar system, called Olympus Mons. It's about 13.6 miles (22 kilometers) high, which is nearly three times the height of Mount Everest!",
-        info4: "<strong>Valles Marineris: The Grand Canyon of Mars:</strong> Mars also hosts a canyon called Valles Marineris, which is about 2,500 miles (4,000 kilometers) long, making it much longer and deeper than the Grand Canyon on Earth.",
+        info2: "<strong>Nickname - The Red Planet:</strong> Mars gets its reddish color from iron oxide, which is like rust, covering its surface. This gives it a distinct and easily recognizable appearance.",
+        info3: "<strong>Olympus Mons - The Tallest Volcano:</strong> Mars is home to the largest volcano in the solar system, called Olympus Mons. It's about 13.6 miles (22 kilometers) high, which is nearly three times the height of Mount Everest!",
+        info4: "<strong>Valles Marineris - The Grand Canyon of Mars:</strong> Mars also hosts a canyon called Valles Marineris, which is about 2,500 miles (4,000 kilometers) long, making it much longer and deeper than the Grand Canyon on Earth.",
         info5: "<strong>Frozen Polar Caps:</strong> Just like Earth, Mars has polar ice caps, but they're made of water and carbon dioxide. During the winter, they expand, and in the summer, they shrink.",
         info6: "<strong>Thin Atmosphere:</strong> Mars has a very thin atmosphere, which is mostly carbon dioxide. This means there's not enough air for humans to breathe, and the surface pressure is only about 0.6% of Earth's.",
         info7: "<strong>Dusty Storms:</strong> Mars experiences enormous dust storms that can cover the entire planet and last for weeks or even months. These storms can sometimes make it difficult for spacecraft to communicate with Earth.",
