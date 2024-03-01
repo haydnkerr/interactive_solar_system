@@ -208,6 +208,24 @@ function populatePlanet() {
     let renderer = new THREE.WebGLRenderer();
     renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.domElement.style.position = 'absolute'; 
+    // renderer.domElement.style.top = '0'; 
+    // renderer.domElement.style.left = '0'; 
+    for (let i = 0; i < 100; i++) {
+        let star = document.createElement('span');
+        let randomSize = Math.ceil((Math.random() * 3));
+        let width = window.innerWidth;
+        let starPos = (Math.random() * width);
+        star.classList.add('star');
+        star.style.opacity = (Math.random());
+        star.style.top = (Math.random() * 100) + '%';
+        star.style.left = starPos + 'px';
+        star.style.width = randomSize + 'px';
+        star.style.height = randomSize + 'px';
+        star.style.animation = `twinkle 7s linear infinite`;
+        star.style.animationDelay = (Math.random() * 20) + 's';
+        planetImageContainerReal.appendChild(star);
+    }
     planetImageContainerReal.appendChild(renderer.domElement);
 
     if (n == 5) {
@@ -217,13 +235,13 @@ function populatePlanet() {
         camera.position.z = 0.85;
         camera.position.set(0, 0, camera.position.z);
     }
- 
+
 
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.antialias = true;
 
     const minDistance = 0.5;
-    const maxDistance = 3; 
+    const maxDistance = 3;
 
     let controls = new OrbitControls(camera, renderer.domElement);
     controls.minDistance = minDistance;
@@ -249,7 +267,7 @@ function populatePlanet() {
     function animate() {
         if (isAnimationRunning) {
             requestAnimationFrame(animate);
-            planetDisplay.rotation.y += 0.0010;
+            planetDisplay.rotation.y += 0.0005;
             renderer.render(scene, camera);
         }
     }

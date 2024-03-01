@@ -1,9 +1,46 @@
+/* =================== LIST OF CONTENTS ======================== */
+
+
+
+
+
+let musicBtn = document.querySelector('.music-btn')
+let isMusicOn = false
+let musicIcon = document.querySelector('.music-icon')
+
+
+musicBtn.addEventListener('click', playMusic)
+
+
+function playMusic() {
+    var soundtrack = document.getElementById("music");
+    if (!isMusicOn) {
+        soundtrack.play();
+        soundtrack.loop = true;
+        musicIcon.src = "./assets/volume-up.png"
+        isMusicOn = true
+    } else {
+        soundtrack.pause();
+        soundtrack.loop = true;
+        musicIcon.src = "./assets/no-sound.png"
+        isMusicOn = false
+    }
+
+}
+
+
+
+
+
+
 let liftOffBtn = document.querySelector('.lift-off-btn');
 let spaceship = document.querySelector('.rocket-modal')
 let modalInfo = document.querySelector('.modal-info')
 let gradientModal = document.querySelector('.gradient-bg')
 let rocketInfoContainer = document.querySelector('.rocket-modal-info')
 let gradientMask = document.querySelector('.gradient-mask')
+let controlsContainer = document.querySelector('.orbit-controls-container')
+
 
 
 liftOffBtn.addEventListener('click', liftOff);
@@ -14,6 +51,7 @@ function liftOff() {
     modalInfo.style.opacity = "0"
     spaceship.classList.add('takeoff-animation');
     gradientMask.classList.add('modal-move')
+    playMusic()
     setTimeout(displayNone, 4000)
     orbit()
     setTimeout(toggleOrbit, 1000)
@@ -23,11 +61,12 @@ function displayNone() {
     spaceship.classList.add('display-none')
     rocketInfoContainer.classList.add('display-none')
     gradientModal.classList.add('display-none')
-    orbitControlBtn.style.opacity = "1"
+    controlsContainer.style.opacity = "0.75"
 }
 
-/* =========================== Declarations =========================== */
-/* =========================== Menu Buttons =========================== */
+/* ===========================      DECLARATIONS        =========================== */
+
+/* ===========================       MENU BUTTONS       =========================== */
 let mercuryMenuBtn = document.getElementById("mercury-menu")
 let venusMenuBtn = document.getElementById("venus-menu")
 let earthMenuBtn = document.getElementById("earth-menu")
@@ -46,7 +85,9 @@ let alienMenuBtn = document.getElementById("alien-menu")
 
 
 
-/* =========================== Individual Planets ===================== */
+/* ===========================        INDIVIDUAL PLANETS            ===================== */
+
+
 let mercury = document.getElementById('mercury');
 let venus = document.getElementById('venus');
 let earth = document.getElementById('earth');
@@ -58,7 +99,9 @@ let uranus = document.getElementById('uranus');
 let sun = document.getElementById('sun')
 let moon = document.getElementById('moon')
 
-/* ========================= Planet Rotation ======================== */
+/* =========================                PLANET ROTATION              ======================== */
+
+
 let mercuryRotate = document.querySelector('.mercury-rotate')
 let venusRotate = document.querySelector('.venus-rotate')
 let earthRotate = document.querySelector('.earth-rotate')
@@ -69,7 +112,9 @@ let uranusRotate = document.querySelector('.uranus-rotate')
 let neptuneRotate = document.querySelector('.neptune-rotate')
 let moonRotate = document.querySelector('.moon-rotate')
 
-/* ========================= Planet Slide Motion ======================== */
+/* =========================              PLANET SLIDE MOTION           ======================== */
+
+
 let mercurySlide = document.querySelector('.mercury-slide')
 let venusSlide = document.querySelector('.venus-slide')
 let earthSlide = document.querySelector('.earth-slide')
@@ -113,7 +158,7 @@ for (let i = 0; i < 700; i++) {
     star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
 }
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 150; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 3));
     let width = window.innerWidth;
@@ -173,7 +218,7 @@ function orbit() {
 
 }
 
-/* ========== orbit Controls =============== */
+/* ==========         ORBIT CONTROLS            =============== */
 let currentOrbit = 1;
 let slideSpeed = 6;
 let rotationSpeed = 12;
@@ -195,7 +240,7 @@ orbitControlBtn.addEventListener("click", function () {
 function toggleOrbit() {
     if (orbitActive) {
         orbitActive = false
-        orbitControlBtn.innerHTML = '<h2>Orbit</h2>';
+        orbitControlBtn.innerHTML = '<h3>Resume Orbit</h3>';
         for (let i = 0; i < planetRotate.length; i++) {
             planetRotate[i].style.animationPlayState = "paused"
             planetSlide[i].style.animationPlayState = "paused"
@@ -214,7 +259,7 @@ function toggleOrbit() {
             shadowRotate[i].style.animationPlayState = "running"
             planet[i].style.animationPlayState = "running"
         }
-        orbitControlBtn.innerHTML = '<h2>Pause</h2>'
+        orbitControlBtn.innerHTML = '<h3>Pause Orbit</h3>'
         moonRotate.style.animationPlayState = "running"
         sun.style.animationPlayState = "running"
     }
@@ -222,6 +267,219 @@ function toggleOrbit() {
     console.log('click')
 }
 
+/* ====================        QUIZ         ================ */
+let quizBtn = document.querySelector('.quiz-btn')
+let quizModal = document.querySelector('.quiz-modal-bg')
+let chosenQuestions = []
+let answer = ''
+let userGuess = ''
+let currentQuestionNumber = 1;
+let questionAnswered = false;
+let isUserCorrect = false;
+let quizQuestion = document.querySelector('.quiz-question')
+let questionNumber = document.querySelector('.question-number')
+let quizOptionBtn = document.querySelectorAll('.quiz-answer')
+let optionA = document.querySelector('.a')
+let optionB = document.querySelector('.b')
+let optionC = document.querySelector('.c')
+let optionD = document.querySelector('.d')
+let quizAnswerBtn = document.querySelector('.quiz-answer-btn')
+let rocketProgressLine = document.querySelector('.quiz-rocket-line')
+let rocketProgress = document.querySelector('.quiz-rocket')
+let progressNumber = 10
+let quizModalContainer = document.querySelector('.quiz-modal')
+let quizSun = document.querySelector('.quiz-sun')
+let quizContent = document.querySelector('.quiz-content')
+let quizProgressContainer = document.querySelector('.quiz-progress-container')
+let quizDestination = document.querySelector('.quiz-destination')
+let landingRocket = document.querySelector('.landing-rocket-container')
+let winQuizStatement = document.querySelector('.win-quiz-statement')
+let flame = document.querySelector('.flame')
+let quizCLoseBtn = document.querySelector('.close-quiz-btn')
+let quizWinBtn = document.querySelector('.quiz-win-btn')
+
+
+
+
+quizBtn.addEventListener('click', startQuiz)
+quizAnswerBtn.addEventListener('click', nextQuestion)
+quizCLoseBtn.addEventListener('click', closeQuiz)
+quizWinBtn.addEventListener('click', closeQuizWin)
+
+function closeQuiz() {
+    quizContent.classList.remove('full-opacity')
+    quizProgressContainer.classList.remove('full-opacity')
+    quizSun.classList.remove('full-opacity')
+    quizModalContainer.classList.remove('quiz-modal-animation')
+
+
+    setTimeout(function() {
+        
+        quizModal.classList.remove('full-opacity')
+    }, 2000)
+    setTimeout(function() {
+        
+        quizModal.classList.add('display-none')
+    }, 5000)
+
+}
+
+function closeQuizWin() {
+    quizContent.classList.remove('full-opacity')
+    quizProgressContainer.classList.remove('full-opacity')
+    quizSun.classList.remove('full-opacity')
+    winQuizStatement.classList.remove('fade-in')
+    quizContent.classList.remove('fade-out')
+    quizProgressContainer.classList.remove('fade-out')
+    quizDestination.classList.remove('move-up')
+    landingRocket.classList.remove('move-down')
+    flame.classList.remove('flame-animation')
+    flame.classList.add('flame-on')
+    
+    setTimeout(function() {
+        quizModalContainer.classList.remove('quiz-modal-animation')
+    }, 1500)
+
+    setTimeout(function() {
+        
+        quizModal.classList.remove('full-opacity')
+    }, 3000)
+
+    setTimeout(function() {
+        flame.classList.remove('flame-on')
+        quizModal.classList.add('display-none')
+        quizSun.classList.remove('sun-move')
+    }, 5000)
+
+}
+
+
+
+quizOptionBtn.forEach(btn => {
+    btn.addEventListener('click', function () {
+        for (let i = 0; i < quizOptionBtn.length; ++i) {
+            quizOptionBtn[i].classList.remove('active-answer')
+        }
+        this.classList.add('active-answer')
+        userGuess = this.value
+    })
+});
+
+function startQuiz() {
+    quizModal.classList.remove('display-none')
+    
+    currentQuestionNumber = 1;
+    chosenQuestions = []
+    answer = ''
+    userGuess = ''
+    populateQuestion()
+    setTimeout(function () {
+        quizModal.classList.add('full-opacity')
+        quizModalContainer.classList.add('quiz-modal-animation')
+
+    }, 0)
+
+    setTimeout(function () {
+
+        quizProgressContainer.classList.add('full-opacity')
+        quizSun.classList.add('full-opacity')
+        quizContent.classList.add('full-opacity')
+    }, 3500)
+
+}
+
+function populateQuestion() {
+    let num = 0;
+    fetch('quiz.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+
+            do {
+                num = Math.floor(Math.random() * data.general_trivia.length);
+            } while (chosenQuestions.includes(num));
+            console.log(data.general_trivia.length)
+            chosenQuestions.push(num)
+            quizQuestion.innerHTML = data.general_trivia[num].question
+            optionA.innerHTML = '<h2>' + data.general_trivia[num].options.a + '</h2>'
+            optionB.innerHTML = '<h2>' + data.general_trivia[num].options.b + '</h2>'
+            optionC.innerHTML = '<h2>' + data.general_trivia[num].options.c + '</h2>'
+            optionD.innerHTML = '<h2>' + data.general_trivia[num].options.d + '</h2>'
+            answer = data.general_trivia[num].correct_answer
+        })
+        .catch(error => {
+            console.error('There was an error', error)
+        })
+}
+
+
+
+function nextQuestion() {
+    if (!questionAnswered) {
+        currentQuestionNumber += 1
+        questionAnswered = true;
+        if (userGuess == answer) {
+            for (let i = 0; i < quizOptionBtn.length; ++i) {
+                if (quizOptionBtn[i].value == answer) {
+                    quizOptionBtn[i].classList.remove('active-answer')
+                    quizOptionBtn[i].classList.add('correct-answer')
+                    rocketProgressLine.style.width = (progressNumber + 4) + '%'
+                    rocketProgress.style.left = progressNumber + '%'
+                    progressNumber += 10
+                }
+            }
+        } else {
+            for (let i = 0; i < quizOptionBtn.length; ++i) {
+                if (quizOptionBtn[i].value == answer) {
+                    quizOptionBtn[i].classList.remove('active-answer')
+                    quizOptionBtn[i].classList.add('correct-answer')
+                } else if (quizOptionBtn[i].value == userGuess) {
+                    quizOptionBtn[i].classList.remove('active-answer')
+                    quizOptionBtn[i].classList.add('wrong-answer')
+                }
+            }
+        }
+        quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
+    } else {
+        // questionNumber.innerHTML = currentQuestionNumber
+        if (progressNumber > 10) {
+            winningAnimation()
+        }
+
+        for (let i = 0; i < quizOptionBtn.length; ++i) {
+            quizOptionBtn[i].classList.remove('active-answer')
+            quizOptionBtn[i].classList.remove('correct-answer')
+            quizOptionBtn[i].classList.remove('wrong-answer')
+        }
+
+        isUserCorrect = false
+        questionAnswered = false
+        quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
+        populateQuestion()
+    }
+    userGuess = ''
+}
+
+
+
+
+function winningAnimation() {
+    quizSun.classList.add('sun-move')
+    quizContent.classList.add('fade-out')
+    quizProgressContainer.classList.add('fade-out')
+    quizDestination.classList.add('move-up')
+    landingRocket.classList.add('move-down')
+    flame.classList.add('flame-animation')
+    setTimeout(function () {
+        winQuizStatement.classList.add('fade-in');
+    }, 5000);
+
+
+}
 /*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */
 
 
@@ -922,8 +1180,9 @@ function closeModal() {
     // adultBtn.classList.remove('active-page')
     planetModal.classList.add("hidden")
     n = 0;
-    planetImageContainerReal.removeChild(planetImageContainerReal.firstElementChild)
-
+    while (planetImageContainerReal.firstChild) {
+        planetImageContainerReal.removeChild(planetImageContainerReal.firstChild);
+    }
 }
 
 
@@ -1001,7 +1260,11 @@ function expandPlanet() {
     planetImageContainerReal.style.background = 'black';
     infoToggle.classList.add('display-none')
     planetExpandCloseContainer.classList.remove('display-none');
-    stars.style.zIndex = '50'
+    // stars.style.zIndex = '50'
+
+
+
+
 }
 
 function closePlanet() {
@@ -1010,8 +1273,11 @@ function closePlanet() {
     planetImageContainerReal.style.width = '50%';
     planetImageContainerReal.style.height = '100%';
     planetImageContainerReal.style.backgroundImage = 'none';
+    planetImageContainerReal.style.background = 'none';
     planetImageContainerReal.style.position = 'relative'
-    stars.style.zIndex = '0'
+
+
+
 
 }
 

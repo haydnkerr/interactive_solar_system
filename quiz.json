@@ -1,0 +1,410 @@
+{
+    "general_trivia": [
+        {
+            "question": "Which planet is closest to the Sun?",
+            "options": {
+                "a": "Mercury",
+                "b": "Venus",
+                "c": "Earth",
+                "d": "Mars"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Mars",
+                "d": "Uranus"
+            },
+            "correct_answer": "c"
+        },
+        {
+            "question": "Which planet is famous for its beautiful rings?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Neptune",
+                "d": "Earth"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet is known as the 'Blue Planet'?",
+            "options": {
+                "a": "Mercury",
+                "b": "Venus",
+                "c": "Earth",
+                "d": "Mars"
+            },
+            "correct_answer": "c"
+        },
+        {
+            "question": "Which planet is the largest in the solar system?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Uranus",
+                "d": "Neptune"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Morning Star'?",
+            "options": {
+                "a": "Mercury",
+                "b": "Venus",
+                "c": "Mars",
+                "d": "Jupiter"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet is known as the 'Evening Star'?",
+            "options": {
+                "a": "Saturn",
+                "b": "Mars",
+                "c": "Venus",
+                "d": "Neptune"
+            },
+            "correct_answer": "c"
+        },
+        {
+            "question": "Which planet has the most moons in the solar system?",
+            "options": {
+                "a": "Earth",
+                "b": "Mars",
+                "c": "Jupiter",
+                "d": "Saturn"
+            },
+            "correct_answer": "c"
+        },
+        {
+            "question": "Which planet is known as the 'Ice Giant'?",
+            "options": {
+                "a": "Uranus",
+                "b": "Saturn",
+                "c": "Neptune",
+                "d": "Pluto"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Goddess of Love'?",
+            "options": {
+                "a": "Venus",
+                "b": "Mars",
+                "c": "Earth",
+                "d": "Mercury"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is famous for its Great Red Spot?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Neptune",
+                "d": "Mars"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet has the shortest day in the solar system?",
+            "options": {
+                "a": "Venus",
+                "b": "Jupiter",
+                "c": "Mercury",
+                "d": "Saturn"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Red Dwarf'?",
+            "options": {
+                "a": "Mars",
+                "b": "Mercury",
+                "c": "Venus",
+                "d": "Jupiter"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet has the most volcanoes?",
+            "options": {
+                "a": "Earth",
+                "b": "Venus",
+                "c": "Mars",
+                "d": "Mercury"
+            },
+            "correct_answer": "c"
+        },
+        {
+            "question": "Which planet has the highest mountain in the solar system?",
+            "options": {
+                "a": "Mars",
+                "b": "Earth",
+                "c": "Venus",
+                "d": "Mercury"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Green Planet'?",
+            "options": {
+                "a": "Earth",
+                "b": "Mars",
+                "c": "Neptune",
+                "d": "Uranus"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is famous for its beautiful blue color?",
+            "options": {
+                "a": "Uranus",
+                "b": "Neptune",
+                "c": "Earth",
+                "d": "Saturn"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet has the longest orbit around the Sun?",
+            "options": {
+                "a": "Neptune",
+                "b": "Mercury",
+                "c": "Uranus",
+                "d": "Saturn"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Ringed Planet'?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Uranus",
+                "d": "Neptune"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet is known as the 'Blue Giant'?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Neptune",
+                "c": "Earth",
+                "d": "Uranus"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet is closest in size to Earth?",
+            "options": {
+                "a": "Venus",
+                "b": "Mars",
+                "c": "Mercury",
+                "d": "Neptune"
+            },
+            "correct_answer": "a"
+        },
+        {
+            "question": "Which planet is known as the 'Twins' with Earth?",
+            "options": {
+                "a": "Mars",
+                "b": "Venus",
+                "c": "Mercury",
+                "d": "Neptune"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet has the most extreme temperatures?",
+            "options": {
+                "a": "Mercury",
+                "b": "Venus",
+                "c": "Mars",
+                "d": "Jupiter"
+            },
+            "correct_answer": "b"
+        },
+        {
+            "question": "Which planet has the longest day?",
+            "options": {
+                "a": "Jupiter",
+                "b": "Saturn",
+                "c": "Mercury",
+                "d": "Venus"
+            },
+            "correct_answer": "a"
+        }
+      ],
+    "moon_trivia": [
+      {
+        "question": "What is the Moon's distance from Earth on average?",
+        "options": {
+          "a": "About 93 million miles",
+          "b": "About 238,855 miles",
+          "c": "About 384,400 kilometers",
+          "d": "About 1/6th the size of Earth"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "What is the main reason why we only see one side of the Moon from Earth?",
+        "options": {
+          "a": "Because the Moon has no atmosphere",
+          "b": "Because the Moon is tidally locked to Earth",
+          "c": "Because of extreme temperature differences",
+          "d": "Because the Moon's surface is covered in craters"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Which of the following is NOT a phase of the Moon?",
+        "options": {
+          "a": "Full moon",
+          "b": "Crescent moon",
+          "c": "New moon",
+          "d": "Blue moon"
+        },
+        "correct_answer": "d"
+      },
+      {
+        "question": "What is the gravity on the Moon compared to Earth?",
+        "options": {
+          "a": "It's about the same",
+          "b": "It's twice as strong",
+          "c": "It's much weaker",
+          "d": "It's about 1/6th stronger"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "Which event resulted in humans walking on the Moon for the first time?",
+        "options": {
+          "a": "Apollo 13 mission",
+          "b": "Apollo 1 mission",
+          "c": "Apollo 11 mission",
+          "d": "Apollo 17 mission"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "What covers the Moon's surface, consisting of small rocks, dust, and broken rock fragments?",
+        "options": {
+          "a": "Craters",
+          "b": "Mountains",
+          "c": "Plains",
+          "d": "Regolith"
+        },
+        "correct_answer": "d"
+      }
+    ],
+    "mars_trivia": [
+        {
+          "question": "Which planet is Mars in our solar system?",
+          "options": {
+            "a": "First",
+            "b": "Second",
+            "c": "Third",
+            "d": "Fourth"
+          },
+          "answer": "d"
+        },
+        {
+          "question": "What gives Mars its reddish color?",
+          "options": {
+            "a": "Iron",
+            "b": "Gold",
+            "c": "Copper",
+            "d": "Titanium"
+          },
+          "answer": "a"
+        },
+        {
+          "question": "What is the name of the largest volcano in the solar system located on Mars?",
+          "options": {
+            "a": "Mount Everest",
+            "b": "Olympus Mons",
+            "c": "K2",
+            "d": "Mauna Loa"
+          },
+          "answer": "b"
+        },
+        {
+          "question": "Which feature on Mars is longer and deeper than the Grand Canyon on Earth?",
+          "options": {
+            "a": "Mount Olympus",
+            "b": "Valles Marineris",
+            "c": "Tharsis Bulge",
+            "d": "Hellas Planitia"
+          },
+          "answer": "b"
+        },
+        {
+          "question": "What are the polar ice caps on Mars made of?",
+          "options": {
+            "a": "Methane",
+            "b": "Nitrogen",
+            "c": "Water and carbon dioxide",
+            "d": "Sulfur dioxide"
+          },
+          "answer": "c"
+        },
+        {
+          "question": "What is the primary component of Mars' thin atmosphere?",
+          "options": {
+            "a": "Oxygen",
+            "b": "Nitrogen",
+            "c": "Carbon dioxide",
+            "d": "Methane"
+          },
+          "answer": "c"
+        },
+        {
+          "question": "What type of storms does Mars experience that can cover the entire planet?",
+          "options": {
+            "a": "Snowstorms",
+            "b": "Dust storms",
+            "c": "Thunderstorms",
+            "d": "Tornadoes"
+          },
+          "answer": "b"
+        },
+        {
+          "question": "What evidence suggests the presence of water on Mars?",
+          "options": {
+            "a": "Dust storms",
+            "b": "Thin atmosphere",
+            "c": "Polar ice caps",
+            "d": "Rover exploration"
+          },
+          "answer": "d"
+        },
+        {
+          "question": "What are the names of the rovers sent to explore Mars by NASA?",
+          "options": {
+            "a": "Discovery and Endeavour",
+            "b": "Spirit and Opportunity",
+            "c": "Curiosity and Perseverance",
+            "d": "Voyager and Pioneer"
+          },
+          "answer": "c"
+        },
+        {
+          "question": "How has Mars captured the imagination of people?",
+          "options": {
+            "a": "As a place for farming",
+            "b": "As a vacation destination",
+            "c": "As a potential habitat for humans",
+            "d": "As a place for underwater exploration"
+          },
+          "answer": "c"
+        }
+      ]
+
+  }
+  
