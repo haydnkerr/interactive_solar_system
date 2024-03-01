@@ -446,7 +446,7 @@ function nextQuestion() {
         quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
     } else {
         // questionNumber.innerHTML = currentQuestionNumber
-        if (progressNumber > 10) {
+        if (progressNumber > 100) {
             winningAnimation()
         }
 

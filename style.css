@@ -1058,7 +1058,7 @@ nav li:hover {
 .win-quiz-statement {
     text-align: center;
     opacity: 0;
-    padding: 100px 25px 25px 25px;
+    padding: 50px 25px 25px 25px;
     position: absolute;
     transition: 5s;
     z-index: -1;
