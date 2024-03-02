@@ -157,9 +157,15 @@ let stars = document.querySelector('.star-map')
 
 /* =========== Setting Up Landing Page ====================== */
 /* =========== Array of stars with randomized position, size and opacity  ====================== */
+
+
+
 for (let i = 0; i < 700; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 2));
+    if (window.innerWidth < 600) {
+        randomSize = Math.ceil((Math.random() * 1));
+    } 
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
     let randomSpeed = Math.floor((Math.random() * 10) * 200);
@@ -176,6 +182,9 @@ for (let i = 0; i < 700; i++) {
 for (let i = 0; i < 150; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 3));
+    if (window.innerWidth < 600) {
+        randomSize = Math.ceil((Math.random() * 1));
+    } 
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
     star.classList.add('star');
@@ -192,6 +201,9 @@ for (let i = 0; i < 150; i++) {
 for (let i = 0; i < 700; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 2));
+    if (window.innerWidth < 600) {
+        randomSize = Math.ceil((Math.random() * 1));
+    } 
     let width = window.innerWidth;
     let starPos = (Math.random() * width) * -1;
     let randomSpeed = Math.floor((Math.random() * 100) * 200);

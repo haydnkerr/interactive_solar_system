@@ -329,7 +329,7 @@ h2 {
 }
 
 h3 {
-    color: white
+    color: white;
 }
 
 h4 {
@@ -1290,6 +1290,7 @@ nav li:hover {
         height: 95dvh;
         width: 0vh;
         height: 0vh;
+        gap: 35px;
     }
 
     .quiz-modal-animation {
@@ -1300,18 +1301,22 @@ nav li:hover {
     }
 
     .quiz-btn-container {
-        gap: 15px;
+        gap: 10px;
     }
 
     .quiz-question {
-        margin-bottom: 40px;
-        font-size: 1.8rem;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
     }
 
     .quiz-answer {
         padding: 5px 25px;
         border-radius: 5px;
         border-radius: 50px;
+    }
+
+    .quiz-answer-btn h2, .quiz-answer h2 {
+        font-size: 1rem;
     }
 
     .quiz-answer-btn {
