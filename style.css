@@ -471,7 +471,7 @@ nav li:hover {
     background: #030534d8;
     position: absolute;
     height: 100dvh;
-    width: 50vw;
+    width: 100vw;
     top: 0;
     right: 0;
     align-items: center;
@@ -489,7 +489,7 @@ nav li:hover {
 }
 
 .mobile-hidden {
-    right: -50vw;
+    right: -100vw;
 }
 
 
