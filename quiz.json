@@ -1,410 +1,1172 @@
 {
-    "general_trivia": [
+  "trivia": [
+    {
+      "general_trivia": [
         {
-            "question": "Which planet is closest to the Sun?",
-            "options": {
-                "a": "Mercury",
-                "b": "Venus",
-                "c": "Earth",
-                "d": "Mars"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the Red Planet?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Mars",
-                "d": "Uranus"
-            },
-            "correct_answer": "c"
-        },
-        {
-            "question": "Which planet is famous for its beautiful rings?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Neptune",
-                "d": "Earth"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet is known as the 'Blue Planet'?",
-            "options": {
-                "a": "Mercury",
-                "b": "Venus",
-                "c": "Earth",
-                "d": "Mars"
-            },
-            "correct_answer": "c"
-        },
-        {
-            "question": "Which planet is the largest in the solar system?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Uranus",
-                "d": "Neptune"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Morning Star'?",
-            "options": {
-                "a": "Mercury",
-                "b": "Venus",
-                "c": "Mars",
-                "d": "Jupiter"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet is known as the 'Evening Star'?",
-            "options": {
-                "a": "Saturn",
-                "b": "Mars",
-                "c": "Venus",
-                "d": "Neptune"
-            },
-            "correct_answer": "c"
-        },
-        {
-            "question": "Which planet has the most moons in the solar system?",
-            "options": {
-                "a": "Earth",
-                "b": "Mars",
-                "c": "Jupiter",
-                "d": "Saturn"
-            },
-            "correct_answer": "c"
-        },
-        {
-            "question": "Which planet is known as the 'Ice Giant'?",
-            "options": {
-                "a": "Uranus",
-                "b": "Saturn",
-                "c": "Neptune",
-                "d": "Jupiter"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Goddess of Love'?",
-            "options": {
-                "a": "Venus",
-                "b": "Mars",
-                "c": "Earth",
-                "d": "Mercury"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is famous for its Great Red Spot?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Neptune",
-                "d": "Mars"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet has the shortest day in the solar system?",
-            "options": {
-                "a": "Venus",
-                "b": "Jupiter",
-                "c": "Mercury",
-                "d": "Saturn"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Red Dwarf'?",
-            "options": {
-                "a": "Mars",
-                "b": "Mercury",
-                "c": "Venus",
-                "d": "Jupiter"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet has the most volcanoes?",
-            "options": {
-                "a": "Earth",
-                "b": "Venus",
-                "c": "Mars",
-                "d": "Mercury"
-            },
-            "correct_answer": "c"
-        },
-        {
-            "question": "Which planet has the highest mountain in the solar system?",
-            "options": {
-                "a": "Mars",
-                "b": "Earth",
-                "c": "Venus",
-                "d": "Mercury"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Green Planet'?",
-            "options": {
-                "a": "Earth",
-                "b": "Mars",
-                "c": "Neptune",
-                "d": "Uranus"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is famous for its beautiful blue color?",
-            "options": {
-                "a": "Uranus",
-                "b": "Neptune",
-                "c": "Earth",
-                "d": "Saturn"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet has the longest orbit around the Sun?",
-            "options": {
-                "a": "Neptune",
-                "b": "Mercury",
-                "c": "Uranus",
-                "d": "Saturn"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Ringed Planet'?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Uranus",
-                "d": "Neptune"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet is known as the 'Blue Giant'?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Neptune",
-                "c": "Earth",
-                "d": "Uranus"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet is closest in size to Earth?",
-            "options": {
-                "a": "Venus",
-                "b": "Mars",
-                "c": "Mercury",
-                "d": "Neptune"
-            },
-            "correct_answer": "a"
-        },
-        {
-            "question": "Which planet is known as the 'Twins' with Earth?",
-            "options": {
-                "a": "Mars",
-                "b": "Venus",
-                "c": "Mercury",
-                "d": "Neptune"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet has the most extreme temperatures?",
-            "options": {
-                "a": "Mercury",
-                "b": "Venus",
-                "c": "Mars",
-                "d": "Jupiter"
-            },
-            "correct_answer": "b"
-        },
-        {
-            "question": "Which planet has the longest day?",
-            "options": {
-                "a": "Jupiter",
-                "b": "Saturn",
-                "c": "Mercury",
-                "d": "Venus"
-            },
-            "correct_answer": "a"
-        }
-      ],
-    "moon_trivia": [
-      {
-        "question": "What is the Moon's distance from Earth on average?",
-        "options": {
-          "a": "About 93 million miles",
-          "b": "About 238,855 miles",
-          "c": "About 384,400 kilometers",
-          "d": "About 1/6th the size of Earth"
-        },
-        "correct_answer": "b"
-      },
-      {
-        "question": "What is the main reason why we only see one side of the Moon from Earth?",
-        "options": {
-          "a": "Because the Moon has no atmosphere",
-          "b": "Because the Moon is tidally locked to Earth",
-          "c": "Because of extreme temperature differences",
-          "d": "Because the Moon's surface is covered in craters"
-        },
-        "correct_answer": "b"
-      },
-      {
-        "question": "Which of the following is NOT a phase of the Moon?",
-        "options": {
-          "a": "Full moon",
-          "b": "Crescent moon",
-          "c": "New moon",
-          "d": "Blue moon"
-        },
-        "correct_answer": "d"
-      },
-      {
-        "question": "What is the gravity on the Moon compared to Earth?",
-        "options": {
-          "a": "It's about the same",
-          "b": "It's twice as strong",
-          "c": "It's much weaker",
-          "d": "It's about 1/6th stronger"
-        },
-        "correct_answer": "c"
-      },
-      {
-        "question": "Which event resulted in humans walking on the Moon for the first time?",
-        "options": {
-          "a": "Apollo 13 mission",
-          "b": "Apollo 1 mission",
-          "c": "Apollo 11 mission",
-          "d": "Apollo 17 mission"
-        },
-        "correct_answer": "c"
-      },
-      {
-        "question": "What covers the Moon's surface, consisting of small rocks, dust, and broken rock fragments?",
-        "options": {
-          "a": "Craters",
-          "b": "Mountains",
-          "c": "Plains",
-          "d": "Regolith"
-        },
-        "correct_answer": "d"
-      }
-    ],
-    "mars_trivia": [
-        {
-          "question": "Which planet is Mars in our solar system?",
+          "question": "Which planet is closest to the Sun?",
           "options": {
-            "a": "First",
-            "b": "Second",
-            "c": "Third",
-            "d": "Fourth"
+            "a": "Mercury",
+            "b": "Venus",
+            "c": "Earth",
+            "d": "Mars"
           },
-          "answer": "d"
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the Red Planet?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Mars",
+            "d": "Uranus"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet is famous for its beautiful rings?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Neptune",
+            "d": "Earth"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet is known as the 'Blue Planet'?",
+          "options": {
+            "a": "Mercury",
+            "b": "Venus",
+            "c": "Earth",
+            "d": "Mars"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet is the largest in the solar system?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Uranus",
+            "d": "Neptune"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Morning Star'?",
+          "options": {
+            "a": "Mercury",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Jupiter"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet is known as the 'Evening Star'?",
+          "options": {
+            "a": "Saturn",
+            "b": "Mars",
+            "c": "Venus",
+            "d": "Neptune"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet has the most moons in the solar system?",
+          "options": {
+            "a": "Earth",
+            "b": "Mars",
+            "c": "Jupiter",
+            "d": "Saturn"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet is known as the 'Ice Giant'?",
+          "options": {
+            "a": "Uranus",
+            "b": "Saturn",
+            "c": "Neptune",
+            "d": "Jupiter"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Goddess of Love'?",
+          "options": {
+            "a": "Venus",
+            "b": "Mars",
+            "c": "Earth",
+            "d": "Mercury"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is famous for its Great Red Spot?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Neptune",
+            "d": "Mars"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet has the shortest day in the solar system?",
+          "options": {
+            "a": "Venus",
+            "b": "Jupiter",
+            "c": "Mercury",
+            "d": "Saturn"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Red Dwarf'?",
+          "options": {
+            "a": "Mars",
+            "b": "Mercury",
+            "c": "Venus",
+            "d": "Jupiter"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet has the most volcanoes?",
+          "options": {
+            "a": "Earth",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Mercury"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet has the highest mountain in the solar system?",
+          "options": {
+            "a": "Mars",
+            "b": "Earth",
+            "c": "Venus",
+            "d": "Mercury"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Green Planet'?",
+          "options": {
+            "a": "Earth",
+            "b": "Mars",
+            "c": "Neptune",
+            "d": "Uranus"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is famous for its beautiful blue color?",
+          "options": {
+            "a": "Uranus",
+            "b": "Neptune",
+            "c": "Earth",
+            "d": "Saturn"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet has the longest orbit around the Sun?",
+          "options": {
+            "a": "Neptune",
+            "b": "Mercury",
+            "c": "Uranus",
+            "d": "Saturn"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Ringed Planet'?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Uranus",
+            "d": "Neptune"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet is known as the 'Blue Giant'?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Neptune",
+            "c": "Earth",
+            "d": "Uranus"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet is closest in size to Earth?",
+          "options": {
+            "a": "Venus",
+            "b": "Mars",
+            "c": "Mercury",
+            "d": "Neptune"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which planet is known as the 'Twins' with Earth?",
+          "options": {
+            "a": "Mars",
+            "b": "Venus",
+            "c": "Mercury",
+            "d": "Neptune"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet has the most extreme temperatures?",
+          "options": {
+            "a": "Mercury",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Jupiter"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet has the longest day?",
+          "options": {
+            "a": "Jupiter",
+            "b": "Saturn",
+            "c": "Mercury",
+            "d": "Venus"
+          },
+          "correct_answer": "a"
+        }
+      ]
+    },
+    {
+      "moon_trivia": [
+        {
+          "question": "What is the Moon's relationship with Earth?",
+          "options": {
+            "a": "It's a planet",
+            "b": "It's a star",
+            "c": "It's a moon",
+            "d": "It's a comet"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How far away is the Moon from Earth on average?",
+          "options": {
+            "a": "100,000 miles",
+            "b": "238,855 miles",
+            "c": "500,000 miles",
+            "d": "1,000,000 miles"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Why do we always see the same side of the Moon from Earth?",
+          "options": {
+            "a": "Because it rotates on its axis",
+            "b": "Because it is tidally locked to Earth",
+            "c": "Because it has a very slow rotation",
+            "d": "Because it has a very fast rotation"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Does the Moon have an atmosphere?",
+          "options": {
+            "a": "Yes",
+            "b": "No",
+            "c": "Sometimes",
+            "d": "Only at night"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What causes the different phases of the Moon?",
+          "options": {
+            "a": "Changes in temperature",
+            "b": "Changes in distance from Earth",
+            "c": "Changes in position relative to the Sun and Earth",
+            "d": "Changes in the Moon's rotation speed"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How does gravity on the Moon compare to gravity on Earth?",
+          "options": {
+            "a": "It's stronger",
+            "b": "It's weaker",
+            "c": "It's the same",
+            "d": "It's variable"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which program sent astronauts to the Moon between 1969 and 1972?",
+          "options": {
+            "a": "SpaceX program",
+            "b": "Apollo program",
+            "c": "Voyager program",
+            "d": "Discovery program"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What covers the Moon's surface?",
+          "options": {
+            "a": "Grass",
+            "b": "Water",
+            "c": "Regolith",
+            "d": "Sand"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is regolith?",
+          "options": {
+            "a": "A type of rock",
+            "b": "A layer of loose, fragmented material on the Moon's surface",
+            "c": "A type of gas",
+            "d": "A layer of ice"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What causes moonquakes?",
+          "options": {
+            "a": "Meteor showers",
+            "b": "Volcanic eruptions",
+            "c": "Gravitational interactions with Earth and surface cooling",
+            "d": "Strong winds"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for the Moon to orbit Earth?",
+          "options": {
+            "a": "7 days",
+            "b": "14 days",
+            "c": "27 days",
+            "d": "30 days"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for the Moon to rotate on its axis?",
+          "options": {
+            "a": "7 days",
+            "b": "14 days",
+            "c": "27 days",
+            "d": "30 days"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is the temperature range on the Moon's surface?",
+          "options": {
+            "a": "-100 to 0°C",
+            "b": "-50 to 50°C",
+            "c": "-183 to 106°C",
+            "d": "-220 to -100°C"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How many moons does the Moon have?",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "What was the first manned mission to land on the Moon?",
+          "options": {
+            "a": "Apollo 11",
+            "b": "Apollo 13",
+            "c": "Apollo 14",
+            "d": "Apollo 15"
+          },
+          "correct_answer": "a"
+        }
+      ]
+    },
+    {
+      "mars_trivia": [
+        {
+          "question": "Which number planet is Mars from the Sun?",
+          "options": {
+            "a": "Third",
+            "b": "Fourth",
+            "c": "Fifth",
+            "d": "Sixth"
+          },
+          "correct_answer": "b"
         },
         {
           "question": "What gives Mars its reddish color?",
           "options": {
-            "a": "Iron",
-            "b": "Gold",
-            "c": "Copper",
-            "d": "Titanium"
+            "a": "Iron oxide",
+            "b": "Copper oxide",
+            "c": "Zinc oxide",
+            "d": "Aluminum oxide"
           },
-          "answer": "a"
+          "correct_answer": "a"
         },
         {
-          "question": "What is the name of the largest volcano in the solar system located on Mars?",
+          "question": "What is the name of the tallest volcano on Mars?",
           "options": {
             "a": "Mount Everest",
-            "b": "Olympus Mons",
-            "c": "K2",
+            "b": "Kilauea",
+            "c": "Olympus Mons",
             "d": "Mauna Loa"
           },
-          "answer": "b"
+          "correct_answer": "c"
         },
         {
-          "question": "Which feature on Mars is longer and deeper than the Grand Canyon on Earth?",
+          "question": "What is the name of the largest canyon on Mars?",
           "options": {
-            "a": "Mount Olympus",
+            "a": "Grand Canyon",
             "b": "Valles Marineris",
-            "c": "Tharsis Bulge",
-            "d": "Hellas Planitia"
+            "c": "Yellowstone Canyon",
+            "d": "Death Valley"
           },
-          "answer": "b"
+          "correct_answer": "b"
         },
         {
           "question": "What are the polar ice caps on Mars made of?",
           "options": {
-            "a": "Methane",
-            "b": "Nitrogen",
-            "c": "Water and carbon dioxide",
-            "d": "Sulfur dioxide"
+            "a": "Water and ice cream",
+            "b": "Water and carbon dioxide",
+            "c": "Nitrogen and oxygen",
+            "d": "Methane and ammonia"
           },
-          "answer": "c"
+          "correct_answer": "b"
         },
         {
-          "question": "What is the primary component of Mars' thin atmosphere?",
+          "question": "What is the primary component of Mars's thin atmosphere?",
           "options": {
             "a": "Oxygen",
             "b": "Nitrogen",
             "c": "Carbon dioxide",
-            "d": "Methane"
+            "d": "Hydrogen"
           },
-          "answer": "c"
+          "correct_answer": "c"
         },
         {
-          "question": "What type of storms does Mars experience that can cover the entire planet?",
+          "question": "What type of storms does Mars experience?",
           "options": {
             "a": "Snowstorms",
-            "b": "Dust storms",
-            "c": "Thunderstorms",
-            "d": "Tornadoes"
+            "b": "Rainstorms",
+            "c": "Dust storms",
+            "d": "Thunderstorms"
           },
-          "answer": "b"
+          "correct_answer": "c"
         },
         {
-          "question": "What evidence suggests the presence of water on Mars?",
+          "question": "What evidence suggests the possibility of water on Mars?",
           "options": {
-            "a": "Dust storms",
-            "b": "Thin atmosphere",
-            "c": "Polar ice caps",
-            "d": "Rover exploration"
+            "a": "Snowfall",
+            "b": "Rainfall",
+            "c": "Evidence of erosion",
+            "d": "Evidence of volcanic activity"
           },
-          "answer": "d"
+          "correct_answer": "c"
         },
         {
-          "question": "What are the names of the rovers sent to explore Mars by NASA?",
+          "question": "Which space agency has sent rovers to explore Mars?",
           "options": {
-            "a": "Discovery and Endeavour",
-            "b": "Spirit and Opportunity",
-            "c": "Curiosity and Perseverance",
-            "d": "Voyager and Pioneer"
+            "a": "NASA",
+            "b": "ESA",
+            "c": "Roscosmos",
+            "d": "ISRO"
           },
-          "answer": "c"
+          "correct_answer": "a"
         },
         {
-          "question": "How has Mars captured the imagination of people?",
+          "question": "What is a common theme in science fiction stories about Mars?",
           "options": {
-            "a": "As a place for farming",
-            "b": "As a vacation destination",
-            "c": "As a potential habitat for humans",
-            "d": "As a place for underwater exploration"
+            "a": "Mars is uninhabitable",
+            "b": "Mars is covered in water",
+            "c": "Mars is home to advanced alien civilizations",
+            "d": "Mars is a potential future home for humans"
           },
-          "answer": "c"
+          "correct_answer": "d"
+        },
+        {
+          "question": "What is the diameter of Mars?",
+          "options": {
+            "a": "4,212 km",
+            "b": "5,692 km",
+            "c": "6,779 km",
+            "d": "7,923 km"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take Mars to orbit the Sun?",
+          "options": {
+            "a": "224 days",
+            "b": "365 days",
+            "c": "687 days",
+            "d": "924 days"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long is a day on Mars?",
+          "options": {
+            "a": "12 hours",
+            "b": "18 hours",
+            "c": "24 hours",
+            "d": "30 hours"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How many moons does Mars have?",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is the temperature range on Mars?",
+          "options": {
+            "a": "-50 to -10°C",
+            "b": "-65 to -20°C",
+            "c": "-80 to -30°C",
+            "d": "-"
+          },
+          "correct_answer": "a"
         }
       ]
-
-  }
-  
+    },
+    {
+      "jupiter_trivia": [
+        {
+          "question": "What is Jupiter known as in our solar system?",
+          "options": {
+            "a": "The Smallest Planet",
+            "b": "The Largest Planet",
+            "c": "The Red Planet",
+            "d": "The Green Planet"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How many Earths could fit inside Jupiter?",
+          "options": {
+            "a": "Over 1,000",
+            "b": "Over 1,300",
+            "c": "Over 2,000",
+            "d": "Over 5,000"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What are the four largest moons of Jupiter called?",
+          "options": {
+            "a": "Europa, Ganymede, Callisto, Io",
+            "b": "Phobos, Deimos, Titan, Triton",
+            "c": "Miranda, Ariel, Umbriel, Titania",
+            "d": "Enceladus, Mimas, Rhea, Tethys"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "What is the name of the giant storm on Jupiter?",
+          "options": {
+            "a": "Hurricane Irma",
+            "b": "The Great Red Spot",
+            "c": "Typhoon Haiyan",
+            "d": "Tornado Alley"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How long has the Great Red Spot been raging on Jupiter?",
+          "options": {
+            "a": "50 years",
+            "b": "100 years",
+            "c": "350 years",
+            "d": "500 years"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for Jupiter to complete one rotation on its axis?",
+          "options": {
+            "a": "24 hours",
+            "b": "10 hours",
+            "c": "48 hours",
+            "d": "72 hours"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How does Jupiter's rapid rotation affect its shape?",
+          "options": {
+            "a": "It becomes a perfect sphere",
+            "b": "It becomes flat at the poles",
+            "c": "It becomes elongated",
+            "d": "It becomes square"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which planet in our solar system has the strongest magnetic field?",
+          "options": {
+            "a": "Earth",
+            "b": "Jupiter",
+            "c": "Mars",
+            "d": "Venus"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What are the main components of Jupiter?",
+          "options": {
+            "a": "Water and Ice",
+            "b": "Rock and Metal",
+            "c": "Hydrogen and Helium",
+            "d": "Carbon Dioxide and Methane"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Does Jupiter have a solid surface like Earth?",
+          "options": {
+            "a": "Yes",
+            "b": "No",
+            "c": "Partially",
+            "d": "Unknown"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is the name of Jupiter's faint ring system?",
+          "options": {
+            "a": "Halo",
+            "b": "Aurora",
+            "c": "Nebula",
+            "d": "Gossamer"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "After which Roman god was Jupiter named?",
+          "options": {
+            "a": "Mars",
+            "b": "Mercury",
+            "c": "Jupiter",
+            "d": "Neptune"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Name one spacecraft that has visited Jupiter.",
+          "options": {
+            "a": "Voyager 1",
+            "b": "Apollo 11",
+            "c": "Hubble Space Telescope",
+            "d": "International Space Station"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Why is Jupiter sometimes called a 'mini solar system'?",
+          "options": {
+            "a": "Because it has its own set of moons",
+            "b": "Because it has its own rings",
+            "c": "Because it has its own atmosphere",
+            "d": "Because it has its own orbit"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "Which moon of Jupiter is larger than the planet Mercury?",
+          "options": {
+            "a": "Callisto",
+            "b": "Io",
+            "c": "Europa",
+            "d": "Ganymede"
+          },
+          "correct_answer": "d"
+        }
+      ]
+    },
+    {
+      "saturn_trivia": [
+        {
+          "question": "What is Saturn famous for in our solar system?",
+          "options": {
+            "a": "Its blue color",
+            "b": "Its spectacular ring system",
+            "c": "Its giant storms",
+            "d": "Its rocky surface"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What are Saturn's rings made of?",
+          "options": {
+            "a": "Metal",
+            "b": "Ice particles and dust",
+            "c": "Diamonds",
+            "d": "Rock"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How are Saturn's rings divided?",
+          "options": {
+            "a": "Into solid hoops",
+            "b": "Into thousands of smaller ringlets",
+            "c": "Into concentric circles",
+            "d": "Into spokes"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What gives Saturn's rings a unique appearance?",
+          "options": {
+            "a": "Their color",
+            "b": "Their tilt relative to the planet's equator",
+            "c": "Their solid structure",
+            "d": "Their speed of rotation"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which of Saturn's moons is larger than the planet Mercury?",
+          "options": {
+            "a": "Mimas",
+            "b": "Enceladus",
+            "c": "Titan",
+            "d": "Rhea"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for Saturn to complete one rotation on its axis?",
+          "options": {
+            "a": "8 hours",
+            "b": "10 hours",
+            "c": "11 hours",
+            "d": "12 hours"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which spacecraft studied Saturn and its moons for over 13 years?",
+          "options": {
+            "a": "Voyager 1",
+            "b": "Cassini-Huygens",
+            "c": "New Horizons",
+            "d": "Curiosity"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is observed at Saturn's north pole?",
+          "options": {
+            "a": "A hexagonal-shaped storm",
+            "b": "A perfect circle",
+            "c": "A giant crater",
+            "d": "A volcano"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "What is the density of Saturn compared to water?",
+          "options": {
+            "a": "More dense",
+            "b": "Less dense",
+            "c": "Equal density",
+            "d": "Cannot be compared"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "After which Roman god is Saturn named?",
+          "options": {
+            "a": "Mars",
+            "b": "Jupiter",
+            "c": "Neptune",
+            "d": "Saturn"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "What is unique about Titan, one of Saturn's moons?",
+          "options": {
+            "a": "It has a substantial atmosphere",
+            "b": "It has a solid gold surface",
+            "c": "It is made entirely of water",
+            "d": "It is the smallest moon in the solar system"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "How many known moons does Saturn have?",
+          "options": {
+            "a": "35",
+            "b": "53",
+            "c": "72",
+            "d": "89"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is the approximate temperature on Saturn?",
+          "options": {
+            "a": "-50°C",
+            "b": "-90°C",
+            "c": "-120°C",
+            "d": "-140°C"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "What mission spent over 13 years studying Saturn and its moons?",
+          "options": {
+            "a": "Voyager 2",
+            "b": "Hubble Space Telescope",
+            "c": "Cassini-Huygens",
+            "d": "SpaceX Mission to Saturn"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is unique about Saturn's rotation?",
+          "options": {
+            "a": "It spins backwards",
+            "b": "Its equator spins faster than its poles",
+            "c": "It completes one rotation every 24 hours",
+            "d": "It has no rotation"
+          },
+          "correct_answer": "b"
+        }
+      ]
+    },
+    {
+      "uranus_trivia": [
+        {
+          "question": "What makes Uranus unique among the planets?",
+          "options": {
+            "a": "Its color",
+            "b": "Its size",
+            "c": "Its tilted axis",
+            "d": "Its many moons"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which planet is the coldest in our solar system?",
+          "options": {
+            "a": "Neptune",
+            "b": "Uranus",
+            "c": "Saturn",
+            "d": "Mercury"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is Uranus classified as?",
+          "options": {
+            "a": "Gas giant",
+            "b": "Ice giant",
+            "c": "Dwarf planet",
+            "d": "Terrestrial planet"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How do Uranus's rings compare to Saturn's rings?",
+          "options": {
+            "a": "They are brighter",
+            "b": "They are more colorful",
+            "c": "They are fainter",
+            "d": "They are thicker"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is unusual about Uranus's magnetic field?",
+          "options": {
+            "a": "It is extremely weak",
+            "b": "It is tilted at an extreme angle",
+            "c": "It is perfectly aligned with its axis",
+            "d": "It is the strongest in the solar system"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "How many known moons does Uranus have?",
+          "options": {
+            "a": "10",
+            "b": "27",
+            "c": "50",
+            "d": "75"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Who is Uranus named after?",
+          "options": {
+            "a": "A Roman god",
+            "b": "An Egyptian god",
+            "c": "A Greek god",
+            "d": "A Norse god"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which spacecraft visited Uranus in 1986?",
+          "options": {
+            "a": "Voyager 1",
+            "b": "Voyager 2",
+            "c": "New Horizons",
+            "d": "Cassini-Huygens"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is unusual about the rotation of Uranus's moons?",
+          "options": {
+            "a": "They rotate very slowly",
+            "b": "They all rotate in the same direction as the planet",
+            "c": "Most of them rotate in the same direction as the planet",
+            "d": "Most of them rotate in the opposite direction of the planet"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "How long is a year on Uranus compared to Earth years?",
+          "options": {
+            "a": "50 Earth years",
+            "b": "75 Earth years",
+            "c": "84 Earth years",
+            "d": "100 Earth years"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is the approximate temperature on Uranus?",
+          "options": {
+            "a": "-100°C",
+            "b": "-150°C",
+            "c": "-195°C",
+            "d": "-220°C"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How many days does it take for Uranus to orbit the Sun?",
+          "options": {
+            "a": "15,365 days",
+            "b": "20,202 days",
+            "c": "25,439 days",
+            "d": "30,687 days"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "What is the shape of Uranus's orbit?",
+          "options": {
+            "a": "Circular",
+            "b": "Elliptical",
+            "c": "Parabolic",
+            "d": "Hyperbolic"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What was the name of the spacecraft that provided valuable data about Uranus?",
+          "options": {
+            "a": "Galileo",
+            "b": "Cassini-Huygens",
+            "c": "Voyager 2",
+            "d": "New Horizons"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is Uranus's diameter compared to Earth's?",
+          "options": {
+            "a": "Double",
+            "b": "Triple",
+            "c": "Quadruple",
+            "d": "Five times"
+          },
+          "correct_answer": "b"
+        }
+      ]
+    },
+    {
+      "neptune_trivia": [
+        {
+          "question": "Which planet is the farthest known planet from the Sun?",
+          "options": {
+            "a": "Saturn",
+            "b": "Uranus",
+            "c": "Neptune",
+            "d": "Pluto"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is Neptune mostly made of?",
+          "options": {
+            "a": "Rock",
+            "b": "Gas",
+            "c": "Ice",
+            "d": "Metal"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is the biggest storm on Neptune called?",
+          "options": {
+            "a": "The Great Red Spot",
+            "b": "The Great Dark Spot",
+            "c": "The Great White Spot",
+            "d": "The Great Blue Spot"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Why does Neptune appear blue?",
+          "options": {
+            "a": "It reflects blue light",
+            "b": "It absorbs blue light",
+            "c": "It emits blue light",
+            "d": "It refracts blue light"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "How long does it take to reach Neptune from Earth at the speed of light?",
+          "options": {
+            "a": "1 hour",
+            "b": "4 hours",
+            "c": "8 hours",
+            "d": "12 hours"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What are Neptune's rings made of?",
+          "options": {
+            "a": "Metal",
+            "b": "Dust and ice particles",
+            "c": "Diamonds",
+            "d": "Plastic"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "Which moon of Neptune orbits in the opposite direction of most moons?",
+          "options": {
+            "a": "Triton",
+            "b": "Nereid",
+            "c": "Proteus",
+            "d": "Naiad"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "How fast can winds on Neptune reach?",
+          "options": {
+            "a": "500 miles per hour",
+            "b": "800 miles per hour",
+            "c": "1,200 miles per hour",
+            "d": "1,500 miles per hour"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long is a day on Neptune?",
+          "options": {
+            "a": "12 hours",
+            "b": "14 hours",
+            "c": "16 hours",
+            "d": "18 hours"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long is a year on Neptune compared to Earth years?",
+          "options": {
+            "a": "50 Earth years",
+            "b": "100 Earth years",
+            "c": "150 Earth years",
+            "d": "165 Earth years"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "When was Neptune visited by the Voyager 2 spacecraft?",
+          "options": {
+            "a": "1979",
+            "b": "1986",
+            "c": "1989",
+            "d": "1995"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is Neptune's diameter compared to Earth's?",
+          "options": {
+            "a": "Half",
+            "b": "Equal",
+            "c": "Twice",
+            "d": "Three times"
+          },
+          "correct_answer": "d"
+        },
+        {
+          "question": "How many moons does Neptune have?",
+          "options": {
+            "a": "10",
+            "b": "12",
+            "c": "14",
+            "d": "16"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is the temperature on Neptune?",
+          "options": {
+            "a": "-150°C",
+            "b": "-175°C",
+            "c": "-200°C",
+            "d": "-225°C"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What fun fact is associated with Neptune's surface winds?",
+          "options": {
+            "a": "They can measure 500km/hr",
+            "b": "They can measure 1,000km/hr",
+            "c": "They can measure 1,500km/hr",
+            "d": "They can measure 2,100km/hr"
+          },
+          "correct_answer": "d"
+        }
+      ]
+    }
+  ]
+}

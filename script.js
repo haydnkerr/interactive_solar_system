@@ -1,8 +1,8 @@
 /* =================== LIST OF CONTENTS ======================== */
 
 let hamburger = document.querySelector('.hamburger-menu')
-let lineTop= document.querySelector('.line-top')
-let lineMiddle= document.querySelector('.line-middle')
+let lineTop = document.querySelector('.line-top')
+let lineMiddle = document.querySelector('.line-middle')
 let lineBottom = document.querySelector('.line-bottom')
 let mobileNav = document.querySelector('.mobile-nav-menu')
 
@@ -27,7 +27,7 @@ function closeMobilePopup() {
     spaceship.classList.add('display-none')
     gradientMask.classList.add('display-none')
     toggleOrbit();
-    setTimeout(function() {
+    setTimeout(function () {
         mobilePopup.style.display = "none"
         controlsContainer.style.opacity = "0.75"
     }, 1000)
@@ -181,7 +181,7 @@ for (let i = 0; i < 700; i++) {
     let randomSize = Math.ceil((Math.random() * 2));
     if (window.innerWidth < 600) {
         randomSize = Math.ceil((Math.random() * 1));
-    } 
+    }
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
     let randomSpeed = Math.floor((Math.random() * 10) * 200);
@@ -200,7 +200,7 @@ for (let i = 0; i < 150; i++) {
     let randomSize = Math.ceil((Math.random() * 3));
     if (window.innerWidth < 600) {
         randomSize = Math.ceil((Math.random() * 1));
-    } 
+    }
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
     star.classList.add('star');
@@ -219,7 +219,7 @@ for (let i = 0; i < 700; i++) {
     let randomSize = Math.ceil((Math.random() * 2));
     if (window.innerWidth < 600) {
         randomSize = Math.ceil((Math.random() * 1));
-    } 
+    }
     let width = window.innerWidth;
     let starPos = (Math.random() * width) * -1;
     let randomSpeed = Math.floor((Math.random() * 100) * 200);
@@ -329,7 +329,7 @@ let optionD = document.querySelector('.d')
 let quizAnswerBtn = document.querySelector('.quiz-answer-btn')
 let rocketProgressLine = document.querySelector('.quiz-rocket-line')
 let rocketProgress = document.querySelector('.quiz-rocket')
-let progressNumber = 10
+let progressNumber = 0
 let quizModalContainer = document.querySelector('.quiz-modal')
 let quizSun = document.querySelector('.quiz-sun')
 let quizContent = document.querySelector('.quiz-content')
@@ -340,6 +340,8 @@ let winQuizStatement = document.querySelector('.win-quiz-statement')
 let flame = document.querySelector('.flame')
 let quizCLoseBtn = document.querySelector('.close-quiz-btn')
 let quizWinBtn = document.querySelector('.quiz-win-btn')
+
+
 
 
 
@@ -407,10 +409,13 @@ quizOptionBtn.forEach(btn => {
         userGuess = this.value
     })
 });
+let planetTriviaList = ["general_trivia", "moon_trivia", "mars_trivia", "jupiter_trivia", "saturn_trivia", "uranus_trivia", "neptune_trivia"]
+
+let categoryNum = 0
+let category = planetTriviaList[categoryNum]
 
 function startQuiz() {
-
-    if (progressNumber > 100) {
+    if (progressNumber >= 100) {
         progressNumber = 0
         rocketProgressLine.style.width = (progressNumber + 4) + '%'
         rocketProgress.style.left = progressNumber + '%'
@@ -418,11 +423,7 @@ function startQuiz() {
     }
     quizModal.classList.remove('display-none')
 
-    currentQuestionNumber = 1;
-    chosenQuestions = []
-    answer = ''
-    userGuess = ''
-    populateQuestion()
+    populateQuestion(category, categoryNum)
     setTimeout(function () {
         quizModal.classList.add('full-opacity')
         quizModalContainer.classList.add('quiz-modal-animation')
@@ -438,8 +439,26 @@ function startQuiz() {
 
 }
 
-function populateQuestion() {
-    let num = 0;
+let quizEarth = document.querySelector('.quiz-earth')
+let quizMoon = document.querySelector('.quiz-moon')
+let quizStarted = false
+let quizLocationPlanet = ["./assets/planets/earth.png", "./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png"]
+let quizDestinationPlanet = ["./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png", "./assets/planets/sun.png"]
+let planetDestinationName = ["The Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "The Mystery Planet"]
+let planetDestination = document.querySelector('.planet-destination-name')
+let quizAnimationPlanet = document.querySelector('.quiz-destination')
+let quizAnimationDestinationName = document.querySelector('.quiz-animation-destination-name')
+
+
+function populateQuestion(category, categoryNum) {
+    rocketProgressLine.style.width = (progressNumber + 4) + '%'
+    rocketProgress.style.left = progressNumber + '%'
+    quizStarted = true
+    quizEarth.src = quizLocationPlanet[categoryNum]
+    quizMoon.src = quizDestinationPlanet[categoryNum]
+    planetDestination.innerHTML = planetDestinationName[categoryNum]
+    quizAnimationPlanet.src = quizDestinationPlanet[categoryNum]
+    let num = 0
     fetch('quiz.json')
         .then(response => {
             if (!response.ok) {
@@ -450,20 +469,20 @@ function populateQuestion() {
         .then(data => {
 
             do {
-                num = Math.floor(Math.random() * data.general_trivia.length);
+                num = Math.floor(Math.random() * 14);
             } while (chosenQuestions.includes(num));
-            console.log(data.general_trivia.length)
             chosenQuestions.push(num)
-            quizQuestion.innerHTML = data.general_trivia[num].question
-            optionA.innerHTML = '<h2>' + data.general_trivia[num].options.a + '</h2>'
-            optionB.innerHTML = '<h2>' + data.general_trivia[num].options.b + '</h2>'
-            optionC.innerHTML = '<h2>' + data.general_trivia[num].options.c + '</h2>'
-            optionD.innerHTML = '<h2>' + data.general_trivia[num].options.d + '</h2>'
-            answer = data.general_trivia[num].correct_answer
+            quizQuestion.innerHTML = data.trivia[categoryNum][category][num].question
+            optionA.innerHTML = '<h2>' + data.trivia[categoryNum][category][num].options.a + '</h2>'
+            optionB.innerHTML = '<h2>' + data.trivia[categoryNum][category][num].options.b + '</h2>'
+            optionC.innerHTML = '<h2>' + data.trivia[categoryNum][category][num].options.c + '</h2>'
+            optionD.innerHTML = '<h2>' + data.trivia[categoryNum][category][num].options.d + '</h2>'
+            answer = data.trivia[categoryNum][category][num].correct_answer
         })
         .catch(error => {
             console.error('There was an error', error)
         })
+
 }
 
 
@@ -477,9 +496,9 @@ function nextQuestion() {
                 if (quizOptionBtn[i].value == answer) {
                     quizOptionBtn[i].classList.remove('active-answer')
                     quizOptionBtn[i].classList.add('correct-answer')
+                    progressNumber += 10
                     rocketProgressLine.style.width = (progressNumber + 4) + '%'
                     rocketProgress.style.left = progressNumber + '%'
-                    progressNumber += 10
                 }
             }
         } else {
@@ -493,23 +512,32 @@ function nextQuestion() {
                 }
             }
         }
-        quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
+        if (progressNumber >=100) {
+            quizAnswerBtn.innerHTML = "<h2>Fly To " + planetDestinationName[categoryNum] + "</h2>"
+        } else {
+            quizAnswerBtn.innerHTML =  "<h2>Next Question</h2>"
+        }
     } else {
-        // questionNumber.innerHTML = currentQuestionNumber
-        if (progressNumber > 100) {
+        if (progressNumber >= 100) {
             winningAnimation()
+            for (let i = 0; i < quizOptionBtn.length; ++i) {
+                quizOptionBtn[i].classList.remove('active-answer')
+                quizOptionBtn[i].classList.remove('correct-answer')
+                quizOptionBtn[i].classList.remove('wrong-answer')
+            }
+        } else {
+            for (let i = 0; i < quizOptionBtn.length; ++i) {
+                quizOptionBtn[i].classList.remove('active-answer')
+                quizOptionBtn[i].classList.remove('correct-answer')
+                quizOptionBtn[i].classList.remove('wrong-answer')
+            }
+
+            isUserCorrect = false
+            questionAnswered = false
+            quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
+            populateQuestion(category, categoryNum)
         }
 
-        for (let i = 0; i < quizOptionBtn.length; ++i) {
-            quizOptionBtn[i].classList.remove('active-answer')
-            quizOptionBtn[i].classList.remove('correct-answer')
-            quizOptionBtn[i].classList.remove('wrong-answer')
-        }
-
-        isUserCorrect = false
-        questionAnswered = false
-        quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
-        populateQuestion()
     }
     userGuess = ''
 }
@@ -518,6 +546,15 @@ function nextQuestion() {
 
 
 function winningAnimation() {
+    quizAnimationDestinationName.innerHTML = planetDestinationName[categoryNum]
+    categoryNum += 1;
+    chosenQuestions = []
+    answer = ''
+    userGuess = ''
+    progressNumber = 0
+    category = planetTriviaList[categoryNum]
+    quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
+    questionAnswered = false
     quizSun.classList.add('sun-move')
     quizContent.classList.add('fade-out')
     quizProgressContainer.classList.add('fade-out')
@@ -527,7 +564,6 @@ function winningAnimation() {
     setTimeout(function () {
         winQuizStatement.classList.add('fade-in');
     }, 5000);
-
 
 }
 /*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */
