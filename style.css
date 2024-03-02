@@ -921,6 +921,7 @@ nav li:hover {
     box-shadow: 0px 0px 15px 5px #fde025;
     opacity: 0;
     transition: opacity 0.5s ease 1s;
+    z-index: 1;
 }
 
 .sun-move {
@@ -1074,7 +1075,7 @@ nav li:hover {
 }
 
 .move-down {
-    transform: translateY(0px);
+    transform: translateY(50px);
 }
 
 .win-quiz-statement {
@@ -1261,6 +1262,23 @@ nav li:hover {
         bottom: 15px
     }
 
+    .quiz-earth {
+        width: 60px;
+    }
+    
+    
+    .quiz-moon {
+        width: 40px;
+    }  
+    .quiz-rocket {
+        width: 40px;
+    }
+
+    .quiz-sun {
+        width: 500px;
+        top: 95%;
+    }
+
     .btn-primary {
         padding: 10px;
         min-width: 125px;
@@ -1287,7 +1305,7 @@ nav li:hover {
 
     .quiz-question {
         margin-bottom: 40px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .quiz-answer {
@@ -1307,11 +1325,11 @@ nav li:hover {
     }
 
     .win-quiz-statement h2 {
-        font-size: 2.7rem;
+        font-size: 2rem;
     }
 
     .quiz-destination {
-        width: 500px;
+        width: 400px;
         top: 83%;
 
     }
@@ -1322,7 +1340,7 @@ nav li:hover {
     }
 
     .landing-rocket {
-        width: 175px;
+        width: 125px;
     }
 }
 
