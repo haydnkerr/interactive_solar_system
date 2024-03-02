@@ -340,6 +340,7 @@ let winQuizStatement = document.querySelector('.win-quiz-statement')
 let flame = document.querySelector('.flame')
 let quizCLoseBtn = document.querySelector('.close-quiz-btn')
 let quizWinBtn = document.querySelector('.quiz-win-btn')
+let nextQuizBtn = document.querySelector('.next-quiz-btn')
 
 
 
@@ -350,6 +351,23 @@ quizBtn.addEventListener('click', startQuiz)
 quizAnswerBtn.addEventListener('click', nextQuestion)
 quizCLoseBtn.addEventListener('click', closeQuiz)
 quizWinBtn.addEventListener('click', closeQuizWin)
+nextQuizBtn.addEventListener('click', nextQuiz)
+
+function nextQuiz() {
+    quizContent.classList.remove('full-opacity')
+    quizProgressContainer.classList.remove('full-opacity')
+    winQuizStatement.classList.remove('fade-in')
+    quizContent.classList.remove('fade-out')
+    quizProgressContainer.classList.remove('fade-out')
+    quizDestination.classList.remove('move-up')
+    landingRocket.classList.remove('move-down')
+    flame.classList.remove('flame-animation')
+    flame.classList.add('flame-on')
+    quizSun.classList.remove('full-opacity')
+    setTimeout(startQuiz,500)
+
+}
+
 
 function closeQuiz() {
     quizContent.classList.remove('full-opacity')
@@ -434,6 +452,7 @@ function startQuiz() {
 
         quizProgressContainer.classList.add('full-opacity')
         quizSun.classList.add('full-opacity')
+        quizSun.classList.remove('sun-move')
         quizContent.classList.add('full-opacity')
     }, 3500)
 
@@ -445,19 +464,30 @@ let quizStarted = false
 let quizLocationPlanet = ["./assets/planets/earth.png", "./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png"]
 let quizDestinationPlanet = ["./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png", "./assets/planets/sun.png"]
 let planetDestinationName = ["The Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "The Mystery Planet"]
-let planetDestination = document.querySelector('.planet-destination-name')
+let planetDestination = document.querySelectorAll('.planet-destination-name')
 let quizAnimationPlanet = document.querySelector('.quiz-destination')
 let quizAnimationDestinationName = document.querySelector('.quiz-animation-destination-name')
 
 
 function populateQuestion(category, categoryNum) {
+    for (let i = 0; i < quizOptionBtn.length; ++i) {
+        quizOptionBtn[i].classList.remove('active-answer')
+        quizOptionBtn[i].classList.remove('correct-answer')
+        quizOptionBtn[i].classList.remove('wrong-answer')
+    }
     rocketProgressLine.style.width = (progressNumber + 4) + '%'
     rocketProgress.style.left = progressNumber + '%'
     quizStarted = true
     quizEarth.src = quizLocationPlanet[categoryNum]
     quizMoon.src = quizDestinationPlanet[categoryNum]
-    planetDestination.innerHTML = planetDestinationName[categoryNum]
-    quizAnimationPlanet.src = quizDestinationPlanet[categoryNum]
+    for (let i = 0; i < planetDestination.length; ++i) {
+        planetDestination[i].innerHTML = planetDestinationName[categoryNum]
+    }
+
+    setTimeout(function() {
+        quizAnimationPlanet.src = quizDestinationPlanet[categoryNum]
+    }, 1500)
+    
     let num = 0
     fetch('quiz.json')
         .then(response => {
@@ -564,7 +594,9 @@ function winningAnimation() {
     setTimeout(function () {
         winQuizStatement.classList.add('fade-in');
     }, 5000);
-
+    for (let i = 0; i < planetDestinationName.length; ++i) {
+        planetDestination[i].innerHTML = planetDestinationName[categoryNum]
+    }
 }
 /*======= This is a list of objects for all the planets, objects, moon and sun within the site. They contain the information that is used to populate the modal when the user interacts with the menu or inidivudal planet ========= */
 

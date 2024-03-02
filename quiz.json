@@ -3,244 +3,154 @@
     {
       "general_trivia": [
         {
-          "question": "Which planet is closest to the Sun?",
+          "question": "Which number planet is Earth from the Sun?",
           "options": {
-            "a": "Mercury",
-            "b": "Venus",
-            "c": "Earth",
-            "d": "Mars"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the Red Planet?",
-          "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Mars",
-            "d": "Uranus"
+            "a": "First",
+            "b": "Second",
+            "c": "Third",
+            "d": "Fourth"
           },
           "correct_answer": "c"
         },
         {
-          "question": "Which planet is famous for its beautiful rings?",
+          "question": "Why is Earth often called the 'Blue Planet'?",
           "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Neptune",
-            "d": "Earth"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet is known as the 'Blue Planet'?",
-          "options": {
-            "a": "Mercury",
-            "b": "Venus",
-            "c": "Earth",
-            "d": "Mars"
+            "a": "Because it's made of blue rocks",
+            "b": "Because it has blue flowers",
+            "c": "Because about 70% of its surface is covered in water",
+            "d": "Because it's always raining"
           },
           "correct_answer": "c"
         },
         {
-          "question": "Which planet is the largest in the solar system?",
+          "question": "What makes Earth special compared to other planets?",
           "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Uranus",
-            "d": "Neptune"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Morning Star'?",
-          "options": {
-            "a": "Mercury",
-            "b": "Venus",
-            "c": "Mars",
-            "d": "Jupiter"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet is known as the 'Evening Star'?",
-          "options": {
-            "a": "Saturn",
-            "b": "Mars",
-            "c": "Venus",
-            "d": "Neptune"
+            "a": "It's the smallest planet",
+            "b": "It's the coldest planet",
+            "c": "It's the only planet with life",
+            "d": "It's the farthest planet from the Sun"
           },
           "correct_answer": "c"
         },
         {
-          "question": "Which planet has the most moons in the solar system?",
+          "question": "What are the different environments on Earth called?",
           "options": {
-            "a": "Earth",
+            "a": "Terrains",
+            "b": "Ecosystems",
+            "c": "Continents",
+            "d": "Plains"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is Earth's special friend?",
+          "options": {
+            "a": "Sun",
             "b": "Mars",
-            "c": "Jupiter",
-            "d": "Saturn"
-          },
-          "correct_answer": "c"
-        },
-        {
-          "question": "Which planet is known as the 'Ice Giant'?",
-          "options": {
-            "a": "Uranus",
-            "b": "Saturn",
-            "c": "Neptune",
-            "d": "Jupiter"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Goddess of Love'?",
-          "options": {
-            "a": "Venus",
-            "b": "Mars",
-            "c": "Earth",
-            "d": "Mercury"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is famous for its Great Red Spot?",
-          "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Neptune",
-            "d": "Mars"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet has the shortest day in the solar system?",
-          "options": {
-            "a": "Venus",
-            "b": "Jupiter",
-            "c": "Mercury",
-            "d": "Saturn"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Red Dwarf'?",
-          "options": {
-            "a": "Mars",
-            "b": "Mercury",
-            "c": "Venus",
-            "d": "Jupiter"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet has the most volcanoes?",
-          "options": {
-            "a": "Earth",
-            "b": "Venus",
-            "c": "Mars",
-            "d": "Mercury"
-          },
-          "correct_answer": "c"
-        },
-        {
-          "question": "Which planet has the highest mountain in the solar system?",
-          "options": {
-            "a": "Mars",
-            "b": "Earth",
-            "c": "Venus",
-            "d": "Mercury"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Green Planet'?",
-          "options": {
-            "a": "Earth",
-            "b": "Mars",
-            "c": "Neptune",
-            "d": "Uranus"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is famous for its beautiful blue color?",
-          "options": {
-            "a": "Uranus",
-            "b": "Neptune",
-            "c": "Earth",
-            "d": "Saturn"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet has the longest orbit around the Sun?",
-          "options": {
-            "a": "Neptune",
-            "b": "Mercury",
-            "c": "Uranus",
-            "d": "Saturn"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Ringed Planet'?",
-          "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Uranus",
-            "d": "Neptune"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet is known as the 'Blue Giant'?",
-          "options": {
-            "a": "Jupiter",
-            "b": "Neptune",
-            "c": "Earth",
-            "d": "Uranus"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet is closest in size to Earth?",
-          "options": {
-            "a": "Venus",
-            "b": "Mars",
-            "c": "Mercury",
-            "d": "Neptune"
-          },
-          "correct_answer": "a"
-        },
-        {
-          "question": "Which planet is known as the 'Twins' with Earth?",
-          "options": {
-            "a": "Mars",
-            "b": "Venus",
-            "c": "Mercury",
-            "d": "Neptune"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet has the most extreme temperatures?",
-          "options": {
-            "a": "Mercury",
-            "b": "Venus",
-            "c": "Mars",
-            "d": "Jupiter"
-          },
-          "correct_answer": "b"
-        },
-        {
-          "question": "Which planet has the longest day?",
-          "options": {
-            "a": "Jupiter",
-            "b": "Saturn",
-            "c": "Mercury",
+            "c": "Moon",
             "d": "Venus"
           },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What are the layers of Earth?",
+          "options": {
+            "a": "Crust, core, outer layer",
+            "b": "Crust, mantle, core",
+            "c": "Core, crust, inner layer",
+            "d": "Mantle, crust, outer layer"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What causes earthquakes and builds mountains on Earth?",
+          "options": {
+            "a": "Tides",
+            "b": "Rainfall",
+            "c": "Tectonic plates movement",
+            "d": "Wind"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "What is responsible for Earth's weather?",
+          "options": {
+            "a": "Atmosphere",
+            "b": "Ocean currents",
+            "c": "Tectonic plates",
+            "d": "Magnetic field"
+          },
           "correct_answer": "a"
+        },
+        {
+          "question": "What are some of Earth's amazing features?",
+          "options": {
+            "a": "Mountains, valleys, rivers, and oceans",
+            "b": "Deserts, forests, lakes, and swamps",
+            "c": "Caves, canyons, plateaus, and glaciers",
+            "d": "Islands, volcanoes, waterfalls, and fjords"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "What is the name of the huge gorge carved by the Colorado River?",
+          "options": {
+            "a": "Grand Canyon",
+            "b": "Great Barrier Reef",
+            "c": "Mount Everest",
+            "d": "Amazon Rainforest"
+          },
+          "correct_answer": "a"
+        },
+        {
+          "question": "How many moons does Earth have?",
+          "options": {
+            "a": "0",
+            "b": "1",
+            "c": "2",
+            "d": "3"
+          },
+          "correct_answer": "b"
+        },
+        {
+          "question": "What is the average temperature on Earth?",
+          "options": {
+            "a": "0°C",
+            "b": "10°C",
+            "c": "15°C",
+            "d": "20°C"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for Earth to complete one orbit around the Sun?",
+          "options": {
+            "a": "100 days",
+            "b": "200 days",
+            "c": "365 days",
+            "d": "500 days"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "How long does it take for Earth to complete one rotation on its axis?",
+          "options": {
+            "a": "12 hours",
+            "b": "18 hours",
+            "c": "24 hours",
+            "d": "30 hours"
+          },
+          "correct_answer": "c"
+        },
+        {
+          "question": "Which layer of Earth is closest to its surface?",
+          "options": {
+            "a": "Core",
+            "b": "Mantle",
+            "c": "Crust",
+            "d": "Outer layer"
+          },
+          "correct_answer": "c"
         }
       ]
     },

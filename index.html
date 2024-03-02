@@ -411,7 +411,7 @@
             <img class="music-icon" src="./assets/volume-up.png">
         </button>
         <button class="btn-primary quiz-btn active-orbit">
-            <h3>Take Quiz</h3>
+            <h3>Fly to <span class="planet-destination-name">The Moon</span></h3>
         </button>
     </section>
 
@@ -425,9 +425,14 @@
             </div>
             <div class="win-quiz-statement">
                 <h2>Congratulations, you made it to <span class="quiz-animation-destination-name"></span>!</h2>
-                <button class="btn-primary quiz-win-btn">
-                    <h3>Back To Space</h3>
-                </button>
+                <div class="win-quiz-btn-container">
+                    <button class="btn-primary quiz-win-btn active-orbit">
+                        <h3>Back To Space</h3>
+                    </button>
+                    <button class="btn-primary next-quiz-btn active-orbit">
+                        <h3>Fly to <span class="planet-destination-name"></span></h3>
+                    </button>
+                </div>
             </div>
             <img class="quiz-destination" src="./assets/planets/moon.png">
             <div class="quiz-sun"></div>
