@@ -1,5 +1,21 @@
 /* =================== LIST OF CONTENTS ======================== */
 
+let hamburger = document.querySelector('.hamburger-menu')
+let lineTop= document.querySelector('.line-top')
+let lineMiddle= document.querySelector('.line-middle')
+let lineBottom = document.querySelector('.line-bottom')
+let mobileNav = document.querySelector('.mobile-nav-menu')
+
+hamburger.addEventListener('click', mobileMenuPopup)
+
+function mobileMenuPopup() {
+    mobileNav.classList.toggle('mobile-hidden')
+    hamburger.classList.toggle('hamburger-menu-move')
+    lineTop.classList.toggle('line-top-move')
+    lineMiddle.classList.toggle('line-middle-move')
+    lineBottom.classList.toggle('line-bottom-move')
+}
+
 let mobilePopupBtn = document.querySelector('.mobile-popup-btn')
 let mobilePopup = document.getElementById('mobile-popup')
 

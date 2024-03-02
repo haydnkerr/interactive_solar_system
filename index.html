@@ -87,7 +87,48 @@
     </section>
 
     <header class="">
+        <div class="mobile-nav-menu mobile-hidden">
+            <li id="sun-menu">Sun</li>
+            <li id="mercury-menu">Mercury</li>
+            <li id="venus-menu">Venus</li>
+            <li id="earth-menu">Earth</li>
+            <li id="moon-menu">Moon</li>
+            <li id="mars-menu">Mars</li>
+            <li id="jupiter-menu">Jupiter</li>
+            <li id="saturn-menu">Saturn</li>
+            <li id="uranus-menu">Uranus</li>
+            <li id="neptune-menu">Neptune</li>
+            <div class="objects-menu-container display-none">
+                <div class="display-flex">
+                    <li id="objects-menu">Objects</li><img class="expand-btn" src="./assets/expand-btn.png">
+                </div>
+                <div class="hidden-objects">
+                    <li id="asteroid-menu">Asteroid</li>
+                    <li id="comet-menu">Comet</li>
+                    <li id="meteor-menu">Meteor</li>
+                    <li id="satellite-menu">Satellite</li>
+                </div>
+            </div>
+            <div class="explorers-menu-container">
+                <div class="display-flex">
+                    <li id="explorers-menu">Explorers</li><img class="expand-btn" src="./assets/expand-btn.png">
+                </div>
+                <li id="astronaut-menu">Astronauts</li>
+                <li id="alien-menu">Aliens</li>
+            </div>
+        </div>
+
         <h3>Cosmic Journey</h3>
+
+        <nav class="mobile-nav">
+            <div class="hamburger-menu">
+                <div class="line line-top"></div>
+                <div class="line line-middle"></div>
+                <div class="line line-bottom"></div>
+            </div>
+        </nav>
+
+
 
         <nav class="desktop-nav">
             <li id="sun-menu">Sun</li>
@@ -128,7 +169,7 @@
     <div id="mobile-popup">
         <h3>Please note that this experience is intended for a desktop. We are currently working on expanding
             accessibility to all devices. Thank You for understanding</h3>
-        <button class="btn-primary mobile-popup-btn">
+        <button class="btn-primary mobile-popup-btn active-orbit">
             <h3>Show Me Anyway</h3>
         </button>
     </div>
@@ -369,7 +410,7 @@
         <button class="music-btn">
             <img class="music-icon" src="./assets/volume-up.png">
         </button>
-        <button class="btn-primary quiz-btn">
+        <button class="btn-primary quiz-btn active-orbit">
             <h3>Take Quiz</h3>
         </button>
     </section>
