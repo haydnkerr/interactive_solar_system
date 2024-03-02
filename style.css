@@ -1258,9 +1258,9 @@ nav li:hover {
 @media only screen and (max-width: 650px) {
 
     .orbit-controls-container {
-        bottom: 10px
+        bottom: 15px
     }
-    
+
     .btn-primary {
         padding: 10px;
         min-width: 125px;

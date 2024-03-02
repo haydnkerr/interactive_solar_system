@@ -15,7 +15,7 @@ function closeMobilePopup() {
         mobilePopup.style.display = "none"
         controlsContainer.style.opacity = "0.75"
     }, 1000)
-    
+    playMusic()
 }
 
 
