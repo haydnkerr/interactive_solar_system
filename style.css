@@ -148,7 +148,26 @@
     .gradient-mask {
         padding: 100px 125px
     }
+
 }
+
+@media only screen and (max-width: 650px) {
+    .rocket-modal-info {
+       display: none;
+    }
+
+    .rocket-modal {
+        display: none;
+    }
+
+    .gradient-bg {
+        display: none;
+    }
+
+}
+
+
+
 
 .modal-info h1 {
     font-size: 5rem;
@@ -561,8 +580,6 @@ nav li:hover {
     padding: 5px 15px;
     overflow: hidden;
     color: white;
-
-
     border: 1px solid white;
 }
 
@@ -1239,6 +1256,11 @@ nav li:hover {
 }
 
 @media only screen and (max-width: 650px) {
+    .btn-primary {
+        padding: 10px;
+        min-width: 125px;
+    }
+    
     .quiz-modal {
         width: 100%;
         border-radius: 15px;
@@ -1327,8 +1349,8 @@ nav li:hover {
 
 @media only screen and (max-width: 650px) {
     #sun {
-        top: 50vh;
-        left: 50vw;
+        top: 50dvh;
+        left: 50dvw;
     }
 }
 
