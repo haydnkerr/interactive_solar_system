@@ -1,7 +1,22 @@
 /* =================== LIST OF CONTENTS ======================== */
 
+let mobilePopupBtn = document.querySelector('.mobile-popup-btn')
+let mobilePopup = document.getElementById('mobile-popup')
 
+mobilePopupBtn.addEventListener('click', closeMobilePopup)
 
+function closeMobilePopup() {
+    mobilePopup.style.opacity = "0"
+    modalInfo.classList.add('display-none')
+    spaceship.classList.add('display-none')
+    gradientMask.classList.add('display-none')
+    toggleOrbit();
+    setTimeout(function() {
+        mobilePopup.style.display = "none"
+        controlsContainer.style.opacity = "0.75"
+    }, 1000)
+    
+}
 
 
 let musicBtn = document.querySelector('.music-btn')
@@ -286,7 +301,7 @@ let optionD = document.querySelector('.d')
 let quizAnswerBtn = document.querySelector('.quiz-answer-btn')
 let rocketProgressLine = document.querySelector('.quiz-rocket-line')
 let rocketProgress = document.querySelector('.quiz-rocket')
-let progressNumber = 10
+let progressNumber = 90
 let quizModalContainer = document.querySelector('.quiz-modal')
 let quizSun = document.querySelector('.quiz-sun')
 let quizContent = document.querySelector('.quiz-content')
@@ -313,12 +328,12 @@ function closeQuiz() {
     quizModalContainer.classList.remove('quiz-modal-animation')
 
 
-    setTimeout(function() {
-        
+    setTimeout(function () {
+
         quizModal.classList.remove('full-opacity')
     }, 2000)
-    setTimeout(function() {
-        
+    setTimeout(function () {
+
         quizModal.classList.add('display-none')
     }, 5000)
 
@@ -335,17 +350,17 @@ function closeQuizWin() {
     landingRocket.classList.remove('move-down')
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         quizModalContainer.classList.remove('quiz-modal-animation')
     }, 1500)
 
-    setTimeout(function() {
-        
+    setTimeout(function () {
+
         quizModal.classList.remove('full-opacity')
     }, 3000)
 
-    setTimeout(function() {
+    setTimeout(function () {
         flame.classList.remove('flame-on')
         quizModal.classList.add('display-none')
         quizSun.classList.remove('sun-move')
@@ -366,8 +381,15 @@ quizOptionBtn.forEach(btn => {
 });
 
 function startQuiz() {
+
+    if (progressNumber > 100) {
+        progressNumber = 0
+        rocketProgressLine.style.width = (progressNumber + 4) + '%'
+        rocketProgress.style.left = progressNumber + '%'
+
+    }
     quizModal.classList.remove('display-none')
-    
+
     currentQuestionNumber = 1;
     chosenQuestions = []
     answer = ''
