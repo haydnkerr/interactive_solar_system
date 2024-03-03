@@ -1445,12 +1445,8 @@ function moonHover() {
 
 /*============ Functions to expand/close 3D planet to full screen ===============*/
 function expandPlanet() {
-    planetImageContainerReal.style.position = 'absolute'
-    planetImageContainerReal.style.height = '100vh'
-    planetImageContainerReal.style.width = '100vw'
-    planetImageContainerReal.style.left = '0'
-    planetImageContainerReal.style.top = '0'
-    planetImageContainerReal.style.background = 'black';
+
+    planetImageContainerReal.classList.add('expand-real-planet')
     infoToggle.classList.add('display-none')
     planetExpandCloseContainer.classList.remove('display-none');
     // stars.style.zIndex = '50'
@@ -1459,36 +1455,9 @@ function expandPlanet() {
 function closePlanet() {
     infoToggle.classList.remove('display-none')
     planetExpandCloseContainer.classList.add('display-none')
-    planetImageContainerReal.style.width = '50%';
-    planetImageContainerReal.style.height = '100%';
-    planetImageContainerReal.style.backgroundImage = 'none';
-    planetImageContainerReal.style.background = 'none';
-    planetImageContainerReal.style.position = 'relative'
+    planetImageContainerReal.classList.remove('expand-real-planet')
 }
 
-
-/*===== Toggle between the two pages of planet info in the modal ======== */
-// function toggleAdult() {
-//     adultBtn.classList.add('active-page')
-//     childBtn.classList.remove('active-page')
-//     populateAdultInfo();
-// }
-
-// function toggleChild() {
-//     childBtn.classList.add('active-page')
-//     adultBtn.classList.remove('active-page')
-//     populatePlanet();
-// }
-
-
-// window.addEventListener('click', function() {
-//     setTimeout(function() {
-//         if (modalOpen == true) {
-//         planetModal.classList.add("hidden");
-//         n = 0;
-//         modalOpen = false;
-//     }}, 10)
-//     });
 
 
 function mercuryInteraction() {

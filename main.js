@@ -236,6 +236,9 @@ function populatePlanet() {
     for (let i = 0; i < 100; i++) {
         let star = document.createElement('span');
         let randomSize = Math.ceil((Math.random() * 3));
+    if (window.innerWidth < 600) {
+        randomSize = Math.ceil((Math.random() * 1));
+    }
         let width = window.innerWidth;
         let starPos = (Math.random() * width);
         star.classList.add('star');
