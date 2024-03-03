@@ -478,8 +478,8 @@ nav li:hover {
 .mobile-nav-menu {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    background: #030534d8;
+    gap: 20px;
+    background: #0304298e;
     position: absolute;
     height: 100dvh;
     width: 100vw;
