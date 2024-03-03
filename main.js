@@ -93,6 +93,17 @@ cometMenuBtn.addEventListener('click', cometInteraction);
 satelliteMenuBtn.addEventListener('click', satelliteInteraction);
 alienMenuBtn.addEventListener('click', alienInteraction);
 
+earthMobileMenuBtn.addEventListener("click", earthInteraction);
+mercuryMobileMenuBtn.addEventListener('click', mercuryInteraction);
+venusMobileMenuBtn.addEventListener('click', venusInteraction);
+marsMobileMenuBtn.addEventListener('click', marsInteraction);
+jupiterMobileMenuBtn.addEventListener('click', jupiterInteraction);
+saturnMobileMenuBtn.addEventListener('click', saturnInteraction);
+uranusMobileMenuBtn.addEventListener('click', uranusInteraction);
+neptuneMobileMenuBtn.addEventListener('click', neptuneInteraction);
+sunMobileMenuBtn.addEventListener('click', sunInteraction);
+moonMobileMenuBtn.addEventListener('click', moonInteraction);
+
 
 let planetImageFile;
 let planetDisplay;
