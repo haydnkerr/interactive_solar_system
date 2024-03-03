@@ -691,6 +691,10 @@ nav li:hover {
     transition: 2s;
 }
 
+.mobile-bottom {
+    display: none;
+}
+
 .page-toggle {
     display: block;
     text-decoration: none;
@@ -2077,10 +2081,12 @@ nav li:hover {
 
     .bottom-container {
         flex-wrap: wrap;
-        overflow: scroll;
         margin-top: 10px;
-        padding: 0px 15px 15px 15px;
-        height: 15dvh
+        display: none;
+    }
+
+    .mobile-bottom {
+        display: flex;
     }
 
     .planet-modal {
@@ -2092,14 +2098,14 @@ nav li:hover {
     }
     
     .planet-height-animation {
-        height: 90dvh;
+        height: 95dvh;
         padding: 0px;
     }
 
     #planet-image-container {
         width: 100%;
         margin-bottom: 15px;
-        height: 100%;
+        height: 45dvh;
     } 
 
     .planet-info-cont {
@@ -2108,9 +2114,9 @@ nav li:hover {
     }
 
     .planet-info-container {
-        padding: 0px;
+        padding: 0px 5px;
         width: 100%;
-        height: 40dvh;
+        height: 55dvh;
     }
 
     .planet-info-container p {

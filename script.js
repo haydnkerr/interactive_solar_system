@@ -1018,11 +1018,12 @@ let planetInfo7 = document.getElementById('planet-info-seven');
 let planetInfo8 = document.getElementById('planet-info-eight');
 let planetInfo9 = document.getElementById('planet-info-nine');
 let planetInfo10 = document.getElementById('planet-info-ten');
-let planetDiameter = document.getElementById('planet-diameter');
-let planetOrbit = document.getElementById('planet-orbit');
-let planetRotation = document.getElementById('planet-rotation');
-let planetMoons = document.getElementById('planet-moons');
-let planetTemp = document.getElementById('planet-temp');
+
+let planetDiameter = document.querySelectorAll('.planet-diameter');
+let planetOrbit = document.querySelectorAll('.planet-orbit');
+let planetRotation = document.querySelectorAll('.planet-rotation');
+let planetMoons = document.querySelectorAll('.planet-moons');
+let planetTemp = document.querySelectorAll('.planet-temp');
 let planetImage = document.getElementById('planet-image');
 
 let modalCloseBtn = document.getElementById('close-btn')
@@ -1558,11 +1559,14 @@ function populatePlanet() {
     planetInfo8.innerHTML = planets[n].info8;
     planetInfo9.innerHTML = planets[n].info9;
     planetInfo10.innerHTML = planets[n].info10;
-    planetDiameter.innerHTML = planets[n].diameter;
-    planetOrbit.innerHTML = planets[n].orbit;
-    planetRotation.innerHTML = planets[n].rotation;
-    planetMoons.innerHTML = planets[n].moons;
-    planetTemp.innerHTML = planets[n].temp;
+    for (let i = 0; i < 2; ++i) {
+        planetDiameter[i].innerHTML = planets[n].diameter;
+        planetOrbit[i].innerHTML = planets[n].orbit;
+        planetRotation[i].innerHTML = planets[n].rotation;
+        planetMoons[i].innerHTML = planets[n].moons;
+        planetTemp[i].innerHTML = planets[n].temp;
+    }
+
     setTimeout(function () {
         planetModalContainer.classList.add("planet-width-animation");
     }, 10)
