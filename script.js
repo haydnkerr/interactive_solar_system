@@ -1,4 +1,35 @@
 /* =================== LIST OF CONTENTS ======================== */
+// Check if the browser is Chrome
+if (navigator.userAgent.indexOf("Chrome") != -1) {
+    console.log("You are using Chrome!");
+}
+
+// Check if the browser is Firefox
+else if (navigator.userAgent.indexOf("Firefox") != -1) {
+    console.log("You are using Firefox!");
+}
+
+// Check if the browser is Safari
+else if (navigator.userAgent.indexOf("Safari") != -1) {
+    console.log("You are using Safari!");
+}
+
+// Check if the browser is Internet Explorer
+else if (navigator.userAgent.indexOf("MSIE") != -1 || !!document.documentMode == true) {
+    console.log("You are using Internet Explorer!");
+}
+
+// Check if the browser is Edge
+else if (navigator.userAgent.indexOf("Edge") != -1) {
+    console.log("You are using Edge!");
+}
+
+// If none of the above, assume it's some other browser
+else {
+    console.log("You are using some other browser!");
+}
+
+
 
 let hamburger = document.querySelector('.hamburger-menu')
 let lineTop = document.querySelector('.line-top')
@@ -44,6 +75,8 @@ musicBtn.addEventListener('click', playMusic)
 
 
 function playMusic() {
+
+
     var soundtrack = document.getElementById("music");
     if (!isMusicOn) {
         soundtrack.play();
@@ -79,13 +112,18 @@ liftOffBtn.addEventListener('click', liftOff);
 
 
 function liftOff() {
-    modalInfo.style.opacity = "0"
-    spaceship.classList.add('takeoff-animation');
-    gradientMask.classList.add('modal-move')
-    playMusic()
-    setTimeout(displayNone, 4000)
-    orbit()
-    setTimeout(toggleOrbit, 1000)
+    // Check if the browser is Safari
+    if (navigator.userAgent.indexOf("Safari") != -1) {
+        console.log("You are using Safari!");
+        modalInfo.style.opacity = "0"
+        spaceship.classList.add('takeoff-animation');
+        gradientMask.classList.add('modal-move')
+        playMusic()
+        setTimeout(displayNone, 4000)
+        orbit()
+        setTimeout(toggleOrbit, 1000)
+    }
+
 }
 
 function displayNone() {
@@ -113,6 +151,17 @@ let asteroidMenuBtn = document.getElementById("asteroid-menu")
 let meteorMenuBtn = document.getElementById("meteor-menu")
 let satelliteMenuBtn = document.getElementById("satellite-menu")
 let alienMenuBtn = document.getElementById("alien-menu")
+
+let mercuryMobileMenuBtn = document.getElementById("mobile-mercury-menu")
+let venusMobileMenuBtn = document.getElementById("mobile-venus-menu")
+let earthMobileMenuBtn = document.getElementById("mobile-earth-menu")
+let marsMobileMenuBtn = document.getElementById("mobile-mars-menu")
+let jupiterMobileMenuBtn = document.getElementById("mobile-jupiter-menu")
+let saturnMobileMenuBtn = document.getElementById("mobile-saturn-menu")
+let uranusMobileMenuBtn = document.getElementById("mobile-uranus-menu")
+let neptuneMobileMenuBtn = document.getElementById("mobile-neptune-menu")
+let sunMobileMenuBtn = document.getElementById("mobile-sun-menu")
+let moonMobileMenuBtn = document.getElementById("mobile-moon-menu")
 
 
 
@@ -364,7 +413,7 @@ function nextQuiz() {
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
     quizSun.classList.remove('full-opacity')
-    setTimeout(startQuiz,500)
+    setTimeout(startQuiz, 500)
 
 }
 
@@ -484,10 +533,10 @@ function populateQuestion(category, categoryNum) {
         planetDestination[i].innerHTML = planetDestinationName[categoryNum]
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
         quizAnimationPlanet.src = quizDestinationPlanet[categoryNum]
     }, 1500)
-    
+
     let num = 0
     fetch('quiz.json')
         .then(response => {
@@ -542,10 +591,10 @@ function nextQuestion() {
                 }
             }
         }
-        if (progressNumber >=100) {
+        if (progressNumber >= 100) {
             quizAnswerBtn.innerHTML = "<h2>Fly To " + planetDestinationName[categoryNum] + "</h2>"
         } else {
-            quizAnswerBtn.innerHTML =  "<h2>Next Question</h2>"
+            quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
         }
     } else {
         if (progressNumber >= 100) {
@@ -1219,60 +1268,70 @@ neptune.addEventListener('click', neptuneInteraction);
 sun.addEventListener('click', sunInteraction);
 
 earthMenuBtn.addEventListener("click", earthInteraction);
+earthMobileMenuBtn.addEventListener("click", earthInteraction);
 earthMenuBtn.addEventListener("mouseover", earthHover)
 earthMenuBtn.addEventListener("mouseout", closeHover)
 earth.addEventListener("mouseover", earthHover)
 earth.addEventListener("mouseout", closeHover)
 
 mercuryMenuBtn.addEventListener('click', mercuryInteraction);
+mercuryMobileMenuBtn.addEventListener('click', mercuryInteraction);
 mercuryMenuBtn.addEventListener("mouseover", mercuryHover)
 mercuryMenuBtn.addEventListener("mouseout", closeHover)
 mercury.addEventListener("mouseover", mercuryHover)
 mercury.addEventListener("mouseout", closeHover)
 
 venusMenuBtn.addEventListener('click', venusInteraction);
+venusMobileMenuBtn.addEventListener('click', venusInteraction);
 venusMenuBtn.addEventListener("mouseover", venusHover)
 venusMenuBtn.addEventListener("mouseout", closeHover)
 venus.addEventListener("mouseover", venusHover)
 venus.addEventListener("mouseout", closeHover)
 
 marsMenuBtn.addEventListener('click', marsInteraction);
+marsMobileMenuBtn.addEventListener('click', marsInteraction);
 marsMenuBtn.addEventListener("mouseover", marsHover)
 marsMenuBtn.addEventListener("mouseout", closeHover)
 mars.addEventListener("mouseover", marsHover)
 mars.addEventListener("mouseout", closeHover)
 
 jupiterMenuBtn.addEventListener('click', jupiterInteraction);
+jupiterMobileMenuBtn.addEventListener('click', jupiterInteraction);
 jupiterMenuBtn.addEventListener("mouseover", jupiterHover)
 jupiterMenuBtn.addEventListener("mouseout", closeHover)
 jupiter.addEventListener("mouseover", jupiterHover)
 jupiter.addEventListener("mouseout", closeHover)
 
 saturnMenuBtn.addEventListener('click', saturnInteraction);
+saturnMobileMenuBtn.addEventListener('click', saturnInteraction);
 saturnMenuBtn.addEventListener("mouseover", saturnHover)
 saturnMenuBtn.addEventListener("mouseout", closeHover)
 saturn.addEventListener("mouseover", saturnHover)
 saturn.addEventListener("mouseout", closeHover)
 
 uranusMenuBtn.addEventListener('click', uranusInteraction);
+uranusMobileMenuBtn.addEventListener('click', uranusInteraction);
 uranusMenuBtn.addEventListener("mouseover", uranusHover)
 uranusMenuBtn.addEventListener("mouseout", closeHover)
 uranus.addEventListener("mouseover", uranusHover)
 uranus.addEventListener("mouseout", closeHover)
 
 neptuneMenuBtn.addEventListener('click', neptuneInteraction);
+neptuneMobileMenuBtn.addEventListener('click', neptuneInteraction);
 neptuneMenuBtn.addEventListener("mouseover", neptuneHover)
 neptuneMenuBtn.addEventListener("mouseout", closeHover)
 neptune.addEventListener("mouseover", neptuneHover)
 neptune.addEventListener("mouseout", closeHover)
 
 sunMenuBtn.addEventListener('click', sunInteraction);
+sunMobileMenuBtn.addEventListener('click', sunInteraction);
 sunMenuBtn.addEventListener("mouseover", sunHover)
 sunMenuBtn.addEventListener("mouseout", closeHover)
 sun.addEventListener("mouseover", sunHover)
 sun.addEventListener("mouseout", closeHover)
 
 moonMenuBtn.addEventListener('click', moonInteraction);
+moonMobileMenuBtn.addEventListener('click', moonInteraction);
 moonMenuBtn.addEventListener("mouseover", moonHover)
 moonMenuBtn.addEventListener("mouseout", closeHover)
 moon.addEventListener("mouseover", moonHover)
@@ -1296,11 +1355,27 @@ let planetExpandCloseBtn = document.getElementById('planet-close-btn')
 function closeModal() {
     // childBtn.classList.add('active-page')
     // adultBtn.classList.remove('active-page')
-    planetModal.classList.add("hidden")
-    n = 0;
-    while (planetImageContainerReal.firstChild) {
-        planetImageContainerReal.removeChild(planetImageContainerReal.firstChild);
-    }
+    setTimeout(function () {
+        planetModalContainer.classList.remove("planet-width-animation");
+    }, 2000)
+
+    setTimeout(function () {
+        planetModalContainer.classList.remove("planet-height-animation");
+        bottomContainer.classList.remove('fade-in')
+    }, 100)
+
+    setTimeout(function () {
+        planetModal.classList.remove('full-width-animation')
+
+        n = 0;
+        while (planetImageContainerReal.firstChild) {
+            planetImageContainerReal.removeChild(planetImageContainerReal.firstChild);
+        }
+    }, 3000)
+    setTimeout(function () {
+        planetModal.classList.add("hidden")
+    }, 3500)
+
 }
 
 
@@ -1379,10 +1454,6 @@ function expandPlanet() {
     infoToggle.classList.add('display-none')
     planetExpandCloseContainer.classList.remove('display-none');
     // stars.style.zIndex = '50'
-
-
-
-
 }
 
 function closePlanet() {
@@ -1393,10 +1464,6 @@ function closePlanet() {
     planetImageContainerReal.style.backgroundImage = 'none';
     planetImageContainerReal.style.background = 'none';
     planetImageContainerReal.style.position = 'relative'
-
-
-
-
 }
 
 
@@ -1504,8 +1571,13 @@ function alienInteraction() {
 
 
 /* ====== pulls in info from planet list and populates modal with appropriate information ========= */
+let planetModalContainer = document.querySelector('.planet-modal')
+let bottomContainer = document.querySelector('.bottom-container')
+
 function populatePlanet() {
-    planetModal.classList.remove("hidden")
+    planetModal.classList.remove("hidden");
+    planetModal.classList.add('full-width-animation')
+
     planetName.innerHTML = planets[n].name;
     planetInfo1.innerHTML = planets[n].info1;
     planetInfo2.innerHTML = planets[n].info2;
@@ -1523,8 +1595,19 @@ function populatePlanet() {
     planetMoons.innerHTML = planets[n].moons;
     planetTemp.innerHTML = planets[n].temp;
     setTimeout(function () {
+        planetModalContainer.classList.add("planet-width-animation");
+    }, 10)
+    setTimeout(function () {
+        planetModalContainer.classList.add("planet-height-animation");
+    }, 1500)
+    setTimeout(function () {
         modalOpen = true
     }, 1000)
+
+    setTimeout(function () {
+        bottomContainer.classList.add('fade-in')
+    }, 2500)
+
 }
 
 function populateAdultInfo() {
@@ -1543,6 +1626,7 @@ function populateAdultInfo() {
     setTimeout(function () {
         modalOpen = true
     }, 1000)
+
 }
 
 

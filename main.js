@@ -166,7 +166,7 @@ scene.add(ambientLight);
 
 
 let directionalLight = new THREE.DirectionalLight(0xffffff, 5); // Color, Intensity
-directionalLight.position.set(1, 1, 1); // Set the direction
+directionalLight.position.set(1, 0.7, 1); // Set the direction
 scene.add(directionalLight);
 
 directionalLight.castShadow = true;
