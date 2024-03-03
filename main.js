@@ -25,6 +25,17 @@ let meteorMenuBtn = document.getElementById("meteor-menu")
 let satelliteMenuBtn = document.getElementById("satellite-menu")
 let alienMenuBtn = document.getElementById("alien-menu")
 
+let mercuryMobileMenuBtn = document.getElementById("mobile-mercury-menu")
+let venusMobileMenuBtn = document.getElementById("mobile-venus-menu")
+let earthMobileMenuBtn = document.getElementById("mobile-earth-menu")
+let marsMobileMenuBtn = document.getElementById("mobile-mars-menu")
+let jupiterMobileMenuBtn = document.getElementById("mobile-jupiter-menu")
+let saturnMobileMenuBtn = document.getElementById("mobile-saturn-menu")
+let uranusMobileMenuBtn = document.getElementById("mobile-uranus-menu")
+let neptuneMobileMenuBtn = document.getElementById("mobile-neptune-menu")
+let sunMobileMenuBtn = document.getElementById("mobile-sun-menu")
+let moonMobileMenuBtn = document.getElementById("mobile-moon-menu")
+
 
 /* =========================== Individual Planets ===================== */
 let mercury = document.getElementById('mercury');
