@@ -253,12 +253,24 @@ function populatePlanet() {
     }
     planetImageContainerReal.appendChild(renderer.domElement);
 
-    if (n == 5) {
-        camera.position.z = 1.5;
-        camera.position.set(0, 0, camera.position.z);
+
+
+    if (window.innerWidth < 650) {
+        if (n == 5) {
+            camera.position.z = 2.5;
+            camera.position.set(0, 0, camera.position.z);
+        } else {
+            camera.position.z = 1.75;
+            camera.position.set(0, 0, camera.position.z);
+        }
     } else {
-        camera.position.z = 0.85;
-        camera.position.set(0, 0, camera.position.z);
+        if (n == 5) {
+            camera.position.z = 1.5;
+            camera.position.set(0, 0, camera.position.z);
+        } else {
+            camera.position.z = 0.85;
+            camera.position.set(0, 0, camera.position.z);
+        }
     }
 
 
