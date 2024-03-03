@@ -2081,13 +2081,14 @@ nav li:hover {
     }
     
     .planet-height-animation {
-        height: 95vh;
+        height: 95dvh;
         padding: 0px;
     }
 
-    .planet-image-container {
+    #planet-image-container {
         width: 100%;
         margin-bottom: 15px;
+
     } 
 
     .planet-info-cont {
