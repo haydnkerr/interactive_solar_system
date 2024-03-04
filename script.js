@@ -413,7 +413,13 @@ function nextQuiz() {
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
     quizSun.classList.remove('full-opacity')
-    setTimeout(startQuiz, 500)
+
+    if (categoryNum > 6) {
+        closeQuiz()
+        setTimeout(makemakeInteraction, 2500)
+    } else {
+        setTimeout(startQuiz, 500)
+    }
 
 }
 
@@ -447,7 +453,6 @@ function closeQuizWin() {
     landingRocket.classList.remove('move-down')
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
-
     setTimeout(function () {
         quizModalContainer.classList.remove('quiz-modal-animation')
     }, 1500)
@@ -462,7 +467,6 @@ function closeQuizWin() {
         quizModal.classList.add('display-none')
         quizSun.classList.remove('sun-move')
     }, 5000)
-
 }
 
 
@@ -486,7 +490,6 @@ function startQuiz() {
         progressNumber = 0
         rocketProgressLine.style.width = (progressNumber + 4) + '%'
         rocketProgress.style.left = progressNumber + '%'
-
     }
     quizModal.classList.remove('display-none')
 
@@ -498,7 +501,6 @@ function startQuiz() {
     }, 0)
 
     setTimeout(function () {
-
         quizProgressContainer.classList.add('full-opacity')
         quizSun.classList.add('full-opacity')
         quizSun.classList.remove('sun-move')
@@ -597,7 +599,7 @@ function nextQuestion() {
             quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
         }
     } else {
-        if (progressNumber >= 100) {
+        if (progressNumber >= 0) {
             winningAnimation()
             for (let i = 0; i < quizOptionBtn.length; ++i) {
                 quizOptionBtn[i].classList.remove('active-answer')
@@ -620,9 +622,6 @@ function nextQuestion() {
     }
     userGuess = ''
 }
-
-
-
 
 function winningAnimation() {
     quizAnimationDestinationName.innerHTML = planetDestinationName[categoryNum]
@@ -1523,7 +1522,6 @@ function neptuneInteraction() {
 }
 
 function sunInteraction() {
-    console.log("This is an sun message.");
     n += 8;
     populatePlanet();
 }
