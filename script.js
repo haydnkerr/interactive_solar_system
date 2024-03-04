@@ -390,6 +390,7 @@ let flame = document.querySelector('.flame')
 let quizCLoseBtn = document.querySelector('.close-quiz-btn')
 let quizWinBtn = document.querySelector('.quiz-win-btn')
 let nextQuizBtn = document.querySelector('.next-quiz-btn')
+let makemakeBtn = document.querySelector('.makemake-btn')
 
 
 
@@ -401,6 +402,7 @@ quizAnswerBtn.addEventListener('click', nextQuestion)
 quizCLoseBtn.addEventListener('click', closeQuiz)
 quizWinBtn.addEventListener('click', closeQuizWin)
 nextQuizBtn.addEventListener('click', nextQuiz)
+makemakeBtn.addEventListener('click', makemakeBtnFunction)
 
 function nextQuiz() {
     quizContent.classList.remove('full-opacity')
@@ -413,14 +415,29 @@ function nextQuiz() {
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
     quizSun.classList.remove('full-opacity')
+    setTimeout(startQuiz, 500)
 
-    if (categoryNum > 6) {
-        closeQuiz()
-        setTimeout(makemakeInteraction, 2500)
-    } else {
-        setTimeout(startQuiz, 500)
+    if (categoryNum > 5) {
+        setTimeout(function () {
+            makemakeBtn.classList.remove('display-none')
+            nextQuizBtn.classList.add('display-none');
+        }, 12000)
     }
 
+}
+function makemakeBtnFunction() {
+    quizContent.classList.remove('full-opacity')
+    quizProgressContainer.classList.remove('full-opacity')
+    winQuizStatement.classList.remove('fade-in')
+    quizContent.classList.remove('fade-out')
+    quizProgressContainer.classList.remove('fade-out')
+    quizDestination.classList.remove('move-up')
+    landingRocket.classList.remove('move-down')
+    flame.classList.remove('flame-animation')
+    flame.classList.add('flame-on')
+    quizSun.classList.remove('full-opacity')
+    closeQuiz()
+    setTimeout(makemakeInteraction, 2500)
 }
 
 
@@ -466,6 +483,7 @@ function closeQuizWin() {
         flame.classList.remove('flame-on')
         quizModal.classList.add('display-none')
         quizSun.classList.remove('sun-move')
+        flame.classList.remove('flame-on')
     }, 5000)
 }
 
@@ -513,7 +531,7 @@ let quizEarth = document.querySelector('.quiz-earth')
 let quizMoon = document.querySelector('.quiz-moon')
 let quizStarted = false
 let quizLocationPlanet = ["./assets/planets/earth.png", "./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png"]
-let quizDestinationPlanet = ["./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png", "./assets/planets/sun.png"]
+let quizDestinationPlanet = ["./assets/planets/moon.png", "./assets/planets/mars.png", "./assets/planets/jupiter.png", "./assets/planets/saturn.png", "./assets/planets/uranus.png", "./assets/planets/neptune.png", "./assets/planets/makemake.png"]
 let planetDestinationName = ["The Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "The Mystery Planet"]
 let planetDestination = document.querySelectorAll('.planet-destination-name')
 let quizAnimationPlanet = document.querySelector('.quiz-destination')
@@ -625,6 +643,11 @@ function nextQuestion() {
 
 function winningAnimation() {
     quizAnimationDestinationName.innerHTML = planetDestinationName[categoryNum]
+    if (categoryNum == 4 || categoryNum == 3) {
+        quizDestination.style.width = '700px'
+    } else {
+        quizDestination.style.width = '550px'
+    }
     categoryNum += 1;
     chosenQuestions = []
     answer = ''
@@ -635,6 +658,7 @@ function winningAnimation() {
     questionAnswered = false
     quizSun.classList.add('sun-move')
     quizContent.classList.add('fade-out')
+    flame.classList.remove('flame-on')
     quizProgressContainer.classList.add('fade-out')
     quizDestination.classList.add('move-up')
     landingRocket.classList.add('move-down')
@@ -1274,8 +1298,8 @@ function sunOrbitDays() {
 
 
 /*============== Event listeners for menu items and the planets themselves. Includes click interactions and hover interactions  ==================*/
-let makemakeBtn = document.querySelector('.makemake-btn')
-makemakeBtn.addEventListener("click", makemakeInteraction);
+
+
 
 earth.addEventListener("click", earthInteraction);
 mercury.addEventListener('click', mercuryInteraction);

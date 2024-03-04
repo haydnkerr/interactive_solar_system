@@ -453,19 +453,19 @@ nav li:hover {
 
 
 .line {
-    width: 35px;
-    height: 5px;
+    width: 25px;
+    height: 3px;
     background: white;
     border-radius: 25px;
     transition: 1s;
 }
 
 .line-top-move {
-    transform: translateY(5px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
 }
 
 .line-bottom-move {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-3px) rotate(-45deg);
     ;
 }
 
@@ -1066,10 +1066,10 @@ nav li:hover {
     position: absolute;
     z-index: 5;
     width: 550px;
-    aspect-ratio: 1 /1;
+    height: 550px;
     border-radius: 50%;
     left: 50;
-    top: 77%;
+    top:85%;
     transform: translateY(400px);
     transition: transform 5s linear;
 }
