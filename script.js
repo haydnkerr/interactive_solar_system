@@ -827,7 +827,7 @@ const planets = [
     }
     ,
     {
-        name: "Sun",
+        name: "The Sun",
         info1: "<strong>Solar Sizzle:</strong> The Sun is so hot that you could cook a pizza in just a few seconds if it were close enough (though, I wouldn't recommend trying!).",
         info2: "<strong>Cosmic Ballerina:</strong> Despite its massive size, the Sun rotates at different rates at its equator and poles. This causes a sort of 'cosmic dance'!",
         info3: "<strong>Sunny Day Out:</strong> If you could drive a car to the Sun at a steady speed of 60 mph (97 km/h), it would take you about 193 years to get there. Don't forget the sunscreen!",
@@ -849,7 +849,7 @@ const planets = [
     }
     ,
     {
-        name: "Moon",
+        name: "The Moon",
         info1: "<strong>Earth's Only Natural Satellite:</strong> The Moon is the only natural satellite of Earth. It's about 1/6th the size of Earth.",
         info2: "<strong>Close Neighbor:</strong> The Moon is relatively close to Earth, about 238,855 miles (384,400 kilometers) away on average.",
         info3: "<strong>Tidally Locked:</strong> The Moon is tidally locked to Earth, which means it always shows the same face to our planet. This is why we only see one side of the Moon from Earth.",
@@ -1003,6 +1003,24 @@ const planets = [
         temp: "167&deg;C",
         link: "",
         image: "./assets/planets/mercury.png"
+    },
+    {
+        name: "Makemake",
+        info1: "<strong>Distant Dwarf:</strong> Makemake is one of the largest known dwarf planets in our solar system, residing in the distant Kuiper Belt beyond the orbit of Neptune.",
+        info2: "<strong > Moons:</strong> Unlike Jupiter, Makemake doesn't have any known moons orbiting around it.",
+        info3: "< strong > Surface Composition:</strong> Makemake's surface is believed to be covered in frozen methane and possibly other volatile substances, giving it a reflective surface.",
+        info4: "<strong>Orbital Period:</strong> It takes Makemake approximately 309 Earth years to complete one orbit around the Sun.",
+        info5: "<strong>Discovery:</strong> Makemake was discovered in 2005 by a team led by astronomer Michael E.Brown and named officially by the International Astronomical Union(IAU) in 2008.",
+        info6: "<strong>Similar Size to Pluto:</strong> Makemake's diameter is about two-thirds that of Pluto, another well-known dwarf planet in the Kuiper Belt.",
+        info7: "<strong>Distinctive Name:</strong> The dwarf planet is named after Makemake, the creator god of the Rapa Nui people of Easter Island, a name chosen by its discoverers.",
+        info8: "<strong>Cold Environment:</strong> Makemake's surface temperature is estimated to be around -240&deg;C (-400&deg;F), making it one of the coldest known objects in our solar system.",
+        info9: "< strong> Low Albedo:</strong> Makemake has a low albedo, meaning it reflects only a small portion of the sunlight that strikes its surface, making it relatively dim compared to other objects in the Kuiper Belt.",
+        info10: "<strong>Minimal Exploration:</strong> As of now, no spacecraft have been specifically sent to explore Makemake, so much of what we know about it comes from ground - based observations and studies.",
+        Diameter: "1,434 km",
+        Orbit: "112,897 days(309 Earth years)",
+        Rotation: "Unknown.",
+        Moons: "0",
+        Temperature: "-240&deg;C(-400&deg;F)"
     }
 ];
 
@@ -1545,6 +1563,7 @@ let planetModalContainer = document.querySelector('.planet-modal')
 let bottomContainer = document.querySelector('.bottom-container')
 
 function populatePlanet() {
+    expandPlanetBtn.innerHTML = "<h3> Explore " + planets[n].name + "</h3>"
     planetModal.classList.remove("hidden");
     planetModal.classList.add('full-width-animation')
 

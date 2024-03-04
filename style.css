@@ -153,7 +153,7 @@
 
 @media only screen and (max-width: 650px) {
     .rocket-modal-info {
-       display: none;
+        display: none;
     }
 
     .rocket-modal {
@@ -436,7 +436,7 @@ nav li:hover {
 
 .mobile-nav {
     position: relative;
-    
+
 }
 
 .hamburger-menu {
@@ -466,7 +466,8 @@ nav li:hover {
 }
 
 .line-bottom-move {
-    transform:  translateY(-5px) rotate(-45deg);;
+    transform: translateY(-5px) rotate(-45deg);
+    ;
 }
 
 .line-middle-move {
@@ -541,7 +542,7 @@ nav li:hover {
 
 
 
-   
+
 
 .close-btn {
     /* position: absolute;
@@ -1401,11 +1402,12 @@ nav li:hover {
     .quiz-earth {
         width: 60px;
     }
-    
-    
+
+
     .quiz-moon {
         width: 40px;
-    }  
+    }
+
     .quiz-rocket {
         width: 40px;
     }
@@ -1424,7 +1426,7 @@ nav li:hover {
         padding: 10px;
         min-width: 125px;
     }
-    
+
     .quiz-modal {
         width: 100%;
         border-radius: 15px;
@@ -1456,7 +1458,8 @@ nav li:hover {
         border-radius: 50px;
     }
 
-    .quiz-answer-btn h2, .quiz-answer h2 {
+    .quiz-answer-btn h2,
+    .quiz-answer h2 {
         font-size: 1rem;
     }
 
@@ -1464,7 +1467,7 @@ nav li:hover {
         font-size: 1rem;
     }
 
-    .music-btn{
+    .music-btn {
         padding: 8px;
     }
 
@@ -1515,12 +1518,12 @@ nav li:hover {
 #sun {
 
     background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
-    width: 7vw;
-    height: 7vw;
+    width: 10vw;
+    height: 10vw;
     border-radius: 50%;
     position: absolute;
-    top: 45vh;
-    left: 47vw;
+    top: 42.3vh;
+    left: 45.8vw;
     z-index: 5;
     box-shadow: 0px 0px 15px 5px #fde025;
     /* display: none; */
@@ -1556,7 +1559,6 @@ nav li:hover {
     width: 33px;
     /* background: none; */
     transform: translateX(-4vw) translateY(2vw);
-    ;
     z-index: 5;
     /* pointer-events: none; */
     animation-play-state: paused;
@@ -1602,7 +1604,6 @@ nav li:hover {
     transform: rotate(110deg);
 }
 
-#mercury-slide {}
 
 .mercury-slide {
     animation-duration: 4.5s;
@@ -1621,19 +1622,20 @@ nav li:hover {
 }
 
 .mercury-rotate {
-    height: 6vw;
-    width: 6vw;
+    height: 9vw;
+    width: 9vw;
 }
 
 
 
 #venus {
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height: 3vw;
     background-image: url("./assets/planets/venus.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+
     z-index: 41;
 }
 
@@ -1660,8 +1662,8 @@ nav li:hover {
 }
 
 .venus-rotate {
-    height: 12vw;
-    width: 12vw;
+    height: 18vw;
+    width: 18vw;
 }
 
 
@@ -1692,8 +1694,8 @@ nav li:hover {
 }
 
 .earth-rotate {
-    height: 20vw;
-    width: 20vw;
+    height: 27vw;
+    width: 27vw;
 }
 
 .earth-slide {
@@ -1776,8 +1778,8 @@ nav li:hover {
 
 
 .mars-rotate {
-    height: 26vw;
-    width: 26vw;
+    height: 36vw;
+    width: 36vw;
 }
 
 .mars-slide {
@@ -1818,8 +1820,8 @@ nav li:hover {
 }
 
 .saturn-rotate {
-    height: 58vw;
-    width: 58vw;
+    height: 69vw;
+    width: 69vw;
 }
 
 .saturn-slide {
@@ -1859,8 +1861,8 @@ nav li:hover {
 }
 
 .jupiter-rotate {
-    height: 41vw;
-    width: 41vw;
+    height: 54vw;
+    width: 54vw;
 }
 
 .jupiter-slide {
@@ -1914,14 +1916,14 @@ nav li:hover {
 } */
 
 .uranus-rotate {
-    height: 70vw;
-    width: 70vw;
+    height: 82vw;
+    width: 82vw;
     z-index: 2
 }
 
 #neptune {
-    width: 4vw;
-    height: 4vw;
+    width: 5.5vw;
+    height: 5.5vw;
     background-image: url("./assets/planets/neptune.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1938,9 +1940,9 @@ nav li:hover {
 }
 
 .neptune-rotate {
-    height: 85vw;
-    width: 85vw;
-    z-index: 1
+    height: 95vw;
+    width: 95vw;
+    z-index: 1;
 }
 
 .neptune-slide {
@@ -2075,55 +2077,118 @@ nav li:hover {
 
 @media only screen and (max-width: 750px) {
     /**** Planet Sizes ******/
+    #sun {
+        width: 12vw;
+        height: 12vw;
+        top: 48vh;
+        left: 47vw;
+    }
+    #mercury {
+        width: 3.5vw;
+        height: 3.5vw;
+    }
 
-/* #mercury {
-    width: 3vw;
-    height: 3vw;
+    .mercury-rotate {
+        height: 14vw;
+        width: 14vw;
+    }
+
+    #venus {
+        width: 3.5vw;
+        height: 3.5vw;
+
+    }
+
+    .venus-rotate {
+        height: 22vw;
+        width: 22vw;
+    }
 
 
-}
+    #earth {
+        width: 4.5vw;
+        height: 4.5vw;
+    }
 
-#venus {
-    width: 3vw;
-    height: 3vw;
+    .earth-rotate {
+        height: 32vw;
+        width: 32vw;
+    }
 
-}
+    #moon {
+        width: 1.2vw;
+        height: 1.2vw;
+    }
+    .moon-rotate {
+        height: 6vw;
+        width: 6vw;
+    }
 
+    #mars {
+        width: 4vw;
+        height: 4vw;
+    }
 
-#earth {
-    width: 4vw;
-    height: 4vw;
-}
+    .mars-rotate {
+        height: 42vw;
+        width: 42vw;
+    }
 
-#moon {
-    width: 1.2vw;
-    height: 1.2vw;
-}
-
-#mars {
-    width: 3.5vw;
-    height: 3.5vw;
-}
     #saturn {
-        height: 8vw;
-        width: 11vw;
+        height: 9vw;
+        width: 13vw;
+    }
+
+    #saturn-shadow {
+        width: 9vw;
+        height: 9vw;
+        top: 0px;
+        right: 2vw;
+    }
+
+    .saturn-rotate {
+        height: 83vw;
+        width: 83vw;
     }
 
     #jupiter {
-        width: 9vw;
-        height: 9vw;
+        width: 10vw;
+        height: 10vw;
     }
-    
+
+    .jupiter-rotate {
+        height: 63vw;
+        width: 63vw;
+    }
+
     #uranus {
         width: 8vw;
         height: 6vw;
     }
 
-    #neptune {
-        width: 5vw;
-        height: 5vw;
+    #uranus-shadow {
+        width: 6vw;
+        height: 6vw;
+        top: 0px;
+        right: 0.8vw;
+    }
 
-    } */
+    .uranus-rotate {
+        height: 97vw;
+        width: 97vw;
+    }
+
+    #neptune {
+        width: 5.5vw;
+        height: 5.5vw;
+
+    }
+
+    .neptune-rotate {
+        height: 108vw;
+        width: 108vw;
+    }
+
     #mobile-modal {
         display: flex;
     }
@@ -2151,7 +2216,7 @@ nav li:hover {
         flex-wrap: wrap;
         margin-top: 10px;
         display: flex;
-   
+
     }
 
     .planet-modal {
@@ -2161,7 +2226,7 @@ nav li:hover {
     .planet-width-animation {
         width: 95vw;
     }
-    
+
     .planet-height-animation {
         height: 95dvh;
         padding: 0px;
@@ -2171,7 +2236,7 @@ nav li:hover {
         width: 100%;
         margin-bottom: 15px;
         height: 100%;
-    } 
+    }
 
     .planet-info-cont {
         width: 100%;
@@ -2191,7 +2256,7 @@ nav li:hover {
         font-size: 1rem;
         color: rgb(215, 214, 214);
         letter-spacing: 0.8px;
-    
+
     }
 
     .info-toggle {
@@ -2199,7 +2264,8 @@ nav li:hover {
         margin-bottom: 15px;
     }
 
-    #planet-name, #close-btn {
+    #planet-name,
+    #close-btn {
         font-size: 2rem;
     }
 
@@ -2218,7 +2284,7 @@ nav li:hover {
         top: 0;
         left: 0;
         background: black;
-    
+
     }
 }
 
@@ -2226,12 +2292,15 @@ nav li:hover {
     .desktop-nav {
         display: none;
     }
+
     header {
         flex-direction: row;
     }
+
     .hamburger-menu {
         display: flex;
     }
+
     .mobile-nav-menu {
         display: flex;
     }
