@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 650px) {
     #mobile-popup {
-        display: flex;
+        display: none;
     }
 }
 
@@ -1503,9 +1503,12 @@ nav li:hover {
 ========================================================================================================== */
 
 
+/* ============================================================================================================
 
+                                      Start Planets Section 
 
-/* =========================== The Planets ========================== */
+========================================================================================================== */
+
 #sun {
 
     background: radial-gradient(circle, rgb(255, 174, 0), orange, #fde025 75%);
@@ -2060,8 +2063,64 @@ nav li:hover {
     }
 }
 
-/***** Responsiveness ******/
+/* ============================================================================================================
+
+                                      Responsiveness
+
+========================================================================================================== */
+
+
 @media only screen and (max-width: 750px) {
+    /**** Planet Sizes ******/
+
+#mercury {
+    width: 3vw;
+    height: 3vw;
+
+
+}
+
+#venus {
+    width: 3vw;
+    height: 3vw;
+
+}
+
+
+#earth {
+    width: 4vw;
+    height: 4vw;
+}
+
+#moon {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+#mars {
+    width: 3.5vw;
+    height: 3.5vw;
+}
+    #saturn {
+        height: 8vw;
+        width: 11vw;
+    }
+
+    #jupiter {
+        width: 9vw;
+        height: 9vw;
+    }
+    
+    #uranus {
+        width: 8vw;
+        height: 6vw;
+    }
+
+    #neptune {
+        width: 5vw;
+        height: 5vw;
+
+    }
     #mobile-modal {
         display: flex;
     }
@@ -2105,7 +2164,7 @@ nav li:hover {
     #planet-image-container {
         width: 100%;
         margin-bottom: 15px;
-        height: 45dvh;
+        height: 100%;
     } 
 
     .planet-info-cont {
@@ -2144,6 +2203,16 @@ nav li:hover {
 
     .stat-box h2 {
         font-size: 1rem;
+    }
+
+    .expand-real-planet {
+        position: absolute;
+        height: 100dvh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        background: black;
+    
     }
 }
 
