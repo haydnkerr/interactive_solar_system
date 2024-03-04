@@ -692,6 +692,11 @@ nav li:hover {
 }
 
 .mobile-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    transition: 2s;
     display: none;
 }
 
@@ -1462,9 +1467,7 @@ nav li:hover {
     .music-btn{
         padding: 8px;
     }
-    .music-icon {
 
-    }
 
     .quiz-answer-btn {
         max-width: 100%;
@@ -2145,7 +2148,10 @@ nav li:hover {
     }
 
     .mobile-bottom {
+        flex-wrap: wrap;
+        margin-top: 10px;
         display: flex;
+   
     }
 
     .planet-modal {
