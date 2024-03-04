@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 650px) {
     #mobile-popup {
-        display: none;
+        display: flex;
     }
 }
 
@@ -2073,7 +2073,7 @@ nav li:hover {
 @media only screen and (max-width: 750px) {
     /**** Planet Sizes ******/
 
-#mercury {
+/* #mercury {
     width: 3vw;
     height: 3vw;
 
@@ -2120,7 +2120,7 @@ nav li:hover {
         width: 5vw;
         height: 5vw;
 
-    }
+    } */
     #mobile-modal {
         display: flex;
     }
