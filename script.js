@@ -599,7 +599,7 @@ function nextQuestion() {
             quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
         }
     } else {
-        if (progressNumber >= 0) {
+        if (progressNumber >= 100) {
             winningAnimation()
             for (let i = 0; i < quizOptionBtn.length; ++i) {
                 quizOptionBtn[i].classList.remove('active-answer')
