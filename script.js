@@ -1007,20 +1007,20 @@ const planets = [
     {
         name: "Makemake",
         info1: "<strong>Distant Dwarf:</strong> Makemake is one of the largest known dwarf planets in our solar system, residing in the distant Kuiper Belt beyond the orbit of Neptune.",
-        info2: "<strong > Moons:</strong> Unlike Jupiter, Makemake doesn't have any known moons orbiting around it.",
-        info3: "< strong > Surface Composition:</strong> Makemake's surface is believed to be covered in frozen methane and possibly other volatile substances, giving it a reflective surface.",
+        info2: "<strong>Moons:</strong> Unlike Jupiter, Makemake doesn't have any known moons orbiting around it.",
+        info3: "<strong>Surface Composition:</strong> Makemake's surface is believed to be covered in frozen methane and possibly other volatile substances, giving it a reflective surface.",
         info4: "<strong>Orbital Period:</strong> It takes Makemake approximately 309 Earth years to complete one orbit around the Sun.",
         info5: "<strong>Discovery:</strong> Makemake was discovered in 2005 by a team led by astronomer Michael E.Brown and named officially by the International Astronomical Union(IAU) in 2008.",
         info6: "<strong>Similar Size to Pluto:</strong> Makemake's diameter is about two-thirds that of Pluto, another well-known dwarf planet in the Kuiper Belt.",
         info7: "<strong>Distinctive Name:</strong> The dwarf planet is named after Makemake, the creator god of the Rapa Nui people of Easter Island, a name chosen by its discoverers.",
         info8: "<strong>Cold Environment:</strong> Makemake's surface temperature is estimated to be around -240&deg;C (-400&deg;F), making it one of the coldest known objects in our solar system.",
-        info9: "< strong> Low Albedo:</strong> Makemake has a low albedo, meaning it reflects only a small portion of the sunlight that strikes its surface, making it relatively dim compared to other objects in the Kuiper Belt.",
+        info9: "<strong>Low Albedo:</strong> Makemake has a low albedo, meaning it reflects only a small portion of the sunlight that strikes its surface, making it relatively dim compared to other objects in the Kuiper Belt.",
         info10: "<strong>Minimal Exploration:</strong> As of now, no spacecraft have been specifically sent to explore Makemake, so much of what we know about it comes from ground - based observations and studies.",
-        Diameter: "1,434 km",
-        Orbit: "112,897 days(309 Earth years)",
-        Rotation: "Unknown.",
-        Moons: "0",
-        Temperature: "-240&deg;C(-400&deg;F)"
+        diameter: "1,434 km",
+        orbit: "112,897 days",
+        rotation: "Unknown",
+        moons: "0",
+        temp: "-240&deg;C"
     }
 ];
 
@@ -1275,6 +1275,8 @@ function sunOrbitDays() {
 
 
 /*============== Event listeners for menu items and the planets themselves. Includes click interactions and hover interactions  ==================*/
+let makemakeBtn = document.querySelector('.makemake-btn')
+makemakeBtn.addEventListener("click", makemakeInteraction);
 
 earth.addEventListener("click", earthInteraction);
 mercury.addEventListener('click', mercuryInteraction);
@@ -1556,6 +1558,11 @@ function alienInteraction() {
     populatePlanet();
 }
 
+function makemakeInteraction() {
+    n += 16;
+    populatePlanet();
+}
+
 
 
 /* ====== pulls in info from planet list and populates modal with appropriate information ========= */
@@ -1622,43 +1629,4 @@ function populateAdultInfo() {
 }
 
 
-// const myPlanets = document.querySelectorAll('.planet');
-
-// // Calculate the distance between two points using the Pythagorean theorem
-// function calculateDistance(x1, y1, x2, y2) {
-//   const deltaX = x2 - x1;
-//   const deltaY = y2 - y1;
-//   return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-// }
-
-// // Function to be called when the document is clicked
-// function onDocumentClick(event) {
-//     console.log("mouse is clicked");
-//   const mouseX = event.clientX;
-//   const mouseY = event.clientY;
-
-//   let closestPlanet = null;
-//   let minDistance = Infinity;
-
-//   myPlanets.forEach((planet) => {
-//     const planetX = planet.getBoundingClientRect().left + planet.offsetWidth / 2;
-//     const planetY = planet.getBoundingClientRect().top + planet.offsetHeight / 2;
-
-//     const distance = calculateDistance(mouseX, mouseY, planetX, planetY);
-
-//     if (distance < minDistance) {
-//       minDistance = distance;
-//       closestPlanet = planet;
-//     }
-//   });
-
-//   if (minDistance.toFixed(2)<15) {
-//     const planetId = closestPlanet.getAttribute('id');
-//     console.log(`clicked on planet: ${planetId}`);
-// //    console.log(`Minimum distance: ${minDistance.toFixed(2)} pixels`);
-//   }
-// }
-
-// // Add a click event listener to the document
-// document.addEventListener('click', onDocumentClick);
 

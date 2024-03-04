@@ -10,6 +10,9 @@ let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 // Instantiate a loader
 let loader = new GLTFLoader();
 
+let makemakeBtn = document.querySelector('.makemake-btn')
+makemakeBtn.addEventListener("click", makemakeInteraction);
+
 let mercuryMenuBtn = document.getElementById("mercury-menu")
 let venusMenuBtn = document.getElementById("venus-menu")
 let earthMenuBtn = document.getElementById("earth-menu")
@@ -61,6 +64,7 @@ let saturnImage = './assets/saturn-real-8k.glb';
 let neptuneImage = './assets/neptune-real-8k.glb';
 let uranusImage = './assets/uranus-real-8k.glb';
 let asteroidImage = './assets/asteroids.glb';
+let makemakeImage = "./assets/makemake.glb"
 let planetImage;
 
 let counter = 0;
@@ -107,6 +111,13 @@ moonMobileMenuBtn.addEventListener('click', moonInteraction);
 
 let planetImageFile;
 let planetDisplay;
+
+function makemakeInteraction() {
+    planetImageFile = makemakeImage;
+    counter = 0;
+    isAnimationRunning = true;
+    populatePlanet()
+}
 
 function mercuryInteraction() {
     planetImageFile = mercuryImage;
@@ -173,6 +184,13 @@ function moonInteraction() {
 
 function meteorInteraction() {
     planetImageFile = asteroidImage;
+    counter = 0;
+    isAnimationRunning = true;
+    populatePlanet()
+}
+
+function makemakeInteraction() {
+    planetImageFile = makemakeImage;
     counter = 0;
     isAnimationRunning = true;
     populatePlanet()

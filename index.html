@@ -51,11 +51,13 @@
     <div class="gradient-bg">
         <div class="gradient-mask">
             <h1>Cosmic Journey</h1>
-            <p>
-                Welcome to Cosmic Journey, where the wonders of our celestial neighborhood await your exploration.
-                Embark on an interactive voyage through our solar system, delving into the mysteries of each planet in
-                both 2D and 3D formats. Discover the beauty and complexity of our cosmic companions as you immerse
-                yourself in this captivating astronomical adventure.
+            <p class="site-intro">
+                Welcome to Cosmic Journey, a magical place where you can explore space like an astronaut! Get ready to
+                blast off on an amazing adventure through our solar system. You'll learn about all the planets, from the
+                fiery hot ones to the icy cold ones, in cool 2D and awesome 3D. Discover the secrets of our cosmic
+                friends and uncover their beauty and mysteries! Plus, if you finish our fun quiz, you might just uncover
+                a special mystery planet waiting for you to find it! So, put on your space helmet and let's begin our
+                incredible journey together!
             </p>
             <p>
                 <em>Background music: Interstellar Journey by Mrm Team</em>
@@ -70,11 +72,13 @@
     <section class="rocket-modal-info ">
         <div class="modal-info">
             <h1>Cosmic Journey</h1>
-            <p>
-                Welcome to Cosmic Journey, where the wonders of our celestial neighborhood await your exploration.
-                Embark on an interactive voyage through our solar system, delving into the mysteries of each planet in
-                both 2D and 3D formats. Discover the beauty and complexity of our cosmic companions as you immerse
-                yourself in this captivating astronomical adventure.
+            <p class="site-intro">
+                Welcome to Cosmic Journey, a magical place where you can explore space like an astronaut! Get ready to
+                blast off on an amazing adventure through our solar system. You'll learn about all the planets, from the
+                fiery hot ones to the icy cold ones, in cool 2D and awesome 3D. Discover the secrets of our cosmic
+                friends and uncover their beauty and mysteries! Plus, if you finish our fun quiz, you might just uncover
+                a special mystery planet waiting for you to find it! So, put on your space helmet and let's begin our
+                incredible journey together!
             </p>
             <p>
                 <em>Background music: Interstellar Journey by Mrm Team</em>
@@ -88,6 +92,7 @@
 
     <header class="">
         <div class="mobile-nav-menu mobile-hidden">
+            <li id="mobile-makemake-menu" class="display-none">Makemake</li>
             <li id="mobile-sun-menu">Sun</li>
             <li id="mobile-mercury-menu">Mercury</li>
             <li id="mobile-venus-menu">Venus</li>
@@ -131,6 +136,8 @@
 
 
         <nav class="desktop-nav">
+            <button class="makemake-btn display-none">Makemake</button>
+            <li id="makemake-menu" class="display-none">Makemake</li>
             <li id="sun-menu">Sun</li>
             <li id="mercury-menu">Mercury</li>
             <li id="venus-menu">Venus</li>
@@ -193,13 +200,13 @@
         <p id="planet-close-btn">X</p>
     </div>
 
-   
+
     <div class="hidden full-width">
-        
+
         <div class="planet-modal">
 
             <div class="top-container">
-                
+
                 <div class="flex-row">
                     <div class="planet-image-container" id="planet-image-container">
 
@@ -210,7 +217,7 @@
                                 <h1 id="planet-name"></h1>
                                 <p id="close-btn">X</p>
                             </div>
-                            
+
                             <br>
                             <div class="content-overflow">
                                 <p class="planet-info" id="planet-info-one">
@@ -457,7 +464,8 @@
             <div class="quiz-sun"></div>
             <div class="quiz-content">
                 <h2 class="close-quiz-btn">X</h2>
-                <p class="question-number-statement">Let's get to <span class="planet-destination-name"></span><span class="question-number"></span></p>
+                <p class="question-number-statement">Let's get to <span class="planet-destination-name"></span><span
+                        class="question-number"></span></p>
                 <h2 class="quiz-question"></h2>
                 <div class="quiz-btn-container">
                     <button class="quiz-answer a" value="a"></button>
