@@ -286,18 +286,18 @@ for (let i = 0; i < 700; i++) {
 
 
 
-setInterval(shootingStarLeft, 10000);
+// setInterval(shootingStarLeft, 10000);
 
-function shootingStarLeft() {
-    let comet = document.createElement('span');
-    let randomSpeed = (Math.random() * 2);
-    comet.classList.add('asteroid');
-    cometXPos = 105;
-    cometYPos = (Math.random() * 100);
-    comet.style.left = cometXPos + "vw";
-    comet.style.top = cometYPos + "vh";
-    stars.appendChild(comet)
-}
+// function shootingStarLeft() {
+//     let comet = document.createElement('span');
+//     let randomSpeed = (Math.random() * 2);
+//     comet.classList.add('asteroid');
+//     cometXPos = 105;
+//     cometYPos = (Math.random() * 100);
+//     comet.style.left = cometXPos + "vw";
+//     comet.style.top = cometYPos + "vh";
+//     stars.appendChild(comet)
+// }
 
 
 
@@ -1430,7 +1430,9 @@ expandPlanetBtn.addEventListener('click', expandPlanet)
 planetExpandCloseBtn.addEventListener('click', closePlanet)
 
 function closeHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    if (innerWidth > 600) {
+        planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    }
     mercuryOrbitOn = false
     venusOrbitOn = false
     earthOrbitOn = false
@@ -1443,47 +1445,53 @@ function closeHover() {
     sunOrbitOn = false
 }
 
+function planetHoverOpen() {
+    if (innerWidth > 600) {
+        planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    }
+}
+
 function mercuryHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     mercuryOrbitOn = true
 }
 
 function venusHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()    
     venusOrbitOn = true
 }
 
 function earthHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     earthOrbitOn = true
 }
 
 function marsHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     marsOrbitOn = true
 }
 function jupiterHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     jupiterOrbitOn = true
 }
 function saturnHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     saturnOrbitOn = true
 }
 function neptuneHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     neptuneOrbitOn = true
 }
 function uranusHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     uranusOrbitOn = true
 }
 function sunHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     sunOrbitOn = true
 }
 function moonHover() {
-    planetHoverInfoContainer.classList.toggle('planet-hover-info-container-move')
+    planetHoverOpen()
     moonOrbitOn = true
 }
 

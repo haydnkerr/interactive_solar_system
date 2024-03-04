@@ -1523,7 +1523,7 @@ nav li:hover {
     position: absolute;
     top: 42.3vh;
     left: 45.8vw;
-    z-index: 5;
+    z-index: 13;
     box-shadow: 0px 0px 15px 5px #fde025;
     /* display: none; */
     animation: index 9s linear infinite;
@@ -1539,7 +1539,7 @@ nav li:hover {
 
 
 .rotate {
-    /* background: none; */
+    background: none;
     transform: rotate(-110deg);
     /* pointer-events: none; */
     animation: rotate 1s linear infinite;
@@ -1606,6 +1606,7 @@ nav li:hover {
 
 .mercury-slide {
     animation-duration: 4.5s;
+    z-index: 11;
 }
 
 .mercury-planet,
@@ -1627,6 +1628,8 @@ nav li:hover {
 
 
 
+
+
 #venus {
     width: 3vw;
     height: 3vw;
@@ -1644,6 +1647,7 @@ nav li:hover {
 
 .venus-slide {
     animation-duration: 6s;
+    z-index: 11;
 }
 
 .venus,
@@ -2045,25 +2049,25 @@ nav li:hover {
 
 @keyframes index {
     0% {
-        z-index: 7
+        z-index: 12
     }
 
     45% {
-        z-index: 7
+        z-index: 12
     }
 
     50% {
-        z-index: 1
+        z-index: 10
     }
 
 
     90% {
-        z-index: 1;
+        z-index: 10;
     }
 
     100% {
 
-        z-index: 1
+        z-index: 10
     }
 }
 
@@ -2079,7 +2083,7 @@ nav li:hover {
     #sun {
         width: 12vw;
         height: 12vw;
-        top: 48vh;
+        top: 48dvh;
         left: 47vw;
     }
     #mercury {
