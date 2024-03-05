@@ -369,6 +369,10 @@ header {
     padding: 25px;
 }
 
+.rocket-logo {
+    width: 80px;
+}
+
 .desktop-nav {
     display: flex;
     color: white;
@@ -824,11 +828,11 @@ nav li:hover {
 }
 
 .asteroid {
-    width: 3px;
-    height: 3px;
+    width: 2px;
+    height: 2px;
     border-radius: 50%;
     background-color: white;
-    animation: cometMoveLeft 4s linear;
+    animation: cometMoveLeft 1s linear;
     animation-iteration-count: 1;
     position: absolute;
 }
@@ -841,10 +845,13 @@ nav li:hover {
 }
 
 @keyframes cometMoveLeft {
-
+    90% {
+        opacity: 1
+    }
     100% {
         transform: translateX(-150vw);
-        opacity: 0%
+        opacity: 0%;
+        display: none;
     }
 }
 
@@ -2086,6 +2093,9 @@ nav li:hover {
 
 @media only screen and (max-width: 750px) {
     /**** Planet Sizes ******/
+    .rocket-logo {
+        width: 40px;
+    }
     #sun {
         width: 12vw;
         height: 12vw;

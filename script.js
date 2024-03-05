@@ -233,7 +233,11 @@ for (let i = 0; i < 700; i++) {
     }
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
-    let randomSpeed = Math.floor((Math.random() * 10) * 200);
+    let randomSpeed = 0
+    while (randomSpeed < 200) {
+        randomSpeed = Math.ceil((Math.random() * 100) * 25);
+    }
+    console.log(randomSpeed)
     star.classList.add('star');
     star.style.opacity = (Math.random());
     star.style.top = (Math.random() * 100) + '%';
@@ -244,11 +248,11 @@ for (let i = 0; i < 700; i++) {
     star.style.animation = `cometMoveRight ${randomSpeed}s linear infinite`;
 }
 
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 200; i++) {
     let star = document.createElement('span');
     let randomSize = Math.ceil((Math.random() * 3));
     if (window.innerWidth < 600) {
-        randomSize = Math.ceil((Math.random() * 1));
+        randomSize = (Math.random() * 1);
     }
     let width = window.innerWidth;
     let starPos = (Math.random() * width);
@@ -271,7 +275,11 @@ for (let i = 0; i < 700; i++) {
     }
     let width = window.innerWidth;
     let starPos = (Math.random() * width) * -1;
-    let randomSpeed = Math.floor((Math.random() * 100) * 200);
+    let randomSpeed = 0
+    while (randomSpeed < 100) {
+        randomSpeed = Math.ceil((Math.random() * 100) * 25);
+    }
+
     star.classList.add('star');
     star.style.opacity = (Math.random());
     star.style.top = (Math.random() * 100) + '%';
@@ -286,18 +294,18 @@ for (let i = 0; i < 700; i++) {
 
 
 
-// setInterval(shootingStarLeft, 10000);
+setInterval(shootingStarLeft, 30000);
 
-// function shootingStarLeft() {
-//     let comet = document.createElement('span');
-//     let randomSpeed = (Math.random() * 2);
-//     comet.classList.add('asteroid');
-//     cometXPos = 105;
-//     cometYPos = (Math.random() * 100);
-//     comet.style.left = cometXPos + "vw";
-//     comet.style.top = cometYPos + "vh";
-//     stars.appendChild(comet)
-// }
+function shootingStarLeft() {
+    let comet = document.createElement('span');
+    let randomSpeed = (Math.random() * 2);
+    comet.classList.add('asteroid');
+    cometXPos = 105;
+    cometYPos = (Math.random() * 100);
+    comet.style.left = cometXPos + "vw";
+    comet.style.top = cometYPos + "vh";
+    stars.appendChild(comet)
+}
 
 
 
