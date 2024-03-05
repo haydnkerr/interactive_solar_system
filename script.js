@@ -1496,18 +1496,26 @@ function moonHover() {
 }
 
 /*============ Functions to expand/close 3D planet to full screen ===============*/
+let planetInfoAnimation = document.querySelector('.planet-info-container')
 function expandPlanet() {
-
-    planetImageContainerReal.classList.add('expand-real-planet')
+    setTimeout(function() {
+        planetImageContainerReal.classList.add('expand-real-planet')
+    }, 750)
+    
     infoToggle.classList.add('display-none')
+    bottomContainer.classList.remove('fade-in') 
     planetExpandCloseContainer.classList.remove('display-none');
     // stars.style.zIndex = '50'
+    
+    planetInfoAnimation.classList.add('planet-info-opacity-animation')
 }
 
 function closePlanet() {
     infoToggle.classList.remove('display-none')
     planetExpandCloseContainer.classList.add('display-none')
     planetImageContainerReal.classList.remove('expand-real-planet')
+    planetInfoAnimation.classList.remove('planet-info-opacity-animation')
+    bottomContainer.classList.add('fade-in')
 }
 
 
