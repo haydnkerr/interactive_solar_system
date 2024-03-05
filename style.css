@@ -18,14 +18,30 @@
     top: 0;
     left: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
     z-index: 999;
     padding: 25px;
     text-align: center;
     transition: opacity 1.5s;
     display: none;
+}
+
+#mobile-popup .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#mobile-popup h1 {
+    visibility: hidden;
+}
+
+.mobile-logo {
+    width: 35vw;
+
 }
 
 @media only screen and (max-width: 650px) {
