@@ -83,16 +83,6 @@
           "correct_answer": "a"
         },
         {
-          "question": "What are some of Earth's amazing features?",
-          "options": {
-            "a": "Mountains, valleys, rivers, and oceans",
-            "b": "Deserts, forests, lakes, and swamps",
-            "c": "Caves, canyons, plateaus, and glaciers",
-            "d": "Islands, volcanoes, waterfalls, and fjords"
-          },
-          "correct_answer": "a"
-        },
-        {
           "question": "What is the name of the huge gorge carved by the Colorado River?",
           "options": {
             "a": "Grand Canyon",

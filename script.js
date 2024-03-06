@@ -372,6 +372,7 @@ let quizModal = document.querySelector('.quiz-modal-bg')
 let chosenQuestions = []
 let answer = ''
 let userGuess = ''
+let userChosenAnswer = false
 let currentQuestionNumber = 1;
 let questionAnswered = false;
 let isUserCorrect = false;
@@ -503,7 +504,9 @@ quizOptionBtn.forEach(btn => {
         }
         this.classList.add('active-answer')
         userGuess = this.value
+        userChosenAnswer = true;
     })
+    
 });
 let planetTriviaList = ["general_trivia", "moon_trivia", "mars_trivia", "jupiter_trivia", "saturn_trivia", "uranus_trivia", "neptune_trivia"]
 
@@ -594,56 +597,65 @@ function populateQuestion(category, categoryNum) {
 
 
 function nextQuestion() {
-    if (!questionAnswered) {
-        currentQuestionNumber += 1
-        questionAnswered = true;
-        if (userGuess == answer) {
-            for (let i = 0; i < quizOptionBtn.length; ++i) {
-                if (quizOptionBtn[i].value == answer) {
-                    quizOptionBtn[i].classList.remove('active-answer')
-                    quizOptionBtn[i].classList.add('correct-answer')
-                    progressNumber += 10
-                    rocketProgressLine.style.width = (progressNumber + 4) + '%'
-                    rocketProgress.style.left = progressNumber + '%'
-                }
-            }
-        } else {
-            for (let i = 0; i < quizOptionBtn.length; ++i) {
-                if (quizOptionBtn[i].value == answer) {
-                    quizOptionBtn[i].classList.remove('active-answer')
-                    quizOptionBtn[i].classList.add('correct-answer')
-                } else if (quizOptionBtn[i].value == userGuess) {
-                    quizOptionBtn[i].classList.remove('active-answer')
-                    quizOptionBtn[i].classList.add('wrong-answer')
-                }
-            }
-        }
-        if (progressNumber >= 100) {
-            quizAnswerBtn.innerHTML = "<h2>Fly To " + planetDestinationName[categoryNum] + "</h2>"
-        } else {
-            quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
+
+    if (!userChosenAnswer) {
+        if (quizContent) {
+            quizContent.classList.add('no-answer');
         }
     } else {
-        if (progressNumber >= 100) {
-            winningAnimation()
-            for (let i = 0; i < quizOptionBtn.length; ++i) {
-                quizOptionBtn[i].classList.remove('active-answer')
-                quizOptionBtn[i].classList.remove('correct-answer')
-                quizOptionBtn[i].classList.remove('wrong-answer')
+        if (!questionAnswered) {
+            currentQuestionNumber += 1
+            questionAnswered = true;
+            quizContent.classList.remove('no-answer');
+            if (userGuess == answer) {
+                for (let i = 0; i < quizOptionBtn.length; ++i) {
+                    if (quizOptionBtn[i].value == answer) {
+                        quizOptionBtn[i].classList.remove('active-answer')
+                        quizOptionBtn[i].classList.add('correct-answer')
+                        progressNumber += 14.3
+                        rocketProgressLine.style.width = (progressNumber + 4) + '%'
+                        rocketProgress.style.left = progressNumber + '%'
+                    }
+                }
+            } else {
+                for (let i = 0; i < quizOptionBtn.length; ++i) {
+                    if (quizOptionBtn[i].value == answer) {
+                        quizOptionBtn[i].classList.remove('active-answer')
+                        quizOptionBtn[i].classList.add('correct-answer')
+                    } else if (quizOptionBtn[i].value == userGuess) {
+                        quizOptionBtn[i].classList.remove('active-answer')
+                        quizOptionBtn[i].classList.add('wrong-answer')
+                    }
+                }
+            }
+            if (progressNumber >= 100) {
+                quizAnswerBtn.innerHTML = "<h2>Fly To " + planetDestinationName[categoryNum] + "</h2>"
+            } else {
+                quizAnswerBtn.innerHTML = "<h2>Next Question</h2>"
             }
         } else {
-            for (let i = 0; i < quizOptionBtn.length; ++i) {
-                quizOptionBtn[i].classList.remove('active-answer')
-                quizOptionBtn[i].classList.remove('correct-answer')
-                quizOptionBtn[i].classList.remove('wrong-answer')
+            quizContent.classList.remove('no-answer');
+            if (progressNumber >= 100) {
+                winningAnimation()
+                for (let i = 0; i < quizOptionBtn.length; ++i) {
+                    quizOptionBtn[i].classList.remove('active-answer')
+                    quizOptionBtn[i].classList.remove('correct-answer')
+                    quizOptionBtn[i].classList.remove('wrong-answer')
+                }
+            } else {
+                for (let i = 0; i < quizOptionBtn.length; ++i) {
+                    quizOptionBtn[i].classList.remove('active-answer')
+                    quizOptionBtn[i].classList.remove('correct-answer')
+                    quizOptionBtn[i].classList.remove('wrong-answer')
+                }
+
+                isUserCorrect = false
+                questionAnswered = false
+                quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
+                populateQuestion(category, categoryNum)
             }
-
-            isUserCorrect = false
-            questionAnswered = false
-            quizAnswerBtn.innerHTML = "<h2>Submit Answer</h2>"
-            populateQuestion(category, categoryNum)
+            userChosenAnswer = false;
         }
-
     }
     userGuess = ''
 }
@@ -1464,7 +1476,7 @@ function mercuryHover() {
 }
 
 function venusHover() {
-    planetHoverOpen()    
+    planetHoverOpen()
     venusOrbitOn = true
 }
 
@@ -1505,15 +1517,15 @@ function moonHover() {
 /*============ Functions to expand/close 3D planet to full screen ===============*/
 let planetInfoAnimation = document.querySelector('.planet-info-container')
 function expandPlanet() {
-    setTimeout(function() {
+    setTimeout(function () {
         planetImageContainerReal.classList.add('expand-real-planet')
     }, 750)
-    
+
     infoToggle.classList.add('display-none')
-    bottomContainer.classList.remove('fade-in') 
+    bottomContainer.classList.remove('fade-in')
     planetExpandCloseContainer.classList.remove('display-none');
     // stars.style.zIndex = '50'
-    
+
     planetInfoAnimation.classList.add('planet-info-opacity-animation')
 }
 

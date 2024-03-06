@@ -78,12 +78,17 @@ body, html {
         opacity: 1;
     }
 
-    50.5% {
+    51% {
+        transform: translateY(-75px) translateX(110px) rotate(0deg);
+        opacity: 0
+    }
+
+    52% {
         transform: translateY(85px) translateX(-110px) rotate(0deg);
         opacity: 0
     }
 
-    51% {
+    53% {
         opacity: 1
     }
 
@@ -1434,6 +1439,20 @@ nav li:hover {
     color: white;
     /* border: 1px solid white; */
     background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+}
+
+.quiz-content:after {
+    content: "Please choose an option before submitting";
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: red;
+    margin-top: 15px;
+    opacity: 0
+}
+
+.quiz-content.no-answer:after {
+    opacity: 0.8;
 }
 
 
