@@ -64,14 +64,14 @@ body, html {
 }
 
 .top-logo {
-    width: 50px;
+    width: 48px;
     animation: moveTheRocket 3.5s ease-out infinite;
-    transform: translateY(14px) translateX(-2px) rotate(-3deg);
+    transform: translateY(12px) translateX(-3px) rotate(0deg);
 }
 
 @keyframes moveTheRocket {
     40% {
-        transform: translateY(14px) translateX(-2px) rotate(-3deg);
+        transform: translateY(12px) translateX(-3px) rotate(0deg);
     }
     50% {
         transform: translateY(-75px) translateX(110px) rotate(-3deg);
@@ -88,7 +88,7 @@ body, html {
     }
 
     60% {
-        transform: translateY(14px) translateX(-2px) rotate(-3deg);
+        transform: translateY(12px) translateX(-3px) rotate(0deg);
     }
 }
 
