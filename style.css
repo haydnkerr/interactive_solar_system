@@ -74,12 +74,12 @@ body, html {
         transform: translateY(12px) translateX(-3px) rotate(0deg);
     }
     50% {
-        transform: translateY(-75px) translateX(110px) rotate(-3deg);
+        transform: translateY(-75px) translateX(110px) rotate(0deg);
         opacity: 1;
     }
 
     50.5% {
-        transform: translateY(85px) translateX(-110px) rotate(-3deg);
+        transform: translateY(85px) translateX(-110px) rotate(0deg);
         opacity: 0
     }
 
