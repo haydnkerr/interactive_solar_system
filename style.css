@@ -1104,7 +1104,7 @@ nav li:hover {
     box-shadow: 0px 0px 10px 3px rgb(112, 207, 255);
     width: 0vh;
     height: 0vh;
-    transition: height 3.5s linear, width 3.5s linear, opacity 3.5s linear, padding 3.5s linear;
+    transition: height 2.5s linear, width 2.5s linear, opacity 2.5s linear, padding 2.5s linear;
     opacity: 1;
     animation: pulsate 6s linear infinite;
 }

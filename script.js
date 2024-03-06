@@ -533,7 +533,7 @@ function startQuiz() {
         quizSun.classList.add('full-opacity')
         quizSun.classList.remove('sun-move')
         quizContent.classList.add('full-opacity')
-    }, 3500)
+    }, 2500)
 
 }
 
