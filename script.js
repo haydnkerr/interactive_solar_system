@@ -237,7 +237,6 @@ for (let i = 0; i < 700; i++) {
     while (randomSpeed < 200) {
         randomSpeed = Math.ceil((Math.random() * 100) * 25);
     }
-    console.log(randomSpeed)
     star.classList.add('star');
     star.style.opacity = (Math.random());
     star.style.top = (Math.random() * 100) + '%';

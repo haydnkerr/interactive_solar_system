@@ -7,6 +7,7 @@
 
 body, html {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
@@ -29,6 +30,7 @@ body, html {
     text-align: center;
     transition: opacity 1.5s;
     display: none;
+    overflow: hidden;
 }
 
 #mobile-popup .centered {
@@ -217,7 +219,7 @@ body, html {
 #mobile-modal {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: black;
     color: white;
     z-index: 991;
@@ -323,7 +325,7 @@ button {
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     background: rgb(0, 1, 40);
     /* background: black; */
     justify-content: center;
@@ -379,8 +381,8 @@ h4 {
 
 header {
     position: absolute;
-    top: 0vh;
-    left: 0vw;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -566,7 +568,7 @@ nav li:hover {
 }
 
 .planet-height-animation {
-    height: 95vh;
+    height: 95dvh;
     padding: 35px;
 }
 
