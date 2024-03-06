@@ -1442,13 +1442,15 @@ nav li:hover {
 }
 
 .quiz-content:after {
-    content: "Please choose an option before submitting";
+    content: "Please choose an answer";
     display: flex;
     justify-content: center;
     width: 100%;
     color: red;
     margin-top: 15px;
-    opacity: 0
+    opacity: 0;
+    font-weight: 600;
+    text-align: center;
 }
 
 .quiz-content.no-answer:after {
