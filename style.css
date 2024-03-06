@@ -47,6 +47,52 @@ body, html {
 
 .mobile-logo {
     width: 35vw;
+}
+
+.mobile-logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transform: translateY(-35vh); */
+}
+
+.mobile-logo > img{
+    position: absolute;
+    
+}
+
+.top-logo {
+    width: 65px;
+    animation: moveTheRocket 3.5s ease-out infinite;
+    transform: translateY(15px) translateX(-3px);
+}
+
+@keyframes moveTheRocket {
+    40% {
+        transform: translateY(15px) translateX(-3px);
+    }
+    50% {
+        transform: translateY(-75px) translateX(110px);
+        opacity: 1;
+    }
+
+    50.5% {
+        transform: translateY(85px) translateX(-110px);
+        opacity: 0
+    }
+
+    51% {
+        opacity: 1
+    }
+
+    60% {
+        transform: translateY(15px) translateX(-3px);
+    }
+}
+
+.bottom-logo {
+    width: 175px;
 
 }
 
