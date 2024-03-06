@@ -83,16 +83,16 @@ body, html {
         opacity: 0
     }
 
-    52% {
+    56% {
         transform: translateY(85px) translateX(-110px) rotate(0deg);
         opacity: 0
     }
 
-    53% {
+    60% {
         opacity: 1
     }
 
-    60% {
+    70% {
         transform: translateY(12px) translateX(-3px) rotate(0deg);
     }
 }
