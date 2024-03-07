@@ -715,7 +715,7 @@ nav li:hover {
     top: 0;
     left: 0;
     background: black;
-    animation: realfade 2s linear;
+    animation: realfade 1.5s linear;
 
 }
 
@@ -787,6 +787,10 @@ nav li:hover {
     width: 100%;
     opacity: 0;
     transition: 2s;
+    border-radius: 15px;
+    border: 0.75px solid rgba(255, 255, 255, 0.622);
+    overflow: hidden;
+    flex-wrap: nowrap;
 }
 
 .mobile-bottom {
@@ -796,6 +800,10 @@ nav li:hover {
     width: 100%;
     transition: 2s;
     display: none;
+    border-radius: 15px;
+    border: 0.75px solid rgba(255, 255, 255, 0.622);
+    overflow: hidden;
+    margin-bottom: 15px;
 }
 
 .page-toggle {
@@ -831,6 +839,22 @@ nav li:hover {
     border: 0.75px solid rgba(255, 255, 255, 0.622);
     padding: 15px;
     flex: 1;
+}
+
+@media only screen and (max-width: 1250px) {
+    .stat-box h2{
+        font-size: 1.15rem;
+    }
+    
+    .stat-box h4 {
+        font-size: 1rem;
+    } 
+}
+
+
+
+.border-right {
+
 }
 
 
@@ -967,13 +991,15 @@ nav li:hover {
     /* padding: 0px 25px; */
     transition: opacity 0.5s;
     background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+    background: rgb(0, 170, 255);
     opacity: 1;
-    border-bottom: 3px solid rgb(57, 163, 250);
+    border-bottom: 3px solid rgb(0, 122, 221);
+    transition: 0.3s;
 }
 
 .active-orbit:hover {
     cursor: pointer;
-    background: linear-gradient(rgb(112, 207, 255), rgb(0, 125, 228))
+    background: rgb(0, 122, 221)
 }
 
 .music-btn {
@@ -1512,7 +1538,7 @@ nav li:hover {
     opacity: 0;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
 
     .orbit-controls-container {
         bottom: 15px
