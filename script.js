@@ -506,7 +506,7 @@ quizOptionBtn.forEach(btn => {
         userGuess = this.value
         userChosenAnswer = true;
     })
-    
+
 });
 let planetTriviaList = ["general_trivia", "moon_trivia", "mars_trivia", "jupiter_trivia", "saturn_trivia", "uranus_trivia", "neptune_trivia"]
 
@@ -1519,10 +1519,12 @@ let planetInfoAnimation = document.querySelector('.planet-info-container')
 function expandPlanet() {
     setTimeout(function () {
         planetImageContainerReal.classList.add('expand-real-planet')
-    }, 750)
+
+    }, 1000)
 
     infoToggle.classList.add('display-none')
     bottomContainer.classList.remove('fade-in')
+    planetImageContainerReal.classList.add('real-fade-out')
     planetExpandCloseContainer.classList.remove('display-none');
     // stars.style.zIndex = '50'
 
@@ -1530,11 +1532,19 @@ function expandPlanet() {
 }
 
 function closePlanet() {
-    infoToggle.classList.remove('display-none')
-    planetExpandCloseContainer.classList.add('display-none')
-    planetImageContainerReal.classList.remove('expand-real-planet')
-    planetInfoAnimation.classList.remove('planet-info-opacity-animation')
-    bottomContainer.classList.add('fade-in')
+    planetImageContainerReal.classList.add('real-fade-exit')
+
+    setTimeout(function () {
+        infoToggle.classList.remove('display-none')
+        planetExpandCloseContainer.classList.add('display-none')
+        planetImageContainerReal.classList.remove('expand-real-planet')
+        planetInfoAnimation.classList.remove('planet-info-opacity-animation')
+        bottomContainer.classList.add('fade-in')
+        planetImageContainerReal.classList.remove('real-fade-out')
+        planetImageContainerReal.classList.remove('real-fade-exit')
+    }, 1000)
+
+
 }
 
 

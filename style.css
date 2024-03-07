@@ -618,7 +618,7 @@ nav li:hover {
     box-shadow: 0px 0px 10px 3px rgb(112, 207, 255);
     opacity: 1;
     animation: pulsate 6s linear infinite;
-    background: rgba(1, 0, 24, 0.85);
+    background: rgba(1, 0, 24, 1);
     width: 0vw;
     height: 0vh;
     padding: 0px;
@@ -686,6 +686,9 @@ nav li:hover {
     z-index: 93;
     position: relative;
     overflow: hidden;
+    transition: 1s;
+    opacity: 1;
+
 }
 
 #planet-expand-close-btn {
@@ -708,15 +711,26 @@ nav li:hover {
     transform: rotate(180deg);
 }
 
+.real-fade-out {
+    transition: 1s;
+    opacity: 0;
+}
+
 .expand-real-planet {
     position: absolute;
     height: 100dvh;
     width: 100vw;
+    opacity: 1;
     top: 0;
     left: 0;
     background: black;
     animation: realfade 1.5s linear;
 
+}
+
+.real-fade-exit {
+    transition: 1s;
+    opacity: 0;
 }
 
 @keyframes realfade {
@@ -990,7 +1004,7 @@ nav li:hover {
     color: white;
     /* padding: 0px 25px; */
     transition: opacity 0.5s;
-    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+    /* background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255)); */
     background: rgb(0, 170, 255);
     opacity: 1;
     border-bottom: 3px solid rgb(0, 122, 221);
@@ -1474,7 +1488,8 @@ nav li:hover {
     cursor: pointer;
     color: white;
     /* border: 1px solid white; */
-    background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255));
+    /* background: linear-gradient(rgb(0, 125, 228), rgb(112, 207, 255)); */
+    background: rgb(0, 170, 255);
 }
 
 .quiz-content:after {
