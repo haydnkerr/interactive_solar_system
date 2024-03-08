@@ -686,8 +686,8 @@ nav li:hover {
     z-index: 93;
     position: relative;
     overflow: hidden;
-    transition: 1s;
-    opacity: 1;
+    /* transition: 1s;
+    opacity: 1; */
 
 }
 
@@ -709,6 +709,11 @@ nav li:hover {
 #planet-close-btn:hover {
     cursor: pointer;
     transform: rotate(180deg);
+}
+
+.real-planet-opacity {
+    transition: 1s;
+    opacity: 1;
 }
 
 .real-fade-out {
