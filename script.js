@@ -1545,7 +1545,7 @@ function closePlanet() {
         bottomContainer.classList.add('fade-in')
         planetImageContainerReal.classList.remove('real-fade-out')
         planetImageContainerReal.classList.remove('real-fade-exit')
-        
+
     }, 1000)
 
 
