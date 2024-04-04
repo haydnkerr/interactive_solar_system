@@ -29,6 +29,8 @@ else {
     console.log("You are using some other browser!");
 }
 
+window.addEventListener('load', toggleOrbit)
+
 
 
 let hamburger = document.querySelector('.hamburger-menu')
@@ -96,7 +98,7 @@ function playMusic() {
 
 
 
-
+let liftOffActive = false
 let liftOffBtn = document.querySelector('.lift-off-btn');
 let spaceship = document.querySelector('.rocket-modal')
 let modalInfo = document.querySelector('.modal-info')
@@ -113,15 +115,15 @@ liftOffBtn.addEventListener('click', liftOff);
 
 function liftOff() {
     // Check if the browser is Safari
-    if (navigator.userAgent.indexOf("Safari") != -1) {
+    if (!liftOffActive) {
         console.log("You are using Safari!");
         modalInfo.style.opacity = "0"
         spaceship.classList.add('takeoff-animation');
         gradientMask.classList.add('modal-move')
         playMusic()
         setTimeout(displayNone, 4000)
-        orbit()
-        setTimeout(toggleOrbit, 1000)
+        // setTimeout(toggleOrbit, 1000)
+        liftOffActive = true
     }
 
 }
