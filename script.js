@@ -614,7 +614,7 @@ function nextQuestion() {
                     if (quizOptionBtn[i].value == answer) {
                         quizOptionBtn[i].classList.remove('active-answer')
                         quizOptionBtn[i].classList.add('correct-answer')
-                        progressNumber += 14.3
+                        progressNumber += 20
                         rocketProgressLine.style.width = (progressNumber + 4) + '%'
                         rocketProgress.style.left = progressNumber + '%'
                     }
