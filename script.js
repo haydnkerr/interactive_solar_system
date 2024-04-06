@@ -1,4 +1,32 @@
 /* =================== LIST OF CONTENTS ======================== */
+// Set the time (in milliseconds) after which the page should reload due to inactivity
+const inactivityTimeout = 60000; // 5 minutes (adjust as needed)
+
+let inactivityTimer; // Variable to hold the reference to the setTimeout function
+
+// Function to reload the page
+function reloadPage() {
+    window.location.reload();
+}
+
+// Function to reset the inactivity timer
+function resetInactivityTimer() {
+    // Clear the existing timer, if any
+    clearTimeout(inactivityTimer);
+
+    // Set a new timer to reload the page after the specified duration of inactivity
+    inactivityTimer = setTimeout(reloadPage, inactivityTimeout);
+}
+
+// Event listeners to track user activity and reset the inactivity timer
+document.addEventListener('mousemove', resetInactivityTimer);
+document.addEventListener('keydown', resetInactivityTimer);
+document.addEventListener('scroll', resetInactivityTimer);
+
+// Initial setup: Start the inactivity timer when the page loads
+resetInactivityTimer();
+
+
 // Check if the browser is Chrome
 if (navigator.userAgent.indexOf("Chrome") != -1) {
     console.log("You are using Chrome!");
@@ -446,8 +474,18 @@ function makemakeBtnFunction() {
     flame.classList.remove('flame-animation')
     flame.classList.add('flame-on')
     quizSun.classList.remove('full-opacity')
+    categoryNum = 0
+    category = planetTriviaList[categoryNum]
     closeQuiz()
     setTimeout(makemakeInteraction, 2500)
+    for (let i = 0; i < planetDestination.length; ++i) {
+        planetDestination[i].innerHTML = planetDestinationName[categoryNum]
+    }
+    setTimeout(function() {
+        makemakeBtn.classList.add('display-none')
+    nextQuizBtn.classList.remove('display-none');
+    }, 2000)
+    
 }
 
 
@@ -522,13 +560,19 @@ function startQuiz() {
         rocketProgress.style.left = progressNumber + '%'
     }
     quizModal.classList.remove('display-none')
+    if (categoryNum > 6) {
+        categoryNum = 0
+        category = planetTriviaList[categoryNum]
+    }
 
-    populateQuestion(category, categoryNum)
+
+    
     setTimeout(function () {
+        populateQuestion(category, categoryNum)
         quizModal.classList.add('full-opacity')
         quizModalContainer.classList.add('quiz-modal-animation')
 
-    }, 0)
+    }, 10)
 
     setTimeout(function () {
         quizProgressContainer.classList.add('full-opacity')
@@ -570,6 +614,7 @@ function populateQuestion(category, categoryNum) {
     }, 1500)
 
     let num = 0
+    
     fetch('quiz.json')
         .then(response => {
             if (!response.ok) {
@@ -669,7 +714,12 @@ function winningAnimation() {
     } else {
         quizDestination.style.width = '550px'
     }
-    categoryNum += 1;
+    if (categoryNum > 6) {
+        categoryNum = 0;
+    } else {
+        categoryNum += 1;
+    }
+    
     chosenQuestions = []
     answer = ''
     userGuess = ''

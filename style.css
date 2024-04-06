@@ -1484,7 +1484,7 @@ nav li:hover {
 .quiz-answer-btn {
     flex: 1;
     min-width: 250px;
-    max-width: 250px;
+    max-width: 300px;
     padding: 10px 25px;
     border: none;
     border-radius: 5px;
