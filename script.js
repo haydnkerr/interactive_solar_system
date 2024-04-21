@@ -87,7 +87,6 @@ function closeMobilePopup() {
     modalInfo.classList.add('display-none')
     spaceship.classList.add('display-none')
     gradientMask.classList.add('display-none')
-    toggleOrbit();
     setTimeout(function () {
         mobilePopup.style.display = "none"
         controlsContainer.style.opacity = "0.75"
