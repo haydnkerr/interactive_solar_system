@@ -6,6 +6,7 @@ Certainly! Here's a README file for your interactive solar system site:
 
 Cosmic Journey is an educational web application that allows users to explore the solar system, learn about the planets, and interact with various features.
 
+
 ## Features
 
 - **Interactive Exploration**: Users can explore the solar system by navigating through the planets and clicking on them to learn more.
@@ -14,7 +15,9 @@ Cosmic Journey is an educational web application that allows users to explore th
 
 - **Orbit Animation**: Planets are displayed orbiting around the Sun, providing a dynamic visual representation of their movements in space.
 
-- **Interactive Elements**: Users can interact with elements such as rotating planets, zooming in for closer views, and viewing moons or satellites orbiting around planets.
+- **Interactive Elements**: Users can interact with elements such as rotating planets, zooming in for closer views, and observing satellite orbits.
+
+- **Quiz and Secret Planet**: Engage users with an interactive quiz about the solar system. Completing the quiz successfully leads to the discovery of a secret planet hidden within the application.
 
 ## Installation
 
@@ -50,19 +53,9 @@ To run the website locally, follow these steps:
 ## Future Enhancements
 
 - **Improved Graphics**: Enhance the visual representation of the planets and their orbits.
-  
-- **Additional Information**: Include more detailed information about each planet, including fun facts and trivia.
 
-- **Interactive Quizzes**: Add interactive quizzes or games to make learning about the solar system more engaging.
 
-## Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to this project.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to adjust and expand upon this README according to your project's specific features and needs! If you have any additional information or specific details you'd like to include, just let me know.
