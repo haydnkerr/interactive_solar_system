@@ -2,9 +2,9 @@ Certainly! Here's a README file for your interactive solar system site:
 
 ---
 
-# Interactive Solar System Website
+# Cosmic Journey
 
-The Interactive Solar System Website is an educational web application that allows users to explore the solar system, learn about the planets, and interact with various features.
+Cosmic Journey is an educational web application that allows users to explore the solar system, learn about the planets, and interact with various features.
 
 ## Features
 
@@ -22,7 +22,7 @@ To run the website locally, follow these steps:
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/solar-system.git
+   git clone https://github.com/haydnkerr/interactive_solar_system.git
    ```
 
 2. Open the project directory in your terminal.
